@@ -1,0 +1,4 @@
+platform :ios, '8.0'
+target "TestApp-IOS-Abx-RemasterSwift-forCocoaPod" do
+	pod 'AdBrixRemaster', '0.0.3-dev' 
+end
