@@ -120,6 +120,8 @@
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:_UITextField_propValue.text,_UITextField_propKey.text, nil];
     
 
+    NSDictionary *dictPrev = [_adBrix getUserProperties];
+    
     [_adBrix setUserPropertiesWithDictionary:dict];
     
     

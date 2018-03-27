@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         //adBrix.initAdBrix(appKey: "test_app1", hashKey: "swift0123")
         adBrix.initAdBrix(appKey: "appkey_demo_sdk1", deviceId: "IgaworksSwiftTestDevice")
-       
+        adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
        
         

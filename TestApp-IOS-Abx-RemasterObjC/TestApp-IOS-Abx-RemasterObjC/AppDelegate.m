@@ -33,6 +33,9 @@
     [adBrix setEventUploadCountInterval:AdBrixEventUploadCountIntervalMIN];
     [adBrix setEventUploadTimeInterval:AdBrixEventUploadTimeIntervalMIN];
     
+    double lat = 37.541;
+    double lon = 126.986;
+    [adBrix setLocationWithLatitude:lat longitude:lon];
 //    [adBrix initAdBrixWithAppKey:@"appkey_demo_sdk1" deviceId:@"igaworksObjTestDevice"];
     [adBrix initAdBrixWithAppKey:@"appkey_demo_sdk1"];
     
