@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>TestApp-IOS-Abx-RemasterSwift</string>
+	<string>AdBrixRM-Swift</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>DeepLink_TestApp-IOS-Abx-RemasterSwift</string>
+				<string>DeepLinkAdBrixRemasterSwift</string>
 			</array>
 		</dict>
 	</array>

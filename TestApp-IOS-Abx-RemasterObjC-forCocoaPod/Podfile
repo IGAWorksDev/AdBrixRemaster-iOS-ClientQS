@@ -1,6 +1,6 @@
 platform :ios, '8.0'
 target "TestApp-IOS-Abx-RemasterObjC-forCocoaPod" do
 
-pod 'AdBrixRemaster', '0.0.5-dev'
+pod 'AdBrixRemaster', '0.0.6-dev'
 
 end

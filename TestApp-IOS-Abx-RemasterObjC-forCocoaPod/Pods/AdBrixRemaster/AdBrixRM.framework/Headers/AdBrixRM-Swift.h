@@ -326,7 +326,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// 사용자의 GPS 위치를 설정한다
-- (void)setLocationWithLongitude:(double)longitude latitude:(double)latitude;
+- (void)setLocationWithLatitude:(double)latitude longitude:(double)longitude;
 /// <ul>
 ///   <li>
 ///     API 명칭 : setAge API, setGender API
@@ -368,6 +368,13 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// </ul>
 /// 유저 구분(프로퍼티)값을 임의의 원하는 정보로 설정
 - (void)setUserPropertiesWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary;
+/// <ul>
+///   <li>
+///     API 명칭 : getUserProperties API
+///   </li>
+/// </ul>
+/// 유저 구분(프로퍼티)값을 반환한다
+- (NSDictionary<NSString *, id> * _Nonnull)getUserProperties SWIFT_WARN_UNUSED_RESULT;
 @end
 
 typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel) {
