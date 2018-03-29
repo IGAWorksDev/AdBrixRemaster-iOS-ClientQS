@@ -204,10 +204,10 @@ SWIFT_CLASS("_TtC8AdBrixRM12AdBrixConfig")
 
 SWIFT_CLASS("_TtC8AdBrixRM13AdBrixPrivate")
 @interface AdBrixPrivate : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 /// @discussion Objective-C 기반 프로젝트에서 본 함수를 호툴하여 싱글톤 인스턴스 객체를 획득한다
 /// @author igaworks
 + (AdBrixPrivate * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 - (NSString * _Nonnull)getAppleAdvertisingIdentifierStr SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getAppleAdvertisingTrackingEnable SWIFT_WARN_UNUSED_RESULT;
 @end

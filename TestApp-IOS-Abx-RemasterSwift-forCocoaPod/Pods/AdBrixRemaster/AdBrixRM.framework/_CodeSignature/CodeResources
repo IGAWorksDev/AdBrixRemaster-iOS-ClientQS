@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/AdBrixRM-Swift.h</key>
 		<data>
-		svZyZoh5viU+VH+KU5X1TdA2i60=
+		7kNNwJ1hbHxNd17q5pC6KLnzfoo=
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
-		AdGojUr3kOLvUe7tCfWFypt/2C0=
+		lukXdamegmy25KkyjbT/8PkeFTw=
 		</data>
 		<key>Headers/IgaworksADUtil.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aKVMtkhMnW/Lfr5ZS7mcDC49Fyg=
+		c9QNyLwxyoQn4b3b869iPAGquhA=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		XU3fgEYcvqxeElv1lcaPl3KYz7Y=
+		D1smo+gvbRuAgEMI+3N8QEgRC7s=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		t2SeoUQhl91r/mjZxNujW4YjhOg=
+		ArZfo0LX4gYlkMLazSUQS0XNSJA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,22 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			svZyZoh5viU+VH+KU5X1TdA2i60=
+			7kNNwJ1hbHxNd17q5pC6KLnzfoo=
 			</data>
 			<key>hash2</key>
 			<data>
-			s27EqvnzqK/vLow4Jx2mHwQ7T8QuVcs/5qpUIHyaY6g=
+			TcMIMDxoxFUYKonJ18AREQLQ6MnfF5n3FdIdqe4tAWc=
 			</data>
 		</dict>
 		<key>Headers/AdBrixRM.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AdGojUr3kOLvUe7tCfWFypt/2C0=
+			lukXdamegmy25KkyjbT/8PkeFTw=
 			</data>
 			<key>hash2</key>
 			<data>
-			GN0dGWK5JKWiyOHYWqIQNVwWUQLp37DlaMwyPpDHiOU=
+			hS0r+IGDWTxIhimgeRFVyev2VKr/TS9iMwK2JvHu/Mc=
 			</data>
 		</dict>
 		<key>Headers/IgaworksADUtil.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XU3fgEYcvqxeElv1lcaPl3KYz7Y=
+			D1smo+gvbRuAgEMI+3N8QEgRC7s=
 			</data>
 			<key>hash2</key>
 			<data>
-			4O+i/h3GlJptHcCGNjOcpJYfj38lUg1KzyZbhW3Zjjs=
+			jFgHpyYU91CLceA8TsPAR0vjToCdQaVsEM6SVWCCxwo=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t2SeoUQhl91r/mjZxNujW4YjhOg=
+			ArZfo0LX4gYlkMLazSUQS0XNSJA=
 			</data>
 			<key>hash2</key>
 			<data>
-			NJXIesqYlISQTKp4C+7ZfyfpknS7z1PyiVapOCYwV18=
+			EYXjVvA9FPKHOh949l7LKVVzWpxm8IlC8EkA3XFG0Gg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

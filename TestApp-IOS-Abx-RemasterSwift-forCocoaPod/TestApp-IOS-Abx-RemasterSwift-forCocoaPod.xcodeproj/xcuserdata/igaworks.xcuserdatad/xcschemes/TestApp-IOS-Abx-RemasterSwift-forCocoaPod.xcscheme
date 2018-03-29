@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "139DBBA2202944470026B03D"
-               BuildableName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod.app"
-               BlueprintName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod"
-               ReferencedContainer = "container:TestApp-IOS-Abx-RemasterObjC-forCocoaPod.xcodeproj">
+               BlueprintIdentifier = "13EE5DF92064E379008A81E0"
+               BuildableName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod.app"
+               BlueprintName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod"
+               ReferencedContainer = "container:TestApp-IOS-Abx-RemasterSwift-forCocoaPod.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,10 +33,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "139DBBA2202944470026B03D"
-            BuildableName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod.app"
-            BlueprintName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod"
-            ReferencedContainer = "container:TestApp-IOS-Abx-RemasterObjC-forCocoaPod.xcodeproj">
+            BlueprintIdentifier = "13EE5DF92064E379008A81E0"
+            BuildableName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod.app"
+            BlueprintName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod"
+            ReferencedContainer = "container:TestApp-IOS-Abx-RemasterSwift-forCocoaPod.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,10 +57,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "139DBBA2202944470026B03D"
-            BuildableName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod.app"
-            BlueprintName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod"
-            ReferencedContainer = "container:TestApp-IOS-Abx-RemasterObjC-forCocoaPod.xcodeproj">
+            BlueprintIdentifier = "13EE5DF92064E379008A81E0"
+            BuildableName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod.app"
+            BlueprintName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod"
+            ReferencedContainer = "container:TestApp-IOS-Abx-RemasterSwift-forCocoaPod.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "139DBBA2202944470026B03D"
-            BuildableName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod.app"
-            BlueprintName = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod"
-            ReferencedContainer = "container:TestApp-IOS-Abx-RemasterObjC-forCocoaPod.xcodeproj">
+            BlueprintIdentifier = "13EE5DF92064E379008A81E0"
+            BuildableName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod.app"
+            BlueprintName = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod"
+            ReferencedContainer = "container:TestApp-IOS-Abx-RemasterSwift-forCocoaPod.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

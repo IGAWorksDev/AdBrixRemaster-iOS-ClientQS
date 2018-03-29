@@ -370,8 +370,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/AdBrixRemaster",
+					"$(inherited)",
+					"\"${PODS_ROOT}/AdBrixRemaster\"",
 				);
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -394,8 +394,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Pods/AdBrixRemaster",
+					"$(inherited)",
+					"\"${PODS_ROOT}/AdBrixRemaster\"",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterObjC-forCocoaPod/Info.plist";

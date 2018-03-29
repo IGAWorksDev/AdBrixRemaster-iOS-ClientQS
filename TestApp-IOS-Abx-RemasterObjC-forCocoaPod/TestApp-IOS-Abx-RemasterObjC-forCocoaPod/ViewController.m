@@ -124,13 +124,6 @@
     
 }
 
-- (IBAction)click_commerceDeeplinkOpen:(id)sender {
-    [_adBrix commerceDeeplinkOpenWithUrl:@"DeeplinkUrl"];
-    
-   
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    //[_adBrix commerceDeeplinkOpenWithUrl:@"DeeplinkUrl" eventDateStr:[self getDateStr]];
-}
 - (IBAction)click_commerceViewHome:(id)sender {
     [_adBrix commerceViewHome];
     

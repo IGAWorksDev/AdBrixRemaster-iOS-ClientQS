@@ -42,12 +42,6 @@
 
 
 
-
-
-
-@property (weak, nonatomic) IBOutlet UIButton *Button_commerceDeeplinkOpen;
-- (IBAction)click_commerceDeeplinkOpen:(id)sender;
-
 @property (weak, nonatomic) IBOutlet UIButton *Button_commerceViewHome;
 
 - (IBAction)click_commerceViewHome:(id)sender;
