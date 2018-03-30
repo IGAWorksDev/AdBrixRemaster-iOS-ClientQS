@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137486DA206CE35C0004968F /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; };
+		137486DB206CE35C0004968F /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		139DBBA8202944470026B03D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139DBBA7202944470026B03D /* AppDelegate.m */; };
 		139DBBAB202944470026B03D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139DBBAA202944470026B03D /* ViewController.m */; };
 		139DBBAE202944470026B03D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139DBBAC202944470026B03D /* Main.storyboard */; };
@@ -17,8 +19,6 @@
 		139DBBCB202944470026B03D /* TestApp_IOS_Abx_RemasterObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 139DBBCA202944470026B03D /* TestApp_IOS_Abx_RemasterObjCUITests.m */; };
 		13EE5E74206893FE008A81E0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED33203FFEFF00793D1D /* iAd.framework */; };
 		13EE5E7520689404008A81E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED35203FFF0700793D1D /* UIKit.framework */; };
-		13EE5E7720689414008A81E0 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; };
-		13EE5E7820689414008A81E0 /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		13EE5E7920689414008A81E0 /* Embed Frameworks */ = {
+		137486DC206CE35C0004968F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				13EE5E7820689414008A81E0 /* AdBrixRM.framework in Embed Frameworks */,
+				137486DB206CE35C0004968F /* AdBrixRM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +82,7 @@
 			files = (
 				13EE5E7520689404008A81E0 /* UIKit.framework in Frameworks */,
 				13EE5E74206893FE008A81E0 /* iAd.framework in Frameworks */,
-				13EE5E7720689414008A81E0 /* AdBrixRM.framework in Frameworks */,
+				137486DA206CE35C0004968F /* AdBrixRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 				139DBB9F202944470026B03D /* Sources */,
 				139DBBA0202944470026B03D /* Frameworks */,
 				139DBBA1202944470026B03D /* Resources */,
-				13EE5E7920689414008A81E0 /* Embed Frameworks */,
+				137486DC206CE35C0004968F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

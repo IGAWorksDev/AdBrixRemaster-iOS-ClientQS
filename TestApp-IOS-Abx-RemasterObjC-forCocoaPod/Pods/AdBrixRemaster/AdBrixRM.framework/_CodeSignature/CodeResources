@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		c9QNyLwxyoQn4b3b869iPAGquhA=
+		r5ngLpYkosvEr9zjdsbCa2lRAJs=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		D1smo+gvbRuAgEMI+3N8QEgRC7s=
+		U8wqPP8h0Mt4RMh7IAmkfRrki6U=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ArZfo0LX4gYlkMLazSUQS0XNSJA=
+		W95Ul7EyVuMlJ6mLqouLadURDCs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D1smo+gvbRuAgEMI+3N8QEgRC7s=
+			U8wqPP8h0Mt4RMh7IAmkfRrki6U=
 			</data>
 			<key>hash2</key>
 			<data>
-			jFgHpyYU91CLceA8TsPAR0vjToCdQaVsEM6SVWCCxwo=
+			WqM6/aWHIB1s2ArArBK2jngb3g9LnCO4jfp82dEYZkM=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ArZfo0LX4gYlkMLazSUQS0XNSJA=
+			W95Ul7EyVuMlJ6mLqouLadURDCs=
 			</data>
 			<key>hash2</key>
 			<data>
-			EYXjVvA9FPKHOh949l7LKVVzWpxm8IlC8EkA3XFG0Gg=
+			zqGqRBbNJ2UoZgj763AG6k7ELqJS96/daa1srdcYRgU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
