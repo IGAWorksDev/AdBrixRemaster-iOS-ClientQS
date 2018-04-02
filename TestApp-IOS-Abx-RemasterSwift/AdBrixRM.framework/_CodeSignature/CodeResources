@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AdBrixRM-Swift.h</key>
 		<data>
-		7kNNwJ1hbHxNd17q5pC6KLnzfoo=
+		XJtiZ2zXPrLHJ4/qjPyvKKBMb9U=
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftdoc</key>
 		<data>
-		QcR2mf63A/NHG4iggDawX2Qy3s0=
+		S1M3VwdQjojlzTWMFUQB6Qbvj/Q=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		nN5w7O5DBFViqxbwzW9IkvtxWGY=
+		vKGH7s5oG14fGSNNUInH0YPDZTM=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		0WRKqBAnFpNG+I05rd1QxQI0zpY=
+		9eO4wL8AZXdS83vE5pje9YyIe94=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		eiiIfBZMose7LK13aGpfFUY9ebU=
+		4Vep+mp2K8bP2XgAuiKVvAJUNbQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7kNNwJ1hbHxNd17q5pC6KLnzfoo=
+			XJtiZ2zXPrLHJ4/qjPyvKKBMb9U=
 			</data>
 			<key>hash2</key>
 			<data>
-			TcMIMDxoxFUYKonJ18AREQLQ6MnfF5n3FdIdqe4tAWc=
+			p/GUC5Qvwg3A8FM1mktthlfWi6izM72mGV8jjnTZrmQ=
 			</data>
 		</dict>
 		<key>Headers/AdBrixRM.h</key>
@@ -95,44 +95,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QcR2mf63A/NHG4iggDawX2Qy3s0=
+			S1M3VwdQjojlzTWMFUQB6Qbvj/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			W/18reZVFXgeJEP9dz0cd1wdKbt4NTFq9zpzHdwXFmI=
+			ZptRpAfgdLCIwSSwGyJP6ADrz/14RSzQm3anSX2+m9w=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nN5w7O5DBFViqxbwzW9IkvtxWGY=
+			vKGH7s5oG14fGSNNUInH0YPDZTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			+uQv2DlRH/qpG8xt5r1YY7+s8S9a7YrCIg2m2wBFfvo=
+			ewGhlcXmUDOkxSDAjIU3NA1OHzZZYluGjiGSz45b2JI=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0WRKqBAnFpNG+I05rd1QxQI0zpY=
+			9eO4wL8AZXdS83vE5pje9YyIe94=
 			</data>
 			<key>hash2</key>
 			<data>
-			WZg9dP03Y6uZVSJZxO0w9gUyM8NllPPoJG45QYTAu6E=
+			Ei/GWWVYZMbClbuYZHMq1dVyk+ehEVOp769wJN7QNCw=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eiiIfBZMose7LK13aGpfFUY9ebU=
+			4Vep+mp2K8bP2XgAuiKVvAJUNbQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			vBzjfZ/JCvZ9bzLfTLbLuelDIBb39wNH7e3jCWh4jTs=
+			7GnIEXu7tVthb54j5ZO73t2G7Qdx5R7TJVKTitnp/dQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
