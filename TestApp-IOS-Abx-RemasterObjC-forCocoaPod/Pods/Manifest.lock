@@ -1,12 +1,12 @@
 PODS:
-  - AdBrixRemaster (0.1.0-dev)
+  - AdBrixRemaster (0.1.1-dev)
 
 DEPENDENCIES:
-  - AdBrixRemaster (= 0.1.0-dev)
+  - AdBrixRemaster (= 0.1.1-dev)
 
 SPEC CHECKSUMS:
-  AdBrixRemaster: 275f8ad1ece2eca0748296801207b408f32bb942
+  AdBrixRemaster: b340cff3fdbd2f4fae6ef27ad7e8b72b8ad47ce3
 
-PODFILE CHECKSUM: fb8f325a24bf1c7ae9d13163ac31dc16d11805c6
+PODFILE CHECKSUM: 7ac706860989ae56e95046badc22f3c11472dd2b
 
 COCOAPODS: 1.4.0
