@@ -161,9 +161,9 @@
                                                  _adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                          productName:@"가을 맞이 슬렉스 10종 특가"
                                                          price:10000.00
-                                                         discount:1000.00
                                                          quantity:1
-                                                         currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                         discount:1000.00
+                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                          extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                  ]
@@ -177,8 +177,8 @@
                                                  _adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                  productName:@"가을 맞이 슬렉스 10종 특가"
                                                  price:10000.00
-                                                 discount:1000.00
                                                  quantity:1
+                                                 discount:1000.00
                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                  category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
@@ -201,8 +201,8 @@
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                  price:10000.00
-                                                                              discount:1000.00
                                                                               quantity:1
+                                                                              discount:1000.00
                                                                         currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                               category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                          extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
@@ -241,8 +241,8 @@
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                   price:10000.00
-                                                                               discount:1000.00
-                                                                               quantity:1
+                                                                                quantity:1
+                                                                                discount:1000.00
                                                                          currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                           extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
@@ -258,8 +258,8 @@
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
                                                                                     productName:@"이월특가 나염 맨투맨"
                                                                                           price:10000.00
-                                                                                       discount:1000.0
                                                                                        quantity:1
+                                                                                       discount:1000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict2]
@@ -300,8 +300,8 @@
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                          price:10000.00
-                                                                                      discount:5000.0
                                                                                       quantity:1
+                                                                                      discount:5000.00
                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
@@ -330,8 +330,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
                                                                                        quantity:1
+                                                                                       discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -341,6 +341,18 @@
                                                                                                          , nil]
                                                                                                  ]
                                                  ];
+    
+//    AdBrixRmCommerceProductModel *productModel3 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
+//                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+//                                                                                            price:10000.00
+//                                                                                         quantity:1
+//                                                                                         discount:5000.00
+//                                                                                   currencyString:nil
+//                                                                                         category:nil
+//                                                                                    extraAttrsMap:nil
+//                                                   ];
+    
+    
     
     
     //NSMutableArray방식
@@ -382,8 +394,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
                                                                                        quantity:1
+                                                                                       discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -397,8 +409,8 @@
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
                                                                                     productName:@"이월특가 나염 맨투맨"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:1
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -450,8 +462,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:1
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -505,8 +517,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:1
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -520,16 +532,11 @@
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
                                                                                     productName:@"이월특가 나염 맨투맨"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                      @"9", @"no",
-                                                                                                                                                      @"black", @"color",
-                                                                                                                                                      @"XXL", @"size"
-                                                                                                                                                      , nil]
-                                                                                                 ]
+                                                                                         quantity:1
+                                                                                         discount:5000.00
+                                                                                 currencyString:nil
+                                                                                       category:nil
+                                                                                  extraAttrsMap:nil
                                                  ];
     
     
@@ -544,7 +551,7 @@
     //상품 결제 - 모바일 결제
     [_adBrix commercePurchaseWithOrderId:@"290192012"
                              productInfo:productArray
-                                discount:0.00
+                                discount:10000.00
                           deliveryCharge:3500.00
                            paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
     ];
@@ -571,8 +578,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:1
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -613,8 +620,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:1
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -628,8 +635,8 @@
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
                                                                                     productName:@"이월특가 나염 맨투맨"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:1
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -671,8 +678,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"n24jsda922"
                                                                                     productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
                                                                                           price:105000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:0
+                                                                                         quantity:0
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
                                                                                   extraAttrsMap:nil
@@ -681,8 +688,8 @@
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"saf323dsa23d4f"
                                                                                     productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
                                                                                           price:105000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:0
+                                                                                         quantity:0
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
                                                                                   extraAttrsMap:nil
@@ -716,8 +723,8 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                       discount:5000.0
-                                                                                       quantity:1
+                                                                                         quantity:0
+                                                                                         discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:

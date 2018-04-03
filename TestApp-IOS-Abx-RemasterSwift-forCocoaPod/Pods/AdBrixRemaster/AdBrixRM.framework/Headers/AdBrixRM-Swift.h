@@ -265,10 +265,6 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)eventWithEventName:(NSString * _Nonnull)eventName value:(NSDictionary<NSString *, id> * _Nonnull)value;
 /// 이벤트
 - (void)eventWithEventName:(NSString * _Nonnull)eventName value:(NSDictionary<NSString *, id> * _Nonnull)value eventDateStr:(NSString * _Nonnull)eventDateStr;
-- (void)commerceDeeplinkOpenWithUrl:(NSString * _Nonnull)url;
-/// purchase 딥링킹 앱 오픈
-- (void)commerceDeeplinkOpenWithUrl:(NSString * _Nonnull)url eventDateStr:(NSString * _Nonnull)eventDateStr;
-/// purchase 홈화면 열기
 - (void)commerceViewHome;
 /// purchase 홈화면 열기
 - (void)commerceViewHomeWithEventDateStr:(NSString * _Nonnull)eventDateStr;
@@ -323,7 +319,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// purchase Category 모델을 생성한다
 - (AdBrixRmCommerceProductCategoryModel * _Nonnull)createCommerceProductCategoryDataWithCategory:(NSString * _Nonnull)category category2:(NSString * _Nonnull)category2 category3:(NSString * _Nonnull)category3 category4:(NSString * _Nonnull)category4 category5:(NSString * _Nonnull)category5 SWIFT_WARN_UNUSED_RESULT;
 /// purchase Product 모델을 생성한다
-- (AdBrixRmCommerceProductModel * _Nonnull)createCommerceProductDataWithProductId:(NSString * _Nonnull)productId productName:(NSString * _Nonnull)productName price:(double)price discount:(double)discount quantity:(NSInteger)quantity currencyString:(NSString * _Nonnull)currencyString category:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category extraAttrsMap:(AdBrixRmCommerceProductAttrModel * _Nonnull)extraAttrsMap SWIFT_WARN_UNUSED_RESULT;
+- (AdBrixRmCommerceProductModel * _Nonnull)createCommerceProductDataWithProductId:(NSString * _Nonnull)productId productName:(NSString * _Nonnull)productName price:(double)price quantity:(NSInteger)quantity discount:(double)discount currencyString:(NSString * _Nullable)currencyString category:(AdBrixRmCommerceProductCategoryModel * _Nullable)category extraAttrsMap:(AdBrixRmCommerceProductAttrModel * _Nullable)extraAttrsMap SWIFT_WARN_UNUSED_RESULT;
 /// purchase Product의 어트리뷰트 모델을 생성한다
 - (AdBrixRmCommerceProductAttrModel * _Nonnull)createCommerceProductAttrDataWithDictionary:(NSDictionary<NSString *, NSString *> * _Nullable)dictionary SWIFT_WARN_UNUSED_RESULT;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;

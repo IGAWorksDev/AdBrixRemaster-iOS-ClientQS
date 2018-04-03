@@ -2,4 +2,102 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
+            timestampString = "544423208.079787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1194"
+            endingLineNumber = "1194"
+            landmarkName = "sendEventFirstOpen()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdBrixRM.AdBrixRM.deepLinkOpen(url: Foundation.URL, eventDateStr: Swift.String) -&gt; ()"
+                  moduleName = "AdBrixRM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igaworks/Documents/iOS/RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
+                  timestampString = "544354494.22886"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1268"
+                  endingLineNumber = "1268"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed&gt; of AdBrixRM.AdBrixRM.deepLinkOpen(url: Foundation.URL) -&gt; ()"
+                  moduleName = "AdBrixRM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igaworks/Documents/iOS/RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
+                  timestampString = "544354494.231195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1268"
+                  endingLineNumber = "1268"
+                  offsetFromSymbolStart = "149">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
+            timestampString = "544423208.079846"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1192"
+            endingLineNumber = "1192"
+            landmarkName = "sendEventFirstOpen()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdBrixRM.AdBrixRM.deepLinkOpen(url: Foundation.URL, eventDateStr: Swift.String) -&gt; ()"
+                  moduleName = "AdBrixRM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igaworks/Documents/iOS/RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
+                  timestampString = "544354494.239921"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1268"
+                  endingLineNumber = "1268"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[0] = Owned To Guaranteed&gt; of AdBrixRM.AdBrixRM.deepLinkOpen(url: Foundation.URL) -&gt; ()"
+                  moduleName = "AdBrixRM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/igaworks/Documents/iOS/RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
+                  timestampString = "544354494.242095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1268"
+                  endingLineNumber = "1268"
+                  offsetFromSymbolStart = "149">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
