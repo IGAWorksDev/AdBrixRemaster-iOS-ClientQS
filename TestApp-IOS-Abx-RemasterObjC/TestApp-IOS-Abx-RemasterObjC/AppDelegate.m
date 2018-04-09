@@ -85,17 +85,11 @@
 {
     
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"deep link test"
-                                                    message:@"deep link push open under ios9"
-                                                   delegate:nil
-                                          cancelButtonTitle:nil
-                                          otherButtonTitles:@"Confirm",nil];
-    [alert show];
+    
     
     // pass open url for commerce conversion
     AdBrixRM *adBrix = [AdBrixRM sharedInstance]; //또는 AdBrix *adBrixs = AdBrixRM.sharedInstance;
-    [adBrix deepLinkOpen:url];
-    
+    [adBrix deepLinkOpenWithUrl:url];
     
     return YES;
 }
@@ -112,10 +106,8 @@
                                           otherButtonTitles:@"Confirm",nil];
     [alert show];
     
-    // pass open url for commerce conversion
     AdBrixRM *adBrix = [AdBrixRM sharedInstance];
-    [adBrix deepLinkOpenWithUrl:url eventDateStr:[self getDateStr]];
-    
+    [adBrix deepLinkOpenWithUrl:url];
     return YES;
     
 }

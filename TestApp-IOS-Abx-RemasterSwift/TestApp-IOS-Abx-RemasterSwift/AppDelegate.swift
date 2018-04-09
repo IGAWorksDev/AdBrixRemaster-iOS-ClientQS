@@ -75,11 +75,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let alertController = UIAlertController(title: "deep link test", message: "deep link push open", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Confirm", style: .default) { (result : UIAlertAction) -> Void in }
-        alertController.addAction(okAction)
-        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
-        
+//        let alertController = UIAlertController(title: "deep link test", message: "deep link push open", preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "Confirm", style: .default) { (result : UIAlertAction) -> Void in }
+//        alertController.addAction(okAction)
+//        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+//
         // pass open url for commerce conversion
         let adBrix = AdBrixRM.getInstance
         adBrix.deepLinkOpen(url: url)

@@ -328,13 +328,10 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setLocationWithLatitude:(double)latitude longitude:(double)longitude;
 /// <ul>
 ///   <li>
-///     API 명칭 : setAge API, setGender API
+///     API 명칭 : setAge API
 ///   </li>
 ///   <li>
-///     애드브릭스 리포트 내 확인 : Demographic & Device - 연령 / 성별
-///   </li>
-///   <li>
-///     목적 : 유저정보 분석(User Info)는 유저의 나이와 성별 정보를 분석할 수 있습니다.
+///     목적 : 유저정보 분석(User Info)는 유저의 나이정보를 분석할 수 있습니다.
 ///   </li>
 ///   <li>
 ///     특징 : 연령 및 성별 외 디바이스 모델, 통신사, 안드로이드 OS, 언어, 국가 등의 정보는 IGAW 공통 연동을 통해서 기본 제공 됩니다.
@@ -345,13 +342,10 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)setAgeWithInt:(NSInteger)int_;
 /// <ul>
 ///   <li>
-///     API 명칭 : setAge API, setGender API
+///     API 명칭 : setGender API
 ///   </li>
 ///   <li>
-///     애드브릭스 리포트 내 확인 : Demographic & Device - 연령 / 성별
-///   </li>
-///   <li>
-///     목적 : 유저정보 분석(User Info)는 유저의 나이와 성별 정보를 분석할 수 있습니다.
+///     목적 : 유저정보 분석(User Info)는 유저의 성별 정보를 분석할 수 있습니다.
 ///   </li>
 ///   <li>
 ///     특징 : 연령 및 성별 외 디바이스 모델, 통신사, 안드로이드 OS, 언어, 국가 등의 정보는 IGAW 공통 연동을 통해서 기본 제공 됩니다.

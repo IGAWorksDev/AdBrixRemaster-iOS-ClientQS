@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <AdBrixRM/Reachability.h>
-//#import <AdBrixRM/IgaworksADUtil.h>
 #import "IgaworksADUtil.h"
 #import "Reachability.h"
 
