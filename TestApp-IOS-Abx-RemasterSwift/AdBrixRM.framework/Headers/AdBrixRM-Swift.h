@@ -382,7 +382,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel) {
 /// 이벤트 전송 갯수를 설정 enum값
 typedef SWIFT_ENUM(NSInteger, AdBrixEventUploadCountInterval) {
   AdBrixEventUploadCountIntervalMIN = 10,
-  AdBrixEventUploadCountIntervalNormal = 30,
+  AdBrixEventUploadCountIntervalNORMAL = 30,
   AdBrixEventUploadCountIntervalMAX = 1000,
 };
 

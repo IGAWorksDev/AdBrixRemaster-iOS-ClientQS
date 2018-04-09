@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AdBrixRM-Swift.h</key>
 		<data>
-		dtTfbcQgTsogb8P951yeRWPxzkY=
+		NckXdOL522n0ePQkeO2BL1Rz2a8=
 		</data>
 		<key>Headers/AdBrixRM.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm.swiftmodule</key>
 		<data>
-		j4+cgvWxwvNwY9GnTGGSJItYKFI=
+		sQp/+R1KxLhckQupKRmDZOYvaAw=
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		A3DrriOefg4Z5HjXqpj27BrNI+Y=
+		S1EqsanvG9jTR7QomDbDdrZ1jR0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,11 +51,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dtTfbcQgTsogb8P951yeRWPxzkY=
+			NckXdOL522n0ePQkeO2BL1Rz2a8=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Qv0/KfUvzSW/dppLIhewe7CPZXqCCqNXN2phgjJQmo=
+			EDDvYr0DJUdU+Xzu7UeBn91CYCHjehbU1gbOMqzfPDY=
 			</data>
 		</dict>
 		<key>Headers/AdBrixRM.h</key>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j4+cgvWxwvNwY9GnTGGSJItYKFI=
+			sQp/+R1KxLhckQupKRmDZOYvaAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			8J3eV3gbfFzSX6bgkj/PJHy0UBA7O7tACd64qkmE988=
+			iXiEsHNcQmKnAxYu7XLXdVZMYxHF4rs3IA8SUASRVVA=
 			</data>
 		</dict>
 		<key>Modules/AdBrixRM.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A3DrriOefg4Z5HjXqpj27BrNI+Y=
+			S1EqsanvG9jTR7QomDbDdrZ1jR0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rp27ybohoXWSga3WJrnZmXDT7qbkHFl/38G10Tc+CxU=
+			toybBnY+Dt1PucymNsKYFuW6TscvG9sUW7MAtDkdql4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
