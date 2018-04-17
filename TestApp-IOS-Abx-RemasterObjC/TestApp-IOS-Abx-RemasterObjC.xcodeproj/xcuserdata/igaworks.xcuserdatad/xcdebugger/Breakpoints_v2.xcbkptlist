@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "545119807.88783"
+            timestampString = "545643951.885592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1195"
-            endingLineNumber = "1195"
+            startingLineNumber = "1198"
+            endingLineNumber = "1198"
             landmarkName = "sendEventFirstOpen()"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "545119807.88793"
+            timestampString = "545643951.885657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1193"
-            endingLineNumber = "1193"
+            startingLineNumber = "1196"
+            endingLineNumber = "1196"
             landmarkName = "sendEventFirstOpen()"
             landmarkType = "7">
             <Locations>
@@ -97,6 +97,22 @@
                   offsetFromSymbolStart = "149">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Job/AdBrixEventQueue.swift"
+            timestampString = "545643951.885709"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "652"
+            endingLineNumber = "652"
+            landmarkName = "addEvent(groupName:evtName:evtParam:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

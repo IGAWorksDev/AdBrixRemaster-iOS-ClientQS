@@ -263,8 +263,12 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// 이벤트
 - (void)eventWithEventName:(NSString * _Nonnull)eventName eventDateStr:(NSString * _Nonnull)eventDateStr;
 - (void)eventWithEventName:(NSString * _Nonnull)eventName value:(NSDictionary<NSString *, id> * _Nonnull)value;
+/// 이벤트 for Unity
+- (void)eventForUnityWithEventName:(NSString * _Nonnull)eventName value:(NSDictionary<NSString *, NSString *> * _Nonnull)value;
 /// 이벤트
 - (void)eventWithEventName:(NSString * _Nonnull)eventName value:(NSDictionary<NSString *, id> * _Nonnull)value eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// 이벤트 for Unity
+- (void)eventForUnityWithEventName:(NSString * _Nonnull)eventName value:(NSDictionary<NSString *, NSString *> * _Nonnull)value eventDateStr:(NSString * _Nonnull)eventDateStr;
 - (void)commerceViewHome;
 /// purchase 홈화면 열기
 - (void)commerceViewHomeWithEventDateStr:(NSString * _Nonnull)eventDateStr;
@@ -303,11 +307,14 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// purchase 상품 공유
 - (void)commerceShareWithChannel:(enum AdBrixSharingChannel)channel productInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 통화 타입을 반환한다
-- (NSString * _Nonnull)getCurrencyString:(enum AdBrixCurrencyType)currency SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getCurrencyStringByAdBrixCurrencyType:(enum AdBrixCurrencyType)currency SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getCurrencyString:(NSInteger)currency SWIFT_WARN_UNUSED_RESULT;
 /// purchase 공유 채널 타입을 반환한다
-- (NSString * _Nonnull)getSharingChannel:(enum AdBrixSharingChannel)channel SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getSharingChannelByAdBrixSharingChannel:(enum AdBrixSharingChannel)channel SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getSharingChannel:(NSInteger)channel SWIFT_WARN_UNUSED_RESULT;
 /// purchase 결제 방법 타입을 반환한다
-- (NSString * _Nonnull)getPaymentMethod:(enum AdbrixPaymentMethod)method SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getPaymentMethodByAdbrixPaymentMethod:(enum AdbrixPaymentMethod)method SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getPaymentMethod:(NSInteger)method SWIFT_WARN_UNUSED_RESULT;
 /// purchase Category 모델을 생성한다
 - (AdBrixRmCommerceProductCategoryModel * _Nonnull)createCommerceProductCategoryDataWithCategory:(NSString * _Nonnull)category SWIFT_WARN_UNUSED_RESULT;
 /// purchase Category 모델을 생성한다
@@ -361,6 +368,13 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// </ul>
 /// 유저 구분(프로퍼티)값을 임의의 원하는 정보로 설정
 - (void)setUserPropertiesWithDictionary:(NSDictionary<NSString *, id> * _Nonnull)dictionary;
+/// <ul>
+///   <li>
+///     API 명칭 : setUserProperties API for Unity
+///   </li>
+/// </ul>
+/// 유저 구분(프로퍼티)값을 임의의 원하는 정보로 설정
+- (void)setUserPropertiesForUnityWithDictionary:(NSDictionary<NSString *, NSString *> * _Nonnull)dictionary;
 /// <ul>
 ///   <li>
 ///     API 명칭 : getUserProperties API
@@ -458,18 +472,21 @@ typedef SWIFT_ENUM(NSInteger, AdBrixCustomCohortType) {
 SWIFT_CLASS("_TtC8AdBrixRM32AdBrixRmCommerceProductAttrModel")
 @interface AdBrixRmCommerceProductAttrModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (AdBrixRmCommerceProductAttrModel * _Nonnull)setModelWithDictionary:(NSDictionary<NSString *, NSString *> * _Nonnull)dictionary SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 SWIFT_CLASS("_TtC8AdBrixRM36AdBrixRmCommerceProductCategoryModel")
 @interface AdBrixRmCommerceProductCategoryModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (AdBrixRmCommerceProductCategoryModel * _Nonnull)setModelWithCategoryArr:(NSArray<NSString *> * _Nonnull)categoryArr SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 SWIFT_CLASS("_TtC8AdBrixRM28AdBrixRmCommerceProductModel")
 @interface AdBrixRmCommerceProductModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (AdBrixRmCommerceProductModel * _Nonnull)setModelWithProductId:(NSString * _Nonnull)productId productName:(NSString * _Nonnull)productName price:(double)price quantity:(NSInteger)quantity discount:(double)discount currencyString:(NSString * _Nullable)currencyString categories:(AdBrixRmCommerceProductCategoryModel * _Nullable)categories extraAttrs:(AdBrixRmCommerceProductAttrModel * _Nullable)extraAttrs SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
