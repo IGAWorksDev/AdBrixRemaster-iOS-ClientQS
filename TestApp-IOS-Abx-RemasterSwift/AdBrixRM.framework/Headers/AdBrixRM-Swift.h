@@ -224,9 +224,9 @@ enum AdBrixEventUploadTimeInterval : NSInteger;
 enum AdBrixEventUploadCountInterval : NSInteger;
 @class AdBrixRmCommerceProductCategoryModel;
 @class AdBrixRmCommerceProductModel;
+enum AdbrixPaymentMethod : NSInteger;
 enum AdBrixSharingChannel : NSInteger;
 enum AdBrixCurrencyType : NSInteger;
-enum AdbrixPaymentMethod : NSInteger;
 @class AdBrixRmCommerceProductAttrModel;
 enum AdBrixGenderType : NSInteger;
 
@@ -272,40 +272,76 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)commerceViewHome;
 /// purchase 홈화면 열기
 - (void)commerceViewHomeWithEventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 홈화면 열기
+- (void)commerceViewHomeWithCommerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 홈화면 열기
+- (void)commerceViewHomeWithCommerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 카테고리(기획전) 진입
-- (void)commerceCategoryViewWithCategory:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category;
+- (void)commerceCategoryViewWithCategory:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo;
 /// purchase 카테고리(기획전) 진입
-- (void)commerceCategoryViewWithCategory:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category eventDateStr:(NSString * _Nonnull)eventDateStr;
+- (void)commerceCategoryViewWithCategory:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 카테고리(기획전) 진입
+- (void)commerceCategoryViewWithCategory:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 카테고리(기획전) 진입
+- (void)commerceCategoryViewWithCategory:(AdBrixRmCommerceProductCategoryModel * _Nonnull)category productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 상품 상세보기
 - (void)commerceProductViewWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo;
 /// purchase 상품 상세보기
 - (void)commerceProductViewWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 상품 상세보기
+- (void)commerceProductViewWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 상품 상세보기
+- (void)commerceProductViewWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 장바구니 담기
 - (void)commerceAddToCartWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo;
 /// purchase 장바구니 담기
 - (void)commerceAddToCartWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 장바구니 담기
+- (void)commerceAddToCartWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 장바구니 담기
+- (void)commerceAddToCartWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 위시리스트(관심상품) 추가
 - (void)commerceAddToWishListWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo;
 /// purchase 위시리스트(관심상품) 추가
 - (void)commerceAddToWishListWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 위시리스트(관심상품) 추가
+- (void)commerceAddToWishListWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 위시리스트(관심상품) 추가
+- (void)commerceAddToWishListWithProductInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 주문 내역 검토
 - (void)commerceReviewOrderWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge;
 /// purchase 주문 내역 검토
+- (void)commerceReviewOrderWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 주문 내역 검토
 - (void)commerceReviewOrderWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 주문 내역 검토
+- (void)commerceReviewOrderWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 상품 결제
-- (void)commercePurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(NSString * _Nonnull)paymentMethod;
-- (void)commercePurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(NSString * _Nonnull)paymentMethod eventDateStr:(NSString * _Nonnull)eventDateStr;
+- (void)commercePurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod;
+- (void)commercePurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+- (void)commercePurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDateStr:(NSString * _Nonnull)eventDateStr;
+- (void)commercePurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 주문 취소(환불)
 - (void)commerceRefundWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo penaltyCharge:(double)penaltyCharge;
+- (void)commerceRefundWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo penaltyCharge:(double)penaltyCharge commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
 - (void)commerceRefundWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo penaltyCharge:(double)penaltyCharge eventDateStr:(NSString * _Nonnull)eventDateStr;
+- (void)commerceRefundWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo penaltyCharge:(double)penaltyCharge commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 상품 검색
 - (void)commerceSearchWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo keyword:(NSString * _Nonnull)keyword;
 /// purchase 상품 검색
+- (void)commerceSearchWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo keyword:(NSString * _Nonnull)keyword commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 상품 검색
 - (void)commerceSearchWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo keyword:(NSString * _Nonnull)keyword eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 상품 검색
+- (void)commerceSearchWithProductInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo keyword:(NSString * _Nonnull)keyword commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 상품 공유
 - (void)commerceShareWithChannel:(enum AdBrixSharingChannel)channel productInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo;
 /// purchase 상품 공유
+- (void)commerceShareWithChannel:(enum AdBrixSharingChannel)channel productInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr;
+/// purchase 상품 공유
 - (void)commerceShareWithChannel:(enum AdBrixSharingChannel)channel productInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 상품 공유
+- (void)commerceShareWithChannel:(enum AdBrixSharingChannel)channel productInfo:(AdBrixRmCommerceProductModel * _Nonnull)productInfo commerceExtraAttr:(NSDictionary<NSString *, id> * _Nullable)commerceExtraAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 통화 타입을 반환한다
 - (NSString * _Nonnull)getCurrencyStringByAdBrixCurrencyType:(enum AdBrixCurrencyType)currency SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getCurrencyString:(NSInteger)currency SWIFT_WARN_UNUSED_RESULT;
@@ -382,6 +418,12 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// </ul>
 /// 유저 구분(프로퍼티)값을 반환한다
 - (NSDictionary<NSString *, id> * _Nonnull)getUserProperties SWIFT_WARN_UNUSED_RESULT;
+- (enum AdBrixSharingChannel)convertChannel:(NSInteger)code SWIFT_WARN_UNUSED_RESULT;
+- (enum AdbrixPaymentMethod)convertPayment:(NSInteger)code SWIFT_WARN_UNUSED_RESULT;
+- (enum AdBrixGenderType)convertGender:(NSInteger)code SWIFT_WARN_UNUSED_RESULT;
+- (enum AdBrixLogLevel)convertLogLevel:(NSInteger)code SWIFT_WARN_UNUSED_RESULT;
+- (enum AdBrixEventUploadTimeInterval)convertTimeInterval:(NSInteger)code SWIFT_WARN_UNUSED_RESULT;
+- (enum AdBrixEventUploadCountInterval)convertCountInterval:(NSInteger)code SWIFT_WARN_UNUSED_RESULT;
 @end
 
 typedef SWIFT_ENUM(NSInteger, AdBrixLogLevel) {
@@ -432,6 +474,7 @@ typedef SWIFT_ENUM(NSInteger, AdBrixSharingChannel) {
 typedef SWIFT_ENUM(NSInteger, AdBrixGenderType) {
   AdBrixGenderTypeMale = 2,
   AdBrixGenderTypeFemale = 1,
+  AdBrixGenderTypeUnknown = 0,
 };
 
 /// 커머스 결제 통화
@@ -458,13 +501,6 @@ typedef SWIFT_ENUM(NSInteger, AdbrixPaymentMethod) {
   AdbrixPaymentMethodBankTransfer = 2,
   AdbrixPaymentMethodMobilePayment = 3,
   AdbrixPaymentMethodETC = 4,
-};
-
-/// 커머스 코호트
-typedef SWIFT_ENUM(NSInteger, AdBrixCustomCohortType) {
-  AdBrixCustomCohortTypeAdBrixCustomCohort_1 = 1,
-  AdBrixCustomCohortTypeAdBrixCustomCohort_2 = 2,
-  AdBrixCustomCohortTypeAdBrixCustomCohort_3 = 3,
 };
 
 
