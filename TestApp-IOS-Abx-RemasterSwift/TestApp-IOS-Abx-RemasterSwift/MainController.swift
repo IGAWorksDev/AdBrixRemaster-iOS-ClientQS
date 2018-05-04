@@ -491,7 +491,7 @@ class MainContoller : UIViewController {
         arr.append(productModel)
         
         //상품 결제 - 신용카드
-        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard))
+        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
         
         //Extra Attr 사용시
         //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), commerceExtraAttr: self.getExtraAttrDic())
@@ -544,7 +544,8 @@ class MainContoller : UIViewController {
         arr.append(productModel2)
         
         //상품 결제 - 모바일 결제
-        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard)
+        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:
+            AdBrixRM.AdbrixPaymentMethod.CreditCard
         )
         
         //Extra Attr 사용시

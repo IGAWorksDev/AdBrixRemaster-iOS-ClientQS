@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A9A0A83FC832A4991559F4698826F625'
-               BlueprintName = 'Pods-TestApp-IOS-Abx-RemasterObjC-forCocoaPod'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-TestApp-IOS-Abx-RemasterObjC-forCocoaPod.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A9A0A83FC832A4991559F4698826F625"
+               BlueprintName = "Pods-TestApp-IOS-Abx-RemasterObjC-forCocoaPod"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libPods-TestApp-IOS-Abx-RemasterObjC-forCocoaPod.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

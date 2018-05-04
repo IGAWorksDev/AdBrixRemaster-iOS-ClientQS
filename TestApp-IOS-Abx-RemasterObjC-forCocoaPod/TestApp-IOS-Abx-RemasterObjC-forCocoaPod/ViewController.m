@@ -127,63 +127,85 @@
 - (IBAction)click_commerceViewHome:(id)sender {
     [_adBrix commerceViewHome];
     
-   
+    //with extra dictionary
+    //[_adBrix commerceViewHomeWithCommerceExtraAttr:commerceExtraDict];
+    
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceViewHomeWithEventDateStr:[self getDateStr]];
+    
+    
+    
+    //Extra Attr 사용시
+    //[_adBrix commerceViewHomeWithCommerceExtraAttr:[self getExtraDic]];
+    //[_adBrix commerceViewHomeWithCommerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
 - (IBAction)click_commerceCategoryView:(id)sender {
     
+    AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
+                                                                                     productName:@"이월특가 나염 맨투맨"
+                                                                                           price:10000.00
+                                                                                        quantity:1
+                                                                                        discount:5000.00
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                       @"9", @"no",
+                                                                                                                                                       @"black", @"color",
+                                                                                                                                                       @"XXL", @"size"
+                                                                                                                                                       , nil]
+                                                                                                  ]
+                                                  ];
+    
+    
+    //NSMutableArray방식
+    NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
+    [productArray addObject:productModel];
+    
     //카테고리 [기획전]을 열었을때
-    [_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]];
+    [_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray];
     
     //카테고리 [바겐세일]을 열었을때
-    [_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"바겐세일" category2:@"바겐세일1-1" category3:@"바겐세일1-2"]];
+    [_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"바겐세일" category2:@"바겐세일1-1" category3:@"바겐세일1-2"] productInfo: productArray];
     
     
-   
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]  eventDateStr:[self getDateStr]];
+    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray eventDateStr:[self getDateStr]];
+    
+    //Extra Attr 사용시
+    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray commerceExtraAttr: [self getExtraDic]];
+    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray commerceExtraAttr: [self getExtraDic] eventDateStr:[self getDateStr]];
+    
 }
 - (IBAction)click_commerceProductView:(id)sender {
     
     //가을 맞이 슬렉스 10종 특가
     NSDictionary *extraDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   @"9", @"no",
-                                   @"black", @"color",
-                                   @"XXL", @"size"
-                                    , nil];
+                               @"9", @"no",
+                               @"black", @"color",
+                               @"XXL", @"size"
+                               , nil];
+    
+    AdBrixRmCommerceProductModel *productModel = [
+                                                  _adBrix createCommerceProductDataWithProductId:@"5385487400"
+                                                  productName:@"가을 맞이 슬렉스 10종 특가"
+                                                  price:10000.00
+                                                  quantity:1
+                                                  discount:1000.00
+                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                  category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
+                                                  ];
+    
     
     //상품 상세보기
-    [_adBrix commerceProductViewWithProductInfo:[
-                                                 _adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                         productName:@"가을 맞이 슬렉스 10종 특가"
-                                                         price:10000.00
-                                                         quantity:1
-                                                         discount:1000.00
-                                                         currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                         extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
-                                                 ]
-     ];
+    [_adBrix commerceProductViewWithProductInfo:productModel];
     
-    /*
-     
-   
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceProductViewWithProductInfo:[
-                                                 _adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                 productName:@"가을 맞이 슬렉스 10종 특가"
-                                                 price:10000.00
-                                                 discount:1000.00
-                                                 quantity:1
-                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                 category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                 extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
-                                                 ]
-                                      eventDateStr:[self getDateStr]
-     ];
-     
-     */
+    //[_adBrix commerceProductViewWithProductInfo:productModel eventDateStr:[self getDateStr]];
+    
+    //Extra Attr 사용시
+    //[_adBrix commerceProductViewWithProductInfo:productModel commerceExtraAttr:[self getExtraDic]];
+    //[_adBrix commerceProductViewWithProductInfo:productModel commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
 
 - (IBAction)click_commerceAddToCart:(id)sender {
@@ -196,71 +218,68 @@
                                , nil];
     
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                   productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                 price:10000.00
+                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                           price:10000.00
                                                                                         quantity:1
                                                                                         discount:1000.00
-                                                                        currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                              category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                         extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
-                                        ];
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
+                                                  ];
     
     //NSMutableArray방식
-    
-    
-    
+    //NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
+    //[productArray addObject:productModel];
+    //[productArray addObject:productModel2];
     
     //NSArray방식
     NSArray *productArray = [[NSArray alloc] initWithObjects:productModel, nil];
     [_adBrix commerceAddToCartWithProductInfo:productArray];
     
-    /*
-     
     
-     
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceAddToCartWithProductInfo:productArray
-                                 eventDateStr:[self getDateStr]
-     ];
-     
-     */
+    //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
+    
+    //Extra Attr 사용시
+    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic]];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
 
 - (IBAction)click_commerceAddToCartBulk:(id)sender {
     
     //가을 맞이 슬렉스 10종 특가
-    NSDictionary *extraDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"9", @"no",
-                               @"black", @"color",
-                               @"XXL", @"size"
-                               , nil];
+    NSDictionary *productExtraDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      @"9", @"no",
+                                      @"black", @"color",
+                                      @"XXL", @"size"
+                                      , nil];
     
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                   productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                  price:10000.00
-                                                                                quantity:1
-                                                                                discount:1000.00
-                                                                         currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                               category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                          extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
-                                         ];
+                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                           price:10000.00
+                                                                                        quantity:1
+                                                                                        discount:1000.00
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict]
+                                                  ];
     
     //이월특가 나염 맨투맨
-    NSDictionary *extraDict2 = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"13", @"no",
-                               @"gray", @"color",
-                               @"XXL", @"size"
-                               , nil];
+    NSDictionary *productExtraDict2 = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       @"13", @"no",
+                                       @"gray", @"color",
+                                       @"XXL", @"size"
+                                       , nil];
     
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
-                                                                                    productName:@"이월특가 나염 맨투맨"
-                                                                                          price:10000.00
-                                                                                     quantity:1
-                                                                                     discount:1000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict2]
-                                         ];
+                                                                                      productName:@"이월특가 나염 맨투맨"
+                                                                                            price:10000.00
+                                                                                         quantity:1
+                                                                                         discount:1000.00
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict2]
+                                                   ];
     
     //NSMutableArray방식
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
@@ -273,16 +292,13 @@
     //장바구니 담기
     [_adBrix commerceAddToCartWithProductInfo:productArray];
     
-    /*
-     
-   
     
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceAddToCartWithProductInfo:productArray
-                                 eventDateStr:[self getDateStr]
-    ];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
     
-    */
+    //Extra Attr 사용시
+    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic]];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
 
 - (IBAction)click_commerceAddToWishList:(id)sender {
@@ -295,26 +311,24 @@
                                , nil];
     
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                   productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                         price:10000.00
-                                                                                    quantity:1
-                                                                                    discount:1000.00
-                                                                                currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                      category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                 extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
-                                                ];
+                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                           price:10000.00
+                                                                                        quantity:1
+                                                                                        discount:5000.00
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                   extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
+                                                  ];
     
     //위시리스트(관심상품) 추가
     [_adBrix commerceAddToWishListWithProductInfo:productModel];
     
-    /*
-         
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceAddToWishListWithProductInfo:productModel
-                                     eventDateStr:[self getDateStr]
-    ];
-     
-     */
+    //[_adBrix commerceAddToWishListWithProductInfo:productModel eventDateStr:[self getDateStr]];
+    
+    //Extra Attr 사용시
+    //[_adBrix commerceAddToWishListWithProductInfo:productModel commerceExtraAttr:[self getExtraDic]];
+    //[_adBrix commerceAddToWishListWithProductInfo:productModel commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
 - (IBAction)click_commerceReviewOrder:(id)sender {
     
@@ -325,19 +339,31 @@
      */
     
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                         @"9", @"no",
-                                                                                                         @"black", @"color",
-                                                                                                         @"XXL", @"size"
-                                                                                                         , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
+    
+    //    AdBrixRmCommerceProductModel *productModel3 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
+    //                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+    //                                                                                            price:10000.00
+    //                                                                                         quantity:1
+    //                                                                                         discount:5000.00
+    //                                                                                   currencyString:nil
+    //                                                                                         category:nil
+    //                                                                                    extraAttrsMap:nil
+    //                                                   ];
+    
+    
     
     
     //NSMutableArray방식
@@ -352,21 +378,42 @@
                                 productInfo:productArray
                                    discount:0.00
                              deliveryCharge:3500.00
-    ];
+     ];
     
     /*
      
-   
      
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceReviewOrderWithOrderId:@"100021"
-                                productInfo:productArray
-                                   discount:0.00
-                             deliveryCharge:3500.00
-                               eventDateStr:[self getDateStr]
-    ];
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commerceReviewOrderWithOrderId:@"100021"
+                                 productInfo:productArray
+                                 discount:0.00
+                                 deliveryCharge:3500.00
+                                 eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    */
+    
+    
+    //Extra Attr 사용시
+    /*
+     
+     [_adBrix commerceReviewOrderWithOrderId:@"100021"
+                                 productInfo:productArray
+                                    discount:0.00
+                              deliveryCharge:3500.00
+                           commerceExtraAttr:[self getExtraDic]
+     ];
+     [_adBrix commerceReviewOrderWithOrderId:@"100021"
+                                 productInfo:productArray
+                                    discount:0.00
+                              deliveryCharge:3500.00
+                           commerceExtraAttr:[self getExtraDic]
+                                eventDateStr:[self getDateStr]
+     ];
+     
+     */
 }
 
 - (IBAction)click_commerceReviewOrderBulk:(id)sender {
@@ -377,34 +424,34 @@
      */
     
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
                                                                                          quantity:1
-                                                                                         discount:1000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                         @"9", @"no",
-                                                                                                         @"black", @"color",
-                                                                                                         @"XXL", @"size"
-                                                                                                         , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                         discount:5000.00
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
-                                                                                    productName:@"이월특가 나염 맨투맨"
-                                                                                          price:10000.00
+                                                                                      productName:@"이월특가 나염 맨투맨"
+                                                                                            price:10000.00
                                                                                          quantity:1
-                                                                                         discount:1000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                        @"9", @"no",
-                                                                                                        @"black", @"color",
-                                                                                                        @"XXL", @"size"
-                                                                                                        , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                         discount:5000.00
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     
     //NSMutableArray방식
@@ -423,17 +470,36 @@
     
     /*
      
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commerceReviewOrderWithOrderId:@"30290121"
+                                 productInfo:productArray
+                                 discount:0.00
+                                 deliveryCharge:3500.00
+                                 eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
     
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceReviewOrderWithOrderId:@"30290121"
-                                productInfo:productArray
-                                   discount:0.00
-                             deliveryCharge:3500.00
-                               eventDateStr:[self getDateStr]
-    ];
-    
-    */
+    //Extra Attr 사용시
+    /*
+     
+     [_adBrix commerceReviewOrderWithOrderId:@"30290121"
+                                 productInfo:productArray
+                                 discount:0.00
+                                 deliveryCharge:3500.00
+                                 commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commerceReviewOrderWithOrderId:@"30290121"
+                                 productInfo:productArray
+                                 discount:0.00
+                                 deliveryCharge:3500.00
+                                 commerceExtraAttr:[self getExtraDic]
+                                 eventDateStr:[self getDateStr]
+     ];
+     
+     */
 }
 
 - (IBAction)click_commercePurchase:(id)sender {
@@ -445,19 +511,19 @@
      */
     
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                         @"9", @"no",
-                                                                                                         @"black", @"color",
-                                                                                                         @"XXL", @"size"
-                                                                                                         , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     //NSMutableArray방식
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
@@ -471,24 +537,44 @@
                              productInfo:productArray
                                 discount:0.00
                           deliveryCharge:3500.00
-                           paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
-    ];
+                           paymentMethod:AdbrixPaymentMethodCreditCard
+     ];
     
     
     /*
      
-  
+     
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commercePurchaseWithOrderId:@"290192012"
+                                 productInfo:productArray
+                                 discount:0.00
+                                 deliveryCharge:3500.00
+                                 paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
+                                 eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commercePurchaseWithOrderId:@"290192012"
+    //Extra Attr 사용시
+    /*
+     [_adBrix commercePurchaseWithOrderId:@"290192012"
                              productInfo:productArray
-                                discount:0.00
-                          deliveryCharge:3500.00
-                           paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
-                            eventDateStr:[self getDateStr]
-    ];
-    
-    */
+                             discount:0.00
+                             deliveryCharge:3500.00
+                             paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
+                             commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commercePurchaseWithOrderId:@"290192012"
+                             productInfo:productArray
+                             discount:0.00
+                             deliveryCharge:3500.00
+                             paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
+                             commerceExtraAttr:[self getExtraDic]
+                             eventDateStr:[self getDateStr]
+     ];
+     */
 }
 
 - (IBAction)click_commercePurchaseBulk:(id)sender {
@@ -500,34 +586,29 @@
      */
     
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                         @"9", @"no",
-                                                                                                         @"black", @"color",
-                                                                                                         @"XXL", @"size"
-                                                                                                         , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
-                                                                                    productName:@"이월특가 나염 맨투맨"
-                                                                                          price:10000.00
+                                                                                      productName:@"이월특가 나염 맨투맨"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                      @"9", @"no",
-                                                                                                                                                      @"black", @"color",
-                                                                                                                                                      @"XXL", @"size"
-                                                                                                                                                      , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:nil
+                                                                                         category:nil
+                                                                                    extraAttrsMap:nil
+                                                   ];
     
     
     //NSMutableArray방식
@@ -541,44 +622,65 @@
     //상품 결제 - 모바일 결제
     [_adBrix commercePurchaseWithOrderId:@"290192012"
                              productInfo:productArray
-                                discount:0.00
+                                discount:10000.00
                           deliveryCharge:3500.00
-                           paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
-    ];
+                           paymentMethod:AdbrixPaymentMethodCreditCard
+     ];
     
     /*
      
-   
+     
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commercePurchaseWithOrderId:@"290192012"
+                                 productInfo:productArray
+                                 discount:0.00
+                                 deliveryCharge:3500.00
+                                 paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                                 eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commercePurchaseWithOrderId:@"290192012"
+    
+    //Extra Attr 사용시
+    /*
+     [_adBrix commercePurchaseWithOrderId:@"290192012"
+                         productInfo:productArray
+                         discount:10000.00
+                         deliveryCharge:3500.00
+                         paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                         commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commercePurchaseWithOrderId:@"290192012"
                              productInfo:productArray
-                                discount:0.00
-                          deliveryCharge:3500.00
-                           paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
-                            eventDateStr:[self getDateStr]
-    ];
-    
-    */
+                             discount:10000.00
+                             deliveryCharge:3500.00
+                             paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                             commerceExtraAttr:[self getExtraDic]
+                             eventDateStr:[self getDateStr]
+     ];
+     */
 }
 
 - (IBAction)click_commerceRefund:(id)sender {
     
     /* 일괄 주문 중에서 가을 맞이 슬렉스 10종 특가 1개 환불. 배송비 3500원이 청구됨. */
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                      @"9", @"no",
-                                                                                                                                                      @"black", @"color",
-                                                                                                                                                      @"XXL", @"size"
-                                                                                                                                                      , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     //NSMutableArray방식
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
@@ -593,49 +695,65 @@
                          penaltyCharge:3500.00];
     /*
      
-   
+     
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commerceRefundWithOrderId:@"290192012"
+                             productInfo:productArray
+                             penaltyCharge:3500.00
+                             eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceRefundWithOrderId:@"290192012"
-                           productInfo:productArray
-                         penaltyCharge:3500.00
-                          eventDateStr:[self getDateStr]
-    ];
-    
-    */
+    //Extra Attr 사용시
+    /*
+     [_adBrix commerceRefundWithOrderId:@"290192012"
+                             productInfo:productArray
+                             penaltyCharge:3500.00
+                             commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commerceRefundWithOrderId:@"290192012"
+                             productInfo:productArray
+                             penaltyCharge:3500.00
+                             commerceExtraAttr:[self getExtraDic]
+                             eventDateStr:[self getDateStr]
+     ];
+     */
 }
 
 - (IBAction)click_commerceRefundBulk:(id)sender {
     /* 일괄 주문 중에서 가을 맞이 슬렉스 10종 특가 1개, 이월특가 나염 맨투맨 1개, 모두 환불. 배송비 미청구. */
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                      @"9", @"no",
-                                                                                                                                                      @"black", @"color",
-                                                                                                                                                      @"XXL", @"size"
-                                                                                                                                                      , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
-                                                                                    productName:@"이월특가 나염 맨투맨"
-                                                                                          price:10000.00
+                                                                                      productName:@"이월특가 나염 맨투맨"
+                                                                                            price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                      @"9", @"no",
-                                                                                                                                                      @"black", @"color",
-                                                                                                                                                      @"XXL", @"size"
-                                                                                                                                                      , nil]
-                                                                                                 ]
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
     
     //NSMutableArray방식
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
@@ -650,40 +768,56 @@
                          penaltyCharge:0.00];
     
     /*
-   
+     
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commerceRefundWithOrderId:@"290192012"
+                             productInfo:productArray
+                             penaltyCharge:0.00
+                             eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceRefundWithOrderId:@"290192012"
-                           productInfo:productArray
-                         penaltyCharge:0.00
-                          eventDateStr:[self getDateStr]
-    ];
-    
-    */
+    //Extra Attr 사용시
+    /*
+     [_adBrix commerceRefundWithOrderId:@"290192012"
+                             productInfo:productArray
+                             penaltyCharge:0.00
+                             commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commerceRefundWithOrderId:@"290192012"
+                             productInfo:productArray
+                             penaltyCharge:0.00
+                             commerceExtraAttr:[self getExtraDic]
+                             eventDateStr:[self getDateStr]
+     ];
+     */
 }
 
 - (IBAction)click_commerceSearch:(id)sender {
     
     /* 나이키 운동화 검색*/
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"n24jsda922"
-                                                                                    productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
-                                                                                          price:105000.00
-                                                                                         quantity:1
+                                                                                      productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
+                                                                                            price:105000.00
+                                                                                         quantity:0
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
-                                                                                  extraAttrsMap:nil
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
+                                                                                    extraAttrsMap:nil
+                                                   ];
     
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"saf323dsa23d4f"
-                                                                                    productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
-                                                                                          price:105000.00
-                                                                                         quantity:1
+                                                                                      productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
+                                                                                            price:105000.00
+                                                                                         quantity:0
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
-                                                                                  extraAttrsMap:nil
-                                                 ];
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
+                                                                                    extraAttrsMap:nil
+                                                   ];
     
     //NSMutableArray방식
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
@@ -697,46 +831,74 @@
                                    keyword:@"나이키 운동화"];
     
     /*
+     
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commerceSearchWithProductInfo:productArray
+                                 keyword:@"나이키 운동화"
+                                 eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceSearchWithProductInfo:productArray
-                                   keyword:@"나이키 운동화"
-                              eventDateStr:[self getDateStr]
-    ];
-    
-    */
+    //Extra Attr 사용시
+    /*
+     [_adBrix commerceSearchWithProductInfo:productArray
+                                     keyword:@"나이키 운동화"
+                                     commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commerceSearchWithProductInfo:productArray
+                                 keyword:@"나이키 운동화"
+                                 commerceExtraAttr:[self getExtraDic]
+                                 eventDateStr:[self getDateStr]
+     ];
+     */
 }
 - (IBAction)click_commerceShare:(id)sender {
     
     /* 가을 맞이 슬렉스 10종 특가 상품을 카카오톡으로 공유*/
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
-                                                                                    productName:@"가을 맞이 슬렉스 10종 특가"
-                                                                                          price:10000.00
-                                                                                         quantity:1
+                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
+                                                                                            price:10000.00
+                                                                                         quantity:0
                                                                                          discount:5000.00
-                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
-                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                      @"9", @"no",
-                                                                                                                                                      @"black", @"color",
-                                                                                                                                                      @"XXL", @"size"
-                                                                                                                                                      , nil]
-                                                                                                 ]
-                                                 ];
- 
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
+                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                                                        @"9", @"no",
+                                                                                                                                                        @"black", @"color",
+                                                                                                                                                        @"XXL", @"size"
+                                                                                                                                                        , nil]
+                                                                                                   ]
+                                                   ];
+    
     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
                           productInfo:productModel1];
     
     /*
      
-   
-    //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
-                          productInfo:productModel1 eventDateStr:[self getDateStr]
-    ];
+     
+     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
+     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
+                            productInfo:productModel1 eventDateStr:[self getDateStr]
+     ];
+     
+     */
     
-    */
+    //Extra Attr 사용시
+    /*
+     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
+                         productInfo:productModel1
+                         commerceExtraAttr:[self getExtraDic]
+     ];
+     
+     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
+                         productInfo:productModel1
+                         commerceExtraAttr:[self getExtraDic]
+                         eventDateStr:[self getDateStr]
+     ];
+     */
 }
 
 
@@ -756,11 +918,11 @@
     [UIView commitAnimations];
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
     [self animateTextField: textField up: YES];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     [self animateTextField: textField up: NO];
 }
 
@@ -773,6 +935,23 @@
     [self.view endEditing:YES];
 }
 
+- (NSString *)getDateStr {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    
+    [dateFormatter setTimeZone:timeZone];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
+    
+    return dateString;
+}
 
+- (NSDictionary *) getExtraDic {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            @"val1", @"key1",
+            @"val2", @"key2"
+            , nil];
+}
 
 @end

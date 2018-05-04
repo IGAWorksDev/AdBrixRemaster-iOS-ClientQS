@@ -621,7 +621,7 @@
                              productInfo:productArray
                                 discount:10000.00
                           deliveryCharge:3500.00
-                           paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                           paymentMethod:AdbrixPaymentMethodCreditCard
     ];
     
     /*

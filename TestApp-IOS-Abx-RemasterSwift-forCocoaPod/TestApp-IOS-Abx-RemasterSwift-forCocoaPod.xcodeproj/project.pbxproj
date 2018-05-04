@@ -100,7 +100,6 @@
 				13EE5DF72064E379008A81E0 /* Frameworks */,
 				13EE5DF82064E379008A81E0 /* Resources */,
 				E5D3322AEB5CDCC40AE84239 /* [CP] Embed Pods Frameworks */,
-				069FF677BB0E0B61FD250A27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,21 +158,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		069FF677BB0E0B61FD250A27 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		39D0C9F52352826B0C01E480 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
