@@ -88,4 +88,9 @@
 + (NSString *)freeDiskSpace;
 + (NSString *)memoryFormatter:(long long)diskSpace;
 + (NSString *)getIgaworksDevice;
+
++ (NSData *)igaworksAD_AES256Encryption:(NSData *)jsonData key:(NSString *)key;
++ (NSData *)igaworksAD_AES256Decryption:(NSData *)jsonData key:(NSString *)key;
++ (NSString *)igaworksAD_tracerByteToHex:(NSData *)data;
+
 @end

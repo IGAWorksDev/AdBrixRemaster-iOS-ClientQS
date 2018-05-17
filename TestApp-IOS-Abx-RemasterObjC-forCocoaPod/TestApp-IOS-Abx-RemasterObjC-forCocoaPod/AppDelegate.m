@@ -26,15 +26,14 @@
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
         BOOL isAppleAdvertisingTrackingEnalbed = [[ASIdentifierManager sharedManager]isAdvertisingTrackingEnabled];
         [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString] :isAppleAdvertisingTrackingEnalbed];
-        NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
+       // NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
     }
     
     [adBrix setLogLevel:AdBrixLogLevelTRACE];
     [adBrix setEventUploadCountInterval:AdBrixEventUploadCountIntervalMIN];
     [adBrix setEventUploadTimeInterval:AdBrixEventUploadTimeIntervalMIN];
     
-//    [adBrix initAdBrixWithAppKey:@"appkey_demo_sdk1" deviceId:@"igaworksObjTestDevice"];
-    [adBrix initAdBrixWithAppKey:@"appkey_demo_sdk1"];
+    [adBrix initAdBrixWithAppKey:@"inputYourAppKeyFromServer" secretKey:@"inputYourSecretKeyFromServer"];
     
     return YES;
 }

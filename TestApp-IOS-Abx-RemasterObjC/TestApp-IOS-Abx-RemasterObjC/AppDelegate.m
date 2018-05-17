@@ -22,7 +22,7 @@
     AdBrixRM *adBrix = [AdBrixRM sharedInstance]; //또는 AdBrixRM *adBrixs = AdBrixRM.sharedInstance;
 
     //광고id
-    if (NSClassFromString(@"ASIdentifierManager")){
+    if (NSClassFromString(@"ASIdentifierManager")) {
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
         BOOL isAppleAdvertisingTrackingEnalbed = [[ASIdentifierManager sharedManager]isAdvertisingTrackingEnabled];
         [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString] :isAppleAdvertisingTrackingEnalbed];
@@ -36,9 +36,8 @@
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
-//    [adBrix initAdBrixWithAppKey:@"appkey_demo_sdk1" deviceId:@"igaworksObjTestDevice"];
-    [adBrix initAdBrixWithAppKey:@"ovR8ndq3jEuvil4_GM2VWA"];
-    
+    [adBrix initAdBrixWithAppKey:@"inputYourAppKeyFromServer" secretKey:@"inputYourSecretKeyFromServer"];
+  
     return YES;
 }
 
@@ -119,7 +118,7 @@
     NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     
     [dateFormatter setTimeZone:timeZone];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+    [dateFormatter setDateFormat:[[AdBrixRM sharedInstance] AdBrixDateFormat]];
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
     

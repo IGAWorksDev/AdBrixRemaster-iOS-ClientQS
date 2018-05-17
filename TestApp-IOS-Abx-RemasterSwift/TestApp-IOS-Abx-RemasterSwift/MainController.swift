@@ -127,8 +127,8 @@ class MainContoller : UIViewController {
         //adBrix.commerceViewHome(eventDateStr:  self.getDateStr())
         
         //Extra Attr 사용시
-        //adBrix.commerceViewHome(commerceExtraAttr: self.getExtraAttrDic() )
-        //adBrix.commerceViewHome(commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceViewHome(orderAttr: self.getExtraAttrDic() )
+        //adBrix.commerceViewHome(orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
    
     @IBAction func click_commerceCategoryView(_ sender: Any) {
@@ -163,8 +163,8 @@ class MainContoller : UIViewController {
         //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "바겐세일", category2: "바겐세일1-1", category3: "바겐세일1-2"), productInfo: arr)
         
         //Extra Attr 사용시
-        //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "기획전"), productInfo: arr, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "기획전"), productInfo: arr, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "기획전"), productInfo: arr, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "기획전"), productInfo: arr, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
         
         
     }
@@ -237,7 +237,7 @@ class MainContoller : UIViewController {
 //                ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
 //                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
 //            ),
-//            commerceExtraAttr: self.getExtraAttrDic()
+//            orderAttr: self.getExtraAttrDic()
 //        )
 //
 //        adBrix.commerceProductView(
@@ -251,7 +251,7 @@ class MainContoller : UIViewController {
 //                ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
 //                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
 //            ),
-//            commerceExtraAttr: self.getExtraAttrDic(),
+//            orderAttr: self.getExtraAttrDic(),
 //            eventDateStr: self.getDateStr()
 //        )
         
@@ -285,9 +285,14 @@ class MainContoller : UIViewController {
         //장바구니 담기
         adBrix.commerceAddToCart(productInfo: arr)
         
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = adBrix.AdBrixDateFormat
+//        formatter.timeZone = TimeZone(identifier: "UTC")
+//        adBrix.commerceAddToCart(productInfo: arr, eventDateStr: formatter.string(from: Date()))
+        
         //Extra Attr 사용시
-        //adBrix.commerceAddToCart(productInfo: arr, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceAddToCart(productInfo: arr, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -338,8 +343,8 @@ class MainContoller : UIViewController {
         adBrix.commerceAddToCart(productInfo: arr)
         
         //Extra Attr 사용시
-        //adBrix.commerceAddToCart(productInfo: arr, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceAddToCart(productInfo: arr, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -370,8 +375,8 @@ class MainContoller : UIViewController {
         adBrix.commerceAddToWishList(productInfo: productModel)
         
         //Extra Attr 사용시
-        //adBrix.commerceAddToWishList(productInfo: productModel, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceAddToWishList(productInfo: productModel, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceAddToWishList(productInfo: productModel, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceAddToWishList(productInfo: productModel, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -406,8 +411,8 @@ class MainContoller : UIViewController {
         adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00)
         
         //Extra Attrs 사용시
-        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -457,8 +462,8 @@ class MainContoller : UIViewController {
         adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00)
         
         //Extra Attr 사용시
-        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -494,8 +499,8 @@ class MainContoller : UIViewController {
         adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
         
         //Extra Attr 사용시
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), orderAttr: self.getExtraAttrDic())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -549,9 +554,9 @@ class MainContoller : UIViewController {
         )
         
         //Extra Attr 사용시
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard),commerceExtraAttr: self.getExtraAttrDic())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard),orderAttr: self.getExtraAttrDic())
         
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard),commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard),orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -583,8 +588,8 @@ class MainContoller : UIViewController {
         adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00)
         
         //Extra Attr 사용시
-        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -631,8 +636,8 @@ class MainContoller : UIViewController {
         adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00)
         
         //Extra Attr 사용시
-        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
    
@@ -668,8 +673,8 @@ class MainContoller : UIViewController {
         adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화")
         
         //Extra Attr 사용시
-        //adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화", commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화", commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화", orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화", orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -695,8 +700,8 @@ class MainContoller : UIViewController {
         adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel)
         
         //Extra Attr 사용시
-        //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, commerceExtraAttr: self.getExtraAttrDic())
-        //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, commerceExtraAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic())
+        //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     

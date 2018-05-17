@@ -165,8 +165,8 @@
     //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray eventDateStr:[self getDateStr]];
     
     //Extra Attr 사용시
-    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray commerceExtraAttr: [self getExtraDic]];
-    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray commerceExtraAttr: [self getExtraDic] eventDateStr:[self getDateStr]];
+    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray orderAttr: [self getExtraDic]];
+    //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray orderAttr: [self getExtraDic] eventDateStr:[self getDateStr]];
 }
 - (IBAction)click_commerceProductView:(id)sender {
     
@@ -196,8 +196,8 @@
     //[_adBrix commerceProductViewWithProductInfo:productModel eventDateStr:[self getDateStr]];
     
     //Extra Attr 사용시
-    //[_adBrix commerceProductViewWithProductInfo:productModel commerceExtraAttr:[self getExtraDic]];
-    //[_adBrix commerceProductViewWithProductInfo:productModel commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
+    //[_adBrix commerceProductViewWithProductInfo:productModel orderAttr:[self getExtraDic]];
+    //[_adBrix commerceProductViewWithProductInfo:productModel orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
 
 - (IBAction)click_commerceAddToCart:(id)sender {
@@ -233,8 +233,8 @@
     //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
     
     //Extra Attr 사용시
-    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic]];
-    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic]];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
      
 }
 
@@ -290,8 +290,8 @@
     //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
     
     //Extra Attr 사용시
-    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic]];
-    //[_adBrix commerceAddToCartWithProductInfo:productArray commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic]];
+    //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
     
  
 }
@@ -322,8 +322,8 @@
     //[_adBrix commerceAddToWishListWithProductInfo:productModel eventDateStr:[self getDateStr]];
     
     //Extra Attr 사용시
-    //[_adBrix commerceAddToWishListWithProductInfo:productModel commerceExtraAttr:[self getExtraDic]];
-    //[_adBrix commerceAddToWishListWithProductInfo:productModel commerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
+    //[_adBrix commerceAddToWishListWithProductInfo:productModel orderAttr:[self getExtraDic]];
+    //[_adBrix commerceAddToWishListWithProductInfo:productModel orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
     
 }
 - (IBAction)click_commerceReviewOrder:(id)sender {
@@ -399,13 +399,13 @@
                                 productInfo:productArray
                                    discount:0.00
                              deliveryCharge:3500.00
-                            commerceExtraAttr:[self getExtraDic]
+                            orderAttr:[self getExtraDic]
      ];
     [_adBrix commerceReviewOrderWithOrderId:@"100021"
                                 productInfo:productArray
                                    discount:0.00
                              deliveryCharge:3500.00
-                          commerceExtraAttr:[self getExtraDic]
+                          orderAttr:[self getExtraDic]
                                eventDateStr:[self getDateStr]
      ];
      
@@ -484,14 +484,14 @@
                                 productInfo:productArray
                                    discount:0.00
                              deliveryCharge:3500.00
-                            commerceExtraAttr:[self getExtraDic]
+                            orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commerceReviewOrderWithOrderId:@"30290121"
                                 productInfo:productArray
                                    discount:0.00
                              deliveryCharge:3500.00
-                          commerceExtraAttr:[self getExtraDic]
+                          orderAttr:[self getExtraDic]
                                eventDateStr:[self getDateStr]
      ];
      
@@ -559,7 +559,7 @@
                                 discount:0.00
                           deliveryCharge:3500.00
                            paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
-                       commerceExtraAttr:[self getExtraDic]
+                       orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commercePurchaseWithOrderId:@"290192012"
@@ -567,7 +567,7 @@
                                 discount:0.00
                           deliveryCharge:3500.00
                            paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
-                       commerceExtraAttr:[self getExtraDic]
+                       orderAttr:[self getExtraDic]
                             eventDateStr:[self getDateStr]
      ];
      */
@@ -647,7 +647,7 @@
                                 discount:10000.00
                           deliveryCharge:3500.00
                            paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
-                       commerceExtraAttr:[self getExtraDic]
+                       orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commercePurchaseWithOrderId:@"290192012"
@@ -655,7 +655,7 @@
                                 discount:10000.00
                           deliveryCharge:3500.00
                            paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
-                       commerceExtraAttr:[self getExtraDic]
+                       orderAttr:[self getExtraDic]
                             eventDateStr:[self getDateStr]
      ];
      */
@@ -708,13 +708,13 @@
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
                          penaltyCharge:3500.00
-                     commerceExtraAttr:[self getExtraDic]
+                     orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
                          penaltyCharge:3500.00
-                     commerceExtraAttr:[self getExtraDic]
+                     orderAttr:[self getExtraDic]
                           eventDateStr:[self getDateStr]
      ];
      */
@@ -781,13 +781,13 @@
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
                          penaltyCharge:0.00
-                     commerceExtraAttr:[self getExtraDic]
+                     orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
                          penaltyCharge:0.00
-                     commerceExtraAttr:[self getExtraDic]
+                     orderAttr:[self getExtraDic]
                           eventDateStr:[self getDateStr]
      ];
      */
@@ -799,7 +799,7 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"n24jsda922"
                                                                                     productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
                                                                                           price:105000.00
-                                                                                         quantity:0
+                                                                                         quantity:1
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
@@ -809,7 +809,7 @@
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"saf323dsa23d4f"
                                                                                     productName:@"[나이키] 나이키NIKE WMNS AIR MAX THEA WHITE womens 599409-103"
                                                                                           price:105000.00
-                                                                                         quantity:0
+                                                                                         quantity:1
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
@@ -842,12 +842,12 @@
     /*
     [_adBrix commerceSearchWithProductInfo:productArray
                                    keyword:@"나이키 운동화"
-                         commerceExtraAttr:[self getExtraDic]
+                         orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commerceSearchWithProductInfo:productArray
                                    keyword:@"나이키 운동화"
-                         commerceExtraAttr:[self getExtraDic]
+                         orderAttr:[self getExtraDic]
                               eventDateStr:[self getDateStr]
      ];
      */
@@ -859,7 +859,7 @@
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
-                                                                                         quantity:0
+                                                                                         quantity:1
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
@@ -888,12 +888,12 @@
     /*
     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
                           productInfo:productModel1
-                    commerceExtraAttr:[self getExtraDic]
+                    orderAttr:[self getExtraDic]
      ];
     
     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
                           productInfo:productModel1
-                    commerceExtraAttr:[self getExtraDic]
+                    orderAttr:[self getExtraDic]
                          eventDateStr:[self getDateStr]
      ];
      */

@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             let isAppleAdvertisingTrackingEnalbed :Bool = ASIdentifierManager.shared().isAdvertisingTrackingEnabled;
             adBrix.setAppleAdvertisingIdentifier(ifa.uuidString, isAppleAdvertisingTrackingEnalbed)
             
-            print("ifa UUIDString :: \(ifa.uuidString)")
+        //    print("ifa UUIDString :: \(ifa.uuidString)")
         }
         
         
@@ -36,8 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
-        //adBrix.initAdBrix(appKey: "test_app1", hashKey: "swift0123")
-        adBrix.initAdBrix(appKey: "appkey_demo_sdk1", deviceId: "IgaworksSwiftTestDevice")
+        adBrix.initAdBrix(appKey: "inputYourAppKeyFromServer", secretKey:"inputYourSecretKeyFromServer", deviceId: "IgaworksSwiftTestDevice")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
        
