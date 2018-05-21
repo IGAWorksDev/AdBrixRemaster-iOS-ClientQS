@@ -550,7 +550,7 @@
                                  productInfo:productArray
                                  discount:0.00
                                  deliveryCharge:3500.00
-                                 paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
+                                 paymentMethod:AdbrixPaymentMethodCreditCard
                                  eventDateStr:[self getDateStr]
      ];
      
@@ -562,7 +562,7 @@
                              productInfo:productArray
                              discount:0.00
                              deliveryCharge:3500.00
-                             paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
+                             paymentMethod:AdbrixPaymentMethodCreditCard
                              commerceExtraAttr:[self getExtraDic]
      ];
      
@@ -570,7 +570,7 @@
                              productInfo:productArray
                              discount:0.00
                              deliveryCharge:3500.00
-                             paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodCreditCard]
+                             paymentMethod:AdbrixPaymentMethodCreditCard
                              commerceExtraAttr:[self getExtraDic]
                              eventDateStr:[self getDateStr]
      ];
@@ -636,7 +636,7 @@
                                  productInfo:productArray
                                  discount:0.00
                                  deliveryCharge:3500.00
-                                 paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                                 paymentMethod:AdbrixPaymentMethodCreditCard
                                  eventDateStr:[self getDateStr]
      ];
      
@@ -649,7 +649,7 @@
                          productInfo:productArray
                          discount:10000.00
                          deliveryCharge:3500.00
-                         paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                         paymentMethod:AdbrixPaymentMethodCreditCard
                          commerceExtraAttr:[self getExtraDic]
      ];
      
@@ -657,7 +657,7 @@
                              productInfo:productArray
                              discount:10000.00
                              deliveryCharge:3500.00
-                             paymentMethod:[_adBrix getPaymentMethod:AdbrixPaymentMethodMobilePayment]
+                             paymentMethod:AdbrixPaymentMethodCreditCard
                              commerceExtraAttr:[self getExtraDic]
                              eventDateStr:[self getDateStr]
      ];

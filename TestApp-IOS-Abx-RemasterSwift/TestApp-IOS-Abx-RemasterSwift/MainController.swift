@@ -499,8 +499,8 @@ class MainContoller : UIViewController {
         adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
         
         //Extra Attr 사용시
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), orderAttr: self.getExtraAttrDic())
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard), orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     
@@ -554,9 +554,9 @@ class MainContoller : UIViewController {
         )
         
         //Extra Attr 사용시
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard),orderAttr: self.getExtraAttrDic())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic())
         
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:adBrix.getPaymentMethodByAdbrixPaymentMethod(AdBrixRM.AdbrixPaymentMethod.CreditCard),orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
     

@@ -39,8 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.initAdBrix(appKey: "inputYourAppKeyFromServer", secretKey:"inputYourSecretKeyFromServer", deviceId: "IgaworksSwiftTestDevice")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
-       
-        
+                
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

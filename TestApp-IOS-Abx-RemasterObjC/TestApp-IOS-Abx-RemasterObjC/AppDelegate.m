@@ -20,13 +20,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     AdBrixRM *adBrix = [AdBrixRM sharedInstance]; //또는 AdBrixRM *adBrixs = AdBrixRM.sharedInstance;
-
+    
     //광고id
     if (NSClassFromString(@"ASIdentifierManager")) {
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
         BOOL isAppleAdvertisingTrackingEnalbed = [[ASIdentifierManager sharedManager]isAdvertisingTrackingEnabled];
         [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString] :isAppleAdvertisingTrackingEnalbed];
-        NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
+        //NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
     }
     
     [adBrix setLogLevel:AdBrixLogLevelNONE];
@@ -36,8 +36,10 @@
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
-    [adBrix initAdBrixWithAppKey:@"inputYourAppKeyFromServer" secretKey:@"inputYourSecretKeyFromServer"];
+    [adBrix initAdBrixWithAppKey:@"" secretKey:@""];
   
+    
+    
     return YES;
 }
 
