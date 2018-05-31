@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1302CAFA20BD168A0024824B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1302CAF920BD168A0024824B /* CoreLocation.framework */; };
 		132FED38203FFF1700793D1D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED37203FFF1600793D1D /* iAd.framework */; };
 		132FED3A203FFF1C00793D1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED39203FFF1B00793D1D /* UIKit.framework */; };
 		137A0BE020294B0100F3072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A0BDF20294B0100F3072C /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1302CAF920BD168A0024824B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		132FED37203FFF1600793D1D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		132FED39203FFF1B00793D1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		137A0BDC20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestApp-IOS-Abx-RemasterSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1302CAFA20BD168A0024824B /* CoreLocation.framework in Frameworks */,
 				132FED3A203FFF1C00793D1D /* UIKit.framework in Frameworks */,
 				132FED38203FFF1700793D1D /* iAd.framework in Frameworks */,
 				13EE5E72206893D2008A81E0 /* AdBrixRM.framework in Frameworks */,
@@ -154,6 +157,7 @@
 		137A0C0D20294B2A00F3072C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1302CAF920BD168A0024824B /* CoreLocation.framework */,
 				132FED39203FFF1B00793D1D /* UIKit.framework */,
 				132FED37203FFF1600793D1D /* iAd.framework */,
 			);

@@ -29,7 +29,7 @@
         //NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
     }
     
-    [adBrix setLogLevel:AdBrixLogLevelNONE];
+    [adBrix setLogLevel:AdBrixLogLevelERROR];
     [adBrix setEventUploadCountInterval:AdBrixEventUploadCountIntervalMIN];
     [adBrix setEventUploadTimeInterval:AdBrixEventUploadTimeIntervalMIN];
     

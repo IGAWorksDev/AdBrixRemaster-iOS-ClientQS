@@ -127,7 +127,7 @@
     
    
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     //[_adBrix commerceViewHomeWithCommerceExtraAttr:[self getExtraDic]];
     //[_adBrix commerceViewHomeWithCommerceExtraAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
     
@@ -141,7 +141,7 @@
                                                                                          discount:5000.00
                                                                                    currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                    extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
                                                                                                                                                         @"black", @"color",
                                                                                                                                                         @"XXL", @"size"
@@ -164,7 +164,7 @@
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray eventDateStr:[self getDateStr]];
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray orderAttr: [self getExtraDic]];
     //[_adBrix commerceCategoryViewWithCategory:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"] productInfo: productArray orderAttr: [self getExtraDic] eventDateStr:[self getDateStr]];
 }
@@ -185,7 +185,7 @@
                                                   discount:1000.00
                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                   category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
+                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                   ];
     
     
@@ -195,7 +195,7 @@
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceProductViewWithProductInfo:productModel eventDateStr:[self getDateStr]];
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     //[_adBrix commerceProductViewWithProductInfo:productModel orderAttr:[self getExtraDic]];
     //[_adBrix commerceProductViewWithProductInfo:productModel orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
 }
@@ -216,7 +216,7 @@
                                                                               discount:1000.00
                                                                         currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                               category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                         extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
+                                                                         productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                         ];
     
     //NSMutableArray방식
@@ -232,7 +232,7 @@
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic]];
     //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
      
@@ -254,7 +254,7 @@
                                                                                 discount:1000.00
                                                                          currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                          extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict]
+                                                                          productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict]
                                          ];
     
     //이월특가 나염 맨투맨
@@ -271,7 +271,7 @@
                                                                                        discount:1000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict2]
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict2]
                                          ];
     
     //NSMutableArray방식
@@ -289,7 +289,7 @@
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic]];
     //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
     
@@ -312,7 +312,7 @@
                                                                                       discount:5000.00
                                                                                 currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                       category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                 extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
+                                                                                 productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                 ];
     
     //위시리스트(관심상품) 추가
@@ -321,7 +321,7 @@
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceAddToWishListWithProductInfo:productModel eventDateStr:[self getDateStr]];
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     //[_adBrix commerceAddToWishListWithProductInfo:productModel orderAttr:[self getExtraDic]];
     //[_adBrix commerceAddToWishListWithProductInfo:productModel orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
     
@@ -341,7 +341,7 @@
                                                                                        discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                          @"9", @"no",
                                                                                                          @"black", @"color",
                                                                                                          @"XXL", @"size"
@@ -356,7 +356,7 @@
 //                                                                                         discount:5000.00
 //                                                                                   currencyString:nil
 //                                                                                         category:nil
-//                                                                                    extraAttrsMap:nil
+//                                                                                    productAttrsMap:nil
 //                                                   ];
     
     
@@ -392,7 +392,7 @@
     
     
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
      
     [_adBrix commerceReviewOrderWithOrderId:@"100021"
@@ -426,7 +426,7 @@
                                                                                        discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                          @"9", @"no",
                                                                                                          @"black", @"color",
                                                                                                          @"XXL", @"size"
@@ -441,7 +441,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                         @"9", @"no",
                                                                                                         @"black", @"color",
                                                                                                         @"XXL", @"size"
@@ -477,7 +477,7 @@
     */
     
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
      
     [_adBrix commerceReviewOrderWithOrderId:@"30290121"
@@ -513,7 +513,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                          @"9", @"no",
                                                                                                          @"black", @"color",
                                                                                                          @"XXL", @"size"
@@ -552,7 +552,7 @@
     
     */
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
     [_adBrix commercePurchaseWithOrderId:@"290192012"
                              productInfo:productArray
@@ -589,7 +589,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                          @"9", @"no",
                                                                                                          @"black", @"color",
                                                                                                          @"XXL", @"size"
@@ -604,7 +604,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:nil
                                                                                        category:nil
-                                                                                  extraAttrsMap:nil
+                                                                                  productAttrsMap:nil
                                                  ];
     
     
@@ -640,7 +640,7 @@
     */
     
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
     [_adBrix commercePurchaseWithOrderId:@"290192012"
                              productInfo:productArray
@@ -671,7 +671,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                       @"9", @"no",
                                                                                                                                                       @"black", @"color",
                                                                                                                                                       @"XXL", @"size"
@@ -703,7 +703,7 @@
     
     */
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
@@ -729,7 +729,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                       @"9", @"no",
                                                                                                                                                       @"black", @"color",
                                                                                                                                                       @"XXL", @"size"
@@ -744,7 +744,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                       @"9", @"no",
                                                                                                                                                       @"black", @"color",
                                                                                                                                                       @"XXL", @"size"
@@ -776,7 +776,7 @@
     
     */
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
@@ -803,7 +803,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
-                                                                                  extraAttrsMap:nil
+                                                                                  productAttrsMap:nil
                                                  ];
     
     AdBrixRmCommerceProductModel *productModel2 = [_adBrix createCommerceProductDataWithProductId:@"saf323dsa23d4f"
@@ -813,7 +813,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
-                                                                                  extraAttrsMap:nil
+                                                                                  productAttrsMap:nil
                                                  ];
     
     //NSMutableArray방식
@@ -838,7 +838,7 @@
     
     */
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
     [_adBrix commerceSearchWithProductInfo:productArray
                                    keyword:@"나이키 운동화"
@@ -863,7 +863,7 @@
                                                                                          discount:5000.00
                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                  extraAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                  productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                       @"9", @"no",
                                                                                                                                                       @"black", @"color",
                                                                                                                                                       @"XXL", @"size"
@@ -884,7 +884,7 @@
     
     */
     
-    //Extra Attr 사용시
+    //Order Attr 사용시
     /*
     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
                           productInfo:productModel1

@@ -32,11 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         
         
-        adBrix.setLogLevel(AdBrixRM.AdBrixLogLevel.TRACE)
+        adBrix.setLogLevel(AdBrixRM.AdBrixLogLevel.ERROR)
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
-        adBrix.initAdBrix(appKey: "inputYourAppKeyFromServer", secretKey:"inputYourSecretKeyFromServer", deviceId: "IgaworksSwiftTestDevice")
+        adBrix.initAdBrix(appKey: "inputYourAppKeyFromServer", secretKey:"inputYourSecretKeyFromServer")
+        
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
                 

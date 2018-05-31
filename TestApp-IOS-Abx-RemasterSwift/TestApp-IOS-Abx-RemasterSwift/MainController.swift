@@ -126,7 +126,7 @@ class MainContoller : UIViewController {
         //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - adBrix.AdBrixDateFormat format 준수
         //adBrix.commerceViewHome(eventDateStr:  self.getDateStr())
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceViewHome(orderAttr: self.getExtraAttrDic() )
         //adBrix.commerceViewHome(orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -141,7 +141,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "13",
                 "color" : "gray",
                 "size" : "XXL"
@@ -162,7 +162,7 @@ class MainContoller : UIViewController {
         //카테고리 1개 이상 5개 이하
         //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "바겐세일", category2: "바겐세일1-1", category3: "바겐세일1-2"), productInfo: arr)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "기획전"), productInfo: arr, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceCategoryView(category: adBrix.createCommerceProductCategoryData(category: "기획전"), productInfo: arr, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
         
@@ -188,7 +188,7 @@ class MainContoller : UIViewController {
                     ,discount: 5000.0
                     ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
                     ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-                    ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
+                    ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
                 )
         )
         
@@ -206,7 +206,7 @@ class MainContoller : UIViewController {
                 ,discount: 5000.0
                 ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
                 ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
+                ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
             )
             
         )
@@ -220,12 +220,12 @@ class MainContoller : UIViewController {
                 ,discount: 5000.0
                 ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
                 ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
+                ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
             ),
             eventDateStr: self.getDateStr()
         )
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
 //        adBrix.commerceProductView(
 //            productInfo: adBrix.createCommerceProductData(
 //                productId: "productId01"
@@ -235,7 +235,7 @@ class MainContoller : UIViewController {
 //                ,discount: 5000.0
 //                ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
 //                ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-//                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
+//                ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
 //            ),
 //            orderAttr: self.getExtraAttrDic()
 //        )
@@ -249,7 +249,7 @@ class MainContoller : UIViewController {
 //                ,discount: 5000.0
 //                ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
 //                ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-//                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
+//                ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
 //            ),
 //            orderAttr: self.getExtraAttrDic(),
 //            eventDateStr: self.getDateStr()
@@ -276,7 +276,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: dicData)
         )
        
         var arr : Array<AdBrixRmCommerceProductModel> = Array()
@@ -290,7 +290,7 @@ class MainContoller : UIViewController {
 //        formatter.timeZone = TimeZone(identifier: "UTC")
 //        adBrix.commerceAddToCart(productInfo: arr, eventDateStr: formatter.string(from: Date()))
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -314,7 +314,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: extraDict)
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: extraDict)
         )
         
         //이월특가 나염 맨투맨
@@ -332,7 +332,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "cate1")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: extraDict2)
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: extraDict2)
         )
         
         var arr : Array<AdBrixRmCommerceProductModel> = Array()
@@ -342,7 +342,7 @@ class MainContoller : UIViewController {
         //장바구니 담기
         adBrix.commerceAddToCart(productInfo: arr)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceAddToCart(productInfo: arr, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -368,13 +368,13 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: extraDict)
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: extraDict)
         )
         
         //위시리스트(관심상품) 추가
         adBrix.commerceAddToWishList(productInfo: productModel)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceAddToWishList(productInfo: productModel, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceAddToWishList(productInfo: productModel, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -396,7 +396,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
                 "size" : "XXL"
@@ -432,7 +432,7 @@ class MainContoller : UIViewController {
                 ,discount: 5000.0
                 ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
                 ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                     "no" : "9",
                     "color" : "black",
                     "size" : "XXL"
@@ -448,7 +448,7 @@ class MainContoller : UIViewController {
                 ,discount: 5000.0
                 ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
                 ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-                ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                     "no" : "13",
                     "color" : "gray",
                     "size" : "XXL"
@@ -461,7 +461,7 @@ class MainContoller : UIViewController {
         arr.append(productModel2)
         adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceReviewOrder(orderId: "100021", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -484,7 +484,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
                 "size" : "XXL"
@@ -498,7 +498,7 @@ class MainContoller : UIViewController {
         //상품 결제 - 신용카드
         adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic())
         //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -520,7 +520,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
                 "size" : "XXL"
@@ -536,7 +536,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "13",
                 "color" : "gray",
                 "size" : "XXL"
@@ -553,7 +553,7 @@ class MainContoller : UIViewController {
             AdBrixRM.AdbrixPaymentMethod.CreditCard
         )
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic())
         
         //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
@@ -573,7 +573,7 @@ class MainContoller : UIViewController {
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
             
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
                 "size" : "XXL"
@@ -587,7 +587,7 @@ class MainContoller : UIViewController {
         //주문 취소(환불)
         adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 3500.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -604,7 +604,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
                 "size" : "XXL"
@@ -620,7 +620,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "13",
                 "color" : "gray",
                 "size" : "XXL"
@@ -635,7 +635,7 @@ class MainContoller : UIViewController {
         //주문 취소(환불)
         adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceRefund(orderId: "290192012", productInfo: arr, penaltyCharge: 0.00, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -652,7 +652,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "[나이키]운동화기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [:])
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [:])
         )
         
         let productModel2 = adBrix.createCommerceProductData(
@@ -663,7 +663,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "[나이키]운동화기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [:])
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [:])
         )
         
         var arr : Array<AdBrixRmCommerceProductModel> = Array()
@@ -672,7 +672,7 @@ class MainContoller : UIViewController {
         
         adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화")
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화", orderAttr: self.getExtraAttrDic())
         //adBrix.commerceSearch(productInfo: arr, keyword: "나이키 운동화", orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
@@ -689,7 +689,7 @@ class MainContoller : UIViewController {
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
             ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,extraAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
                 "size" : "XXL"
@@ -699,7 +699,7 @@ class MainContoller : UIViewController {
         
         adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel)
         
-        //Extra Attr 사용시
+        //Order Attr 사용시
         //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
