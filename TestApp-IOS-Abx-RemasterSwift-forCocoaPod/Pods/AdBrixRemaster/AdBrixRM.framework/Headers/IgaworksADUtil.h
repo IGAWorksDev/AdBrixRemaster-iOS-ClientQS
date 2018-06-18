@@ -64,6 +64,8 @@
 + (NSString *)getKoreaDateFormateDate:(NSDate *)date;
 + (NSString *)getUTCFormateDate:(NSDate *)date;
 + (NSString *)getUTCFormateDateWithFormatExp:(NSDate *)date format:(NSString *)format;
++ (NSDate *)msToDate:(double)baseTime;
++ (NSString *)getUTCFormatByMs:(double)baseTime;
 
 + (NSString *)md5:(NSString *)input;
 + (NSString *)sha1:(NSString *)input;

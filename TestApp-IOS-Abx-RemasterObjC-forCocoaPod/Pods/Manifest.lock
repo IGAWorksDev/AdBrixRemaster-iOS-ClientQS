@@ -1,16 +1,16 @@
 PODS:
-  - AdBrixRemaster (1.0.0)
+  - AdBrixRemaster (1.0.2)
 
 DEPENDENCIES:
   - AdBrixRemaster
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AdBrixRemaster
 
 SPEC CHECKSUMS:
-  AdBrixRemaster: 9804ff22d12129386921c4ea8ccc873234654022
+  AdBrixRemaster: 314a86ec4bcd17029e69da1c91688e41b76710f1
 
 PODFILE CHECKSUM: 331d94fb88b6ece2e9de10e0ba202d40a18cf7d7
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
