@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "549358352.213802"
+            timestampString = "550994061.342573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1348"
-            endingLineNumber = "1348"
-            landmarkName = "sendEventFirstOpen()"
+            startingLineNumber = "1352"
+            endingLineNumber = "1352"
+            landmarkName = "makeCommerceProductParams(productInfo:attributes:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "549358352.213864"
+            timestampString = "550994061.342669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1346"
-            endingLineNumber = "1346"
-            landmarkName = "sendEventFirstOpen()"
+            startingLineNumber = "1350"
+            endingLineNumber = "1350"
+            landmarkName = "makeCommerceProductParams(productInfo:attributes:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Job/AdBrixEventQueue.swift"
-            timestampString = "548734320.998778"
+            timestampString = "550474454.574584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "667"
-            endingLineNumber = "667"
+            startingLineNumber = "715"
+            endingLineNumber = "715"
             landmarkName = "addEvent(groupName:evtName:evtParam:)"
             landmarkType = "7">
          </BreakpointContent>

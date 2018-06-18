@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  TestApp-IOS-Abx-RemasterObjC
 //
-//  Created by igaworks on 2018. 2. 6..
+//  Created by igaworks on 2018
 //  Copyright © 2018년 igaworks. All rights reserved.
 //
 
@@ -36,9 +36,8 @@
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
-    [adBrix initAdBrixWithAppKey:@"" secretKey:@""];
-  
-    
+//    [adBrix initAdBrixWithAppKey:@"insert_Your_App_Key" secretKey:@"insert_Your_Secret_Key"];
+    [adBrix initAdBrixWithAppKey:@"03M110kRQ0K7UAF16jxmYg" secretKey:@"Br9TLszIZUGsmSbnToNBXg"];
     
     return YES;
 }

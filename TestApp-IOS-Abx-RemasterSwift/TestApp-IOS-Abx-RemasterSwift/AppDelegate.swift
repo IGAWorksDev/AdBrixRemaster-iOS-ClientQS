@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         //광고id
         if ((NSClassFromString("ASIdentifierManager")) != nil) {
-            let ifa :UUID = ASIdentifierManager.shared().advertisingIdentifier;
-            let isAppleAdvertisingTrackingEnalbed :Bool = ASIdentifierManager.shared().isAdvertisingTrackingEnabled;
+            let ifa :UUID = ASIdentifierManager.shared().advertisingIdentifier
+            let isAppleAdvertisingTrackingEnalbed :Bool = ASIdentifierManager.shared().isAdvertisingTrackingEnabled
             adBrix.setAppleAdvertisingIdentifier(ifa.uuidString, isAppleAdvertisingTrackingEnalbed)
             
         //    print("ifa UUIDString :: \(ifa.uuidString)")
@@ -37,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
         adBrix.initAdBrix(appKey: "inputYourAppKeyFromServer", secretKey:"inputYourSecretKeyFromServer")
-        
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
                 
