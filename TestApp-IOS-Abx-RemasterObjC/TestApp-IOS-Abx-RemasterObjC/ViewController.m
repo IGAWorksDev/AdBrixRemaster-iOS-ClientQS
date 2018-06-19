@@ -47,8 +47,8 @@
     //[_adBrix eventWithEventName:@"objcEventNDate" eventDate:[NSDate date]];
     
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
-    //NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
-    //[dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.fff"];
+//    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:[_adBrix AdBrixDateFormat]];
     //[_adBrix eventWithEventName:@"objcEventNDateStr" eventDateStr:[dateFormatter stringFromDate:[NSDate date]]];
 }
 
@@ -940,7 +940,7 @@
     NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
     
     [dateFormatter setTimeZone:timeZone];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];
+    [dateFormatter setDateFormat:[_adBrix AdBrixDateFormat]];
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
     
