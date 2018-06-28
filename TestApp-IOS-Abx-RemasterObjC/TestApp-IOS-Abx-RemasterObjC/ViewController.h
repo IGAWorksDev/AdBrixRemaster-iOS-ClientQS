@@ -101,9 +101,18 @@
 
 - (IBAction)click_commerceShare:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *Button_listView;
 
+@property (weak, nonatomic) IBOutlet UIButton *Button_cartView;
 
+@property (weak, nonatomic) IBOutlet UIButton *Button_paymentInfoAdded;
 
+@property (weak, nonatomic) IBOutlet UIButton *Button_LevelAchieved;
+
+@property (weak, nonatomic) IBOutlet UIButton *Button_tutorialCompleted;
+@property (weak, nonatomic) IBOutlet UIButton *Button_characterCreated;
+
+@property (weak, nonatomic) IBOutlet UIButton *Button_stageCleared;
 
 
 @end

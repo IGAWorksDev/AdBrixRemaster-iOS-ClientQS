@@ -1,5 +1,5 @@
 PODS:
-  - AdBrixRemaster (1.0.2)
+  - AdBrixRemaster (1.0.3)
 
 DEPENDENCIES:
   - AdBrixRemaster
@@ -9,7 +9,7 @@ SPEC REPOS:
     - AdBrixRemaster
 
 SPEC CHECKSUMS:
-  AdBrixRemaster: 314a86ec4bcd17029e69da1c91688e41b76710f1
+  AdBrixRemaster: 51c9c4ee515f6ad4455a6ea84f781784226dd45c
 
 PODFILE CHECKSUM: 331d94fb88b6ece2e9de10e0ba202d40a18cf7d7
 

@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
-        adBrix.initAdBrix(appKey: "inputYourAppKeyFromServer", secretKey:"inputYourSecretKeyFromServer")
+        adBrix.initAdBrix(appKey: "inputYourKeyFromServer", secretKey:"inputYourKeyFromServer")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
                 
@@ -72,6 +72,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any?) -> Bool {
+        let adBrix = AdBrixRM.getInstance
+        adBrix.deepLinkOpen(url: url)
+        return true
+    }
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
 //        let alertController = UIAlertController(title: "deep link test", message: "deep link push open", preferredStyle: .alert)
 //        let okAction = UIAlertAction(title: "Confirm", style: .default) { (result : UIAlertAction) -> Void in }
@@ -82,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let adBrix = AdBrixRM.getInstance
         adBrix.deepLinkOpen(url: url)
         
-        return false
+        return true
     }
     
     
