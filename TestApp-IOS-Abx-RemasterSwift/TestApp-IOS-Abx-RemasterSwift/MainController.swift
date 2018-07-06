@@ -30,16 +30,28 @@ class MainContoller : UIViewController {
     @IBOutlet weak var Button_commerceAddToWishList :UIButton!
     @IBOutlet weak var Button_commerceReviewOrder :UIButton!
     @IBOutlet weak var Button_commerceReviewOrderBulk :UIButton!
-    @IBOutlet weak var Button_commercePurchase :UIButton!
-    @IBOutlet weak var Button_commercePurchaseBulk :UIButton!
+
     @IBOutlet weak var Button_commerceRefund :UIButton!
     @IBOutlet weak var Button_commerceRefundBulk :UIButton!
     @IBOutlet weak var Button_commerceSearch :UIButton!
     @IBOutlet weak var Button_commerceShare :UIButton!
     
     
+    @IBOutlet weak var Button_commerceListView :UIButton!
+    @IBOutlet weak var Button_commerceCartView :UIButton!
+    @IBOutlet weak var Button_commercePaymentInfoAdded :UIButton!
     
     
+    @IBOutlet weak var Button_commonPurchase :UIButton!
+    @IBOutlet weak var Button_commonPurchaseBulk :UIButton!
+    
+    
+    @IBOutlet weak var Button_gameLevelAchieved :UIButton!
+    @IBOutlet weak var Button_gameTutorialCompleted :UIButton!
+    @IBOutlet weak var Button_gameCharacterCreated :UIButton!
+    @IBOutlet weak var Button_gameStageCleared :UIButton!
+    
+   
     
     let adBrix = AdBrixRM.getInstance
     
@@ -468,96 +480,7 @@ class MainContoller : UIViewController {
     
     
    
-    @IBAction func click_commercePurchase(_ sender: Any) {
-        
-        /*
-         [ 가을 맞이 슬렉스 10종 특가 1개 ] = 총 1개 상품
-         쿠폰까지 써서 배송비 3500원을 할인받음
-         할인은 상품에 적용 되었음.
-         */
-        
-        let productModel = adBrix.createCommerceProductData(
-            productId: "5385487400"
-            ,productName: "가을 맞이 슬렉스 10종 특가"
-            ,price: 10000.00
-            ,quantity: 1
-            ,discount: 5000.0
-            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
-            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
-                "no" : "9",
-                "color" : "black",
-                "size" : "XXL"
-                ]
-            )
-        )
-        
-        var arr : Array<AdBrixRmCommerceProductModel> = Array()
-        arr.append(productModel)
-        
-        //상품 결제 - 신용카드
-        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
-        
-        //Order Attr 사용시
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic())
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
-    }
     
-    
-    @IBAction func click_commercePurchaseBulk(_ sender: Any) {
-        
-        /*
-         [ 가을 맞이 슬렉스 10종 특가 1개, 이월특가 나염 맨투맨 1개 ] = 총 2개 상품
-         쿠폰까지 써서 배송비 3500원을 할인받음
-         할인은 각 상품에 적용 되었음.
-         */
-        
-        let productModel = adBrix.createCommerceProductData(
-            productId: "5385487400"
-            ,productName: "가을 맞이 슬렉스 10종 특가"
-            ,price: 10000.00
-            ,quantity: 1
-            ,discount: 5000.0
-            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
-            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
-                "no" : "9",
-                "color" : "black",
-                "size" : "XXL"
-                ]
-            )
-        )
-        
-        let productModel2 = adBrix.createCommerceProductData(
-            productId: "5385487401"
-            ,productName: "이월특가 나염 맨투맨"
-            ,price: 10000.00
-            ,quantity: 1
-            ,discount: 5000.0
-            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
-            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
-            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
-                "no" : "13",
-                "color" : "gray",
-                "size" : "XXL"
-                ]
-            )
-        )
-        
-        var arr : Array<AdBrixRmCommerceProductModel> = Array()
-        arr.append(productModel)
-        arr.append(productModel2)
-        
-        //상품 결제 - 모바일 결제
-        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:
-            AdBrixRM.AdbrixPaymentMethod.CreditCard
-        )
-        
-        //Order Attr 사용시
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic())
-        
-        //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
-    }
     
     
     
@@ -704,6 +627,204 @@ class MainContoller : UIViewController {
         //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
     }
     
+    @IBAction func click_commerceListView(_ sender: Any) {
+        let productModel = adBrix.createCommerceProductData(
+            productId: "5385487400"
+            ,productName: "가을 맞이 슬렉스 10종 특가"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "9",
+                "color" : "black",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        let productModel2 = adBrix.createCommerceProductData(
+            productId: "5385487401"
+            ,productName: "이월특가 나염 맨투맨"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "13",
+                "color" : "gray",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        var arr : Array<AdBrixRmCommerceProductModel> = Array()
+        arr.append(productModel)
+        arr.append(productModel2)
+        adBrix.commerceListView(productInfo: arr)
+    }
+    
+    @IBAction func click_commerceCartView(_ sender: Any) {
+        let productModel = adBrix.createCommerceProductData(
+            productId: "5385487400"
+            ,productName: "가을 맞이 슬렉스 10종 특가"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "9",
+                "color" : "black",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        let productModel2 = adBrix.createCommerceProductData(
+            productId: "5385487401"
+            ,productName: "이월특가 나염 맨투맨"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "13",
+                "color" : "gray",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        var arr : Array<AdBrixRmCommerceProductModel> = Array()
+        arr.append(productModel)
+        arr.append(productModel2)
+        adBrix.commerceCartView(productInfo: arr)
+    }
+    
+    @IBAction func click_commercePaymentInfoAdded(_ sender: Any) {
+        adBrix.commercePaymentInfoAdded(paymentInfoAttr: [
+            "creditcard" : "kbcard"])
+    }
+    
+    @IBAction func click_commonPurchase(_ sender: Any) {
+        
+        /*
+         [ 가을 맞이 슬렉스 10종 특가 1개 ] = 총 1개 상품
+         쿠폰까지 써서 배송비 3500원을 할인받음
+         할인은 상품에 적용 되었음.
+         */
+        
+        let productModel = adBrix.createCommerceProductData(
+            productId: "5385487400"
+            ,productName: "가을 맞이 슬렉스 10종 특가"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "9",
+                "color" : "black",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        var arr : Array<AdBrixRmCommerceProductModel> = Array()
+        arr.append(productModel)
+        
+        //상품 결제 - 신용카드
+        adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
+        
+        //Order Attr 사용시
+        //adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic())
+        //adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+    }
+    
+    
+    @IBAction func click_commonPurchaseBulk(_ sender: Any) {
+        
+        /*
+         [ 가을 맞이 슬렉스 10종 특가 1개, 이월특가 나염 맨투맨 1개 ] = 총 2개 상품
+         쿠폰까지 써서 배송비 3500원을 할인받음
+         할인은 각 상품에 적용 되었음.
+         */
+        
+        let productModel = adBrix.createCommerceProductData(
+            productId: "5385487400"
+            ,productName: "가을 맞이 슬렉스 10종 특가"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "9",
+                "color" : "black",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        let productModel2 = adBrix.createCommerceProductData(
+            productId: "5385487401"
+            ,productName: "이월특가 나염 맨투맨"
+            ,price: 10000.00
+            ,quantity: 1
+            ,discount: 5000.0
+            ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
+                "no" : "13",
+                "color" : "gray",
+                "size" : "XXL"
+                ]
+            )
+        )
+        
+        var arr : Array<AdBrixRmCommerceProductModel> = Array()
+        arr.append(productModel)
+        arr.append(productModel2)
+        
+        //상품 결제 - 모바일 결제
+        adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:
+            AdBrixRM.AdbrixPaymentMethod.CreditCard
+        )
+        
+        //Order Attr 사용시
+        //adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic())
+        
+        //adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:AdBrixRM.AdbrixPaymentMethod.CreditCard,orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+    }
+    
+    
+    
+    
+    @IBAction func click_gameLevelAchieved(_ sender: Any) {
+        adBrix.gameLevelAchieved(level: 15)
+    }
+    
+    @IBAction func click_gameTutorialCompleted(_ sender: Any) {
+        adBrix.gameTutorialCompleted(isSkip: false)
+    }
+    
+    @IBAction func click_gameCharacterCreated(_ sender: Any) {
+        adBrix.gameCharacterCreated()
+        adBrix.gameCharacterCreated(gameInfoAttr: [
+            "nickname" : "adbrixer",
+            ])
+    }
+    
+    @IBAction func click_stageCleared(_ sender: Any) {
+        adBrix.gameStageCleared(stageName: "1-1")
+        adBrix.gameStageCleared(stageName: "1-1", gameInfoAttr: [
+            "stage_redeem" : "none",
+            ])
+    }
     
     func getDateStr() -> String {
         let formatter = DateFormatter()

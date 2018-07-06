@@ -76,13 +76,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *Button_commerceReviewOrderBulk;
 - (IBAction)click_commerceReviewOrderBulk:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *Button_commercePurchase;
+@property (weak, nonatomic) IBOutlet UIButton *Button_commonPurchase;
+- (IBAction)click_commonPurchase:(id)sender;
 
-- (IBAction)click_commercePurchase:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UIButton *Button_commercePurchaseBulk;
-
-- (IBAction)click_commercePurchaseBulk:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *Button_commonPurchaseBulk;
+- (IBAction)click_commonPurchaseBulk:(id)sender;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_commerceRefund;
@@ -102,17 +100,32 @@
 - (IBAction)click_commerceShare:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_listView;
+- (IBAction)click_commerceListView:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_cartView;
+- (IBAction)click_commerceCartView:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_paymentInfoAdded;
+- (IBAction)click_commercePaymentInfoAdded:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_LevelAchieved;
+- (IBAction)click_levelAchieved:(id)sender;
+
+
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_tutorialCompleted;
+- (IBAction)click_tutorialCompleted:(id)sender;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *Button_characterCreated;
+- (IBAction)click_characterCreated:(id)sender;
+
+
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_stageCleared;
+- (IBAction)click_stageCleared:(id)sender;
 
 
 @end

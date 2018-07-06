@@ -28,10 +28,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDp-d1-UvQ">
                                 <rect key="frame" x="0.0" y="46" width="320" height="522"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK8-VD-oST">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK8-VD-oST">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-KO-6l0">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeK-KO-6l0" userLabel="TopView">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSV-86-JLI">
@@ -122,8 +122,8 @@
                                                             <action selector="click_setUserProp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duC-gW-9OO"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="purchase ▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CT-fW-C8E">
-                                                        <rect key="frame" x="16" y="245" width="288" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="commerce▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CT-fW-C8E">
+                                                        <rect key="frame" x="16" y="249" width="288" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="2Iw-lz-Vvo"/>
                                                         </constraints>
@@ -132,10 +132,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV2-tv-8TE">
-                                                        <rect key="frame" x="16" y="268" width="142" height="18"/>
+                                                        <rect key="frame" x="16" y="272" width="142" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="4Ja-Xe-Efw"/>
+                                                            <constraint firstAttribute="height" constant="24" id="4Ja-Xe-Efw"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="홈화면 열기"/>
@@ -144,7 +144,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW9-mB-OxV">
-                                                        <rect key="frame" x="162" y="268" width="142" height="18"/>
+                                                        <rect key="frame" x="162" y="272" width="142" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="카테고리 진입"/>
@@ -153,10 +153,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gta-EV-g3l">
-                                                        <rect key="frame" x="16" y="290" width="69" height="18"/>
+                                                        <rect key="frame" x="16" y="304" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="h9v-5C-p85"/>
+                                                            <constraint firstAttribute="height" constant="24" id="h9v-5C-p85"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="상품상세보기"/>
@@ -165,7 +165,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwb-bT-hGq">
-                                                        <rect key="frame" x="89" y="290" width="69" height="18"/>
+                                                        <rect key="frame" x="89" y="304" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="장바구니 단"/>
@@ -174,7 +174,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pv-Lx-bsE">
-                                                        <rect key="frame" x="235.5" y="290" width="68.5" height="18"/>
+                                                        <rect key="frame" x="235.5" y="304" width="68.5" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="위시리스트 추가"/>
@@ -183,10 +183,10 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-xz-Ne5">
-                                                        <rect key="frame" x="16" y="312" width="142" height="18"/>
+                                                        <rect key="frame" x="16" y="336" width="142" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="42Z-1N-eMg"/>
+                                                            <constraint firstAttribute="height" constant="24" id="42Z-1N-eMg"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="주문내역 단"/>
@@ -195,22 +195,22 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4w-zg-DRt">
-                                                        <rect key="frame" x="16" y="396.5" width="69" height="18"/>
+                                                        <rect key="frame" x="16" y="452.5" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="mjb-4C-JcL"/>
+                                                            <constraint firstAttribute="height" constant="24" id="mjb-4C-JcL"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="상품결제 단"/>
                                                         <connections>
-                                                            <action selector="click_commercePurchase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAy-DM-Qqb"/>
+                                                            <action selector="click_commonPurchase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="loe-ru-eZb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQr-jo-fY1">
-                                                        <rect key="frame" x="16" y="334" width="69" height="18"/>
+                                                        <rect key="frame" x="16" y="368" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="F3z-us-2DY"/>
+                                                            <constraint firstAttribute="height" constant="24" id="F3z-us-2DY"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="취소환불 단"/>
@@ -219,7 +219,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxN-1h-sKU">
-                                                        <rect key="frame" x="162" y="334" width="69" height="18"/>
+                                                        <rect key="frame" x="162" y="368" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="상품 검색"/>
@@ -228,7 +228,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daV-1n-eNC">
-                                                        <rect key="frame" x="235" y="334" width="69" height="18"/>
+                                                        <rect key="frame" x="235" y="368" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="상품 공유"/>
@@ -237,7 +237,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYk-dz-WIP">
-                                                        <rect key="frame" x="162" y="289.5" width="69.5" height="18"/>
+                                                        <rect key="frame" x="162" y="303.5" width="69.5" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="장바구니 복"/>
@@ -246,7 +246,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWY-e1-sfB">
-                                                        <rect key="frame" x="162" y="312" width="142" height="18"/>
+                                                        <rect key="frame" x="162" y="336" width="142" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
                                                         <state key="normal" title="주문내역 복"/>
@@ -255,7 +255,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qks-Cf-EJV">
-                                                        <rect key="frame" x="89" y="334" width="69" height="18"/>
+                                                        <rect key="frame" x="89" y="368" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="취소환불 복"/>
@@ -264,73 +264,94 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZV-2i-Fka">
-                                                        <rect key="frame" x="89" y="396.5" width="68.5" height="18"/>
+                                                        <rect key="frame" x="89" y="452.5" width="68.5" height="24"/>
                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="상품결제 복"/>
                                                         <connections>
-                                                            <action selector="click_commercePurchaseBulk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NpO-J3-uOg"/>
+                                                            <action selector="click_commonPurchaseBulk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NeG-55-dgs"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 관련▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3T-Gi-LOH">
-                                                        <rect key="frame" x="16" y="380" width="288" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="common▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3T-Gi-LOH">
+                                                        <rect key="frame" x="16" y="436" width="288" height="15"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="game(지원예정) ▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ0-rq-vLh">
-                                                        <rect key="frame" x="16" y="420.5" width="288" height="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="game▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ0-rq-vLh">
+                                                        <rect key="frame" x="16" y="488.5" width="288" height="15"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4S-AX-pdC">
-                                                        <rect key="frame" x="16" y="437.5" width="69" height="18"/>
+                                                        <rect key="frame" x="16" y="505.5" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="dtt-3n-OHr"/>
+                                                            <constraint firstAttribute="height" constant="24" id="dtt-3n-OHr"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="레벨달성"/>
+                                                        <connections>
+                                                            <action selector="click_levelAchieved:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pih-hF-e9H"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ku-Jv-3OX">
-                                                        <rect key="frame" x="89" y="437.5" width="68.5" height="18"/>
+                                                        <rect key="frame" x="89" y="505.5" width="68.5" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="튜토리얼완료"/>
+                                                        <connections>
+                                                            <action selector="click_tutorialCompleted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7y-Uh-wGj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-Hh-eVx">
-                                                        <rect key="frame" x="162" y="437.5" width="69" height="18"/>
+                                                        <rect key="frame" x="162" y="505.5" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="캐릭터생성"/>
+                                                        <connections>
+                                                            <action selector="click_characterCreated:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eap-1r-j81"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jse-8M-d5l">
-                                                        <rect key="frame" x="16" y="356" width="69" height="18"/>
+                                                        <rect key="frame" x="16" y="400" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="18" id="RYS-VU-nzT"/>
+                                                            <constraint firstAttribute="height" constant="24" id="RYS-VU-nzT"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="-"/>
+                                                        <state key="normal" title="상품목록조회"/>
+                                                        <connections>
+                                                            <action selector="click_commerceListView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MIK-Tc-Gqz"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-U7-kBe">
-                                                        <rect key="frame" x="89" y="356" width="69" height="18"/>
+                                                        <rect key="frame" x="89" y="400" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="-"/>
+                                                        <state key="normal" title="장바구니 조회"/>
+                                                        <connections>
+                                                            <action selector="click_commerceCartView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6RW-vU-CU8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHa-eV-ald">
-                                                        <rect key="frame" x="162" y="356" width="69" height="18"/>
+                                                        <rect key="frame" x="162" y="400" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <state key="normal" title="-"/>
+                                                        <state key="normal" title="결제정보 입력"/>
+                                                        <connections>
+                                                            <action selector="click_commercePaymentInfoAdded:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg8-TL-8lr"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q87-Rm-0pe">
-                                                        <rect key="frame" x="235" y="437.5" width="69" height="18"/>
+                                                        <rect key="frame" x="235" y="505.5" width="69" height="24"/>
                                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <state key="normal" title="스테이지달성"/>
+                                                        <connections>
+                                                            <action selector="click_stageCleared:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nr3-j6-gjS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,10 +370,10 @@
                                                     <constraint firstItem="D4S-AX-pdC" firstAttribute="leading" secondItem="E4w-zg-DRt" secondAttribute="leading" id="4U6-tA-57c"/>
                                                     <constraint firstItem="bxN-1h-sKU" firstAttribute="centerY" secondItem="daV-1n-eNC" secondAttribute="centerY" id="5Ab-fz-1ER"/>
                                                     <constraint firstItem="peb-ml-Hkz" firstAttribute="top" secondItem="5eb-Jm-AiG" secondAttribute="bottom" constant="8" id="7Ti-yG-lms"/>
-                                                    <constraint firstItem="8CT-fW-C8E" firstAttribute="top" secondItem="jU3-EX-nSZ" secondAttribute="bottom" constant="8" id="8Xb-wa-3HZ"/>
+                                                    <constraint firstItem="8CT-fW-C8E" firstAttribute="top" secondItem="jU3-EX-nSZ" secondAttribute="bottom" constant="12" id="8Xb-wa-3HZ"/>
                                                     <constraint firstItem="qWY-e1-sfB" firstAttribute="leading" secondItem="MWk-xz-Ne5" secondAttribute="trailing" constant="4" id="9BT-3A-Y6T"/>
                                                     <constraint firstItem="9pv-Lx-bsE" firstAttribute="trailing" secondItem="jW9-mB-OxV" secondAttribute="trailing" id="9Bw-8s-m6D"/>
-                                                    <constraint firstItem="f3T-Gi-LOH" firstAttribute="top" secondItem="jse-8M-d5l" secondAttribute="bottom" constant="6" id="9Nr-1R-NVF"/>
+                                                    <constraint firstItem="f3T-Gi-LOH" firstAttribute="top" secondItem="jse-8M-d5l" secondAttribute="bottom" constant="12" id="9Nr-1R-NVF"/>
                                                     <constraint firstItem="bZL-gc-GMJ" firstAttribute="trailing" secondItem="Tjv-SH-VV9" secondAttribute="trailing" id="AD2-Ge-KIv"/>
                                                     <constraint firstItem="GYk-dz-WIP" firstAttribute="centerY" secondItem="Fwb-bT-hGq" secondAttribute="centerY" id="B1q-Jp-m2e"/>
                                                     <constraint firstItem="VHa-eV-ald" firstAttribute="trailing" secondItem="bxN-1h-sKU" secondAttribute="trailing" id="B8n-cZ-7y3"/>
@@ -377,7 +398,7 @@
                                                     <constraint firstItem="Q87-Rm-0pe" firstAttribute="centerY" secondItem="GL3-Hh-eVx" secondAttribute="centerY" id="L1l-LP-KUb"/>
                                                     <constraint firstItem="tV2-tv-8TE" firstAttribute="centerY" secondItem="jW9-mB-OxV" secondAttribute="centerY" id="LRi-KO-vMa"/>
                                                     <constraint firstItem="KpA-FM-Ous" firstAttribute="top" secondItem="ZeK-KO-6l0" secondAttribute="top" id="Le5-Vr-8O6"/>
-                                                    <constraint firstItem="OQ0-rq-vLh" firstAttribute="top" secondItem="E4w-zg-DRt" secondAttribute="bottom" constant="6" id="LgT-sS-gmz"/>
+                                                    <constraint firstItem="OQ0-rq-vLh" firstAttribute="top" secondItem="E4w-zg-DRt" secondAttribute="bottom" constant="12" id="LgT-sS-gmz"/>
                                                     <constraint firstItem="bZL-gc-GMJ" firstAttribute="centerY" secondItem="fA7-jq-0v1" secondAttribute="centerY" id="Lxg-Jw-sBN"/>
                                                     <constraint firstItem="tV2-tv-8TE" firstAttribute="trailing" secondItem="ZeK-KO-6l0" secondAttribute="centerX" constant="-2" id="Mez-uj-UFS"/>
                                                     <constraint firstItem="peb-ml-Hkz" firstAttribute="leading" secondItem="rFw-He-3aD" secondAttribute="leading" id="Nce-m8-GFl"/>
@@ -395,7 +416,7 @@
                                                     <constraint firstItem="GYk-dz-WIP" firstAttribute="width" secondItem="Fwb-bT-hGq" secondAttribute="width" id="UHC-pY-qPY"/>
                                                     <constraint firstItem="7Px-Zz-6O5" firstAttribute="trailing" secondItem="5eb-Jm-AiG" secondAttribute="trailing" id="VvF-pz-hGw"/>
                                                     <constraint firstItem="tV2-tv-8TE" firstAttribute="leading" secondItem="8CT-fW-C8E" secondAttribute="leading" id="WVa-M2-dPs"/>
-                                                    <constraint firstItem="XQr-jo-fY1" firstAttribute="top" secondItem="MWk-xz-Ne5" secondAttribute="bottom" constant="4" id="Wsq-uW-gl2"/>
+                                                    <constraint firstItem="XQr-jo-fY1" firstAttribute="top" secondItem="MWk-xz-Ne5" secondAttribute="bottom" constant="8" id="Wsq-uW-gl2"/>
                                                     <constraint firstItem="bZL-gc-GMJ" firstAttribute="width" secondItem="jU3-EX-nSZ" secondAttribute="width" id="YC4-de-Yy1"/>
                                                     <constraint firstItem="YSV-86-JLI" firstAttribute="top" secondItem="KpA-FM-Ous" secondAttribute="bottom" constant="8" id="YxR-ju-nrA"/>
                                                     <constraint firstItem="NA0-U7-kBe" firstAttribute="trailing" secondItem="Qks-Cf-EJV" secondAttribute="trailing" id="ZCY-N2-Id2"/>
@@ -405,7 +426,7 @@
                                                     <constraint firstItem="9pv-Lx-bsE" firstAttribute="width" secondItem="gta-EV-g3l" secondAttribute="width" id="aba-Ge-ste"/>
                                                     <constraint firstItem="jW9-mB-OxV" firstAttribute="leading" secondItem="tV2-tv-8TE" secondAttribute="trailing" constant="4" id="anJ-hs-3tl"/>
                                                     <constraint firstItem="jU3-EX-nSZ" firstAttribute="leading" secondItem="Tjv-SH-VV9" secondAttribute="leading" id="bAk-H5-jes"/>
-                                                    <constraint firstItem="gta-EV-g3l" firstAttribute="top" secondItem="tV2-tv-8TE" secondAttribute="bottom" constant="4" id="bBq-P7-z78"/>
+                                                    <constraint firstItem="gta-EV-g3l" firstAttribute="top" secondItem="tV2-tv-8TE" secondAttribute="bottom" constant="8" id="bBq-P7-z78"/>
                                                     <constraint firstItem="Tjv-SH-VV9" firstAttribute="top" secondItem="rFw-He-3aD" secondAttribute="bottom" constant="8" id="bWE-uZ-qBv"/>
                                                     <constraint firstItem="KpA-FM-Ous" firstAttribute="trailing" secondItem="rFw-He-3aD" secondAttribute="trailing" id="bo4-lh-b6e"/>
                                                     <constraint firstItem="MWk-xz-Ne5" firstAttribute="leading" secondItem="gta-EV-g3l" secondAttribute="leading" id="bvT-5A-b0X"/>
@@ -415,7 +436,7 @@
                                                     <constraint firstItem="Tjv-SH-VV9" firstAttribute="trailing" secondItem="7Px-Zz-6O5" secondAttribute="trailing" id="efq-Ue-qzc"/>
                                                     <constraint firstItem="bxN-1h-sKU" firstAttribute="leading" secondItem="Qks-Cf-EJV" secondAttribute="trailing" constant="4" id="f0v-OE-I76"/>
                                                     <constraint firstItem="GYk-dz-WIP" firstAttribute="height" secondItem="9pv-Lx-bsE" secondAttribute="height" id="hSW-Hp-bIA"/>
-                                                    <constraint firstItem="MWk-xz-Ne5" firstAttribute="top" secondItem="gta-EV-g3l" secondAttribute="bottom" constant="4" id="ipB-gt-iPX"/>
+                                                    <constraint firstItem="MWk-xz-Ne5" firstAttribute="top" secondItem="gta-EV-g3l" secondAttribute="bottom" constant="8" id="ipB-gt-iPX"/>
                                                     <constraint firstItem="5eb-Jm-AiG" firstAttribute="trailing" secondItem="YSV-86-JLI" secondAttribute="trailing" id="iry-Xk-hPA"/>
                                                     <constraint firstItem="9pv-Lx-bsE" firstAttribute="leading" secondItem="GYk-dz-WIP" secondAttribute="trailing" constant="4" id="itQ-Ud-LUc"/>
                                                     <constraint firstItem="gta-EV-g3l" firstAttribute="leading" secondItem="tV2-tv-8TE" secondAttribute="leading" id="jeg-GZ-mzK"/>
@@ -433,7 +454,7 @@
                                                     <constraint firstItem="5eb-Jm-AiG" firstAttribute="top" secondItem="YSV-86-JLI" secondAttribute="bottom" constant="8" id="oWq-X2-psM"/>
                                                     <constraint firstItem="jse-8M-d5l" firstAttribute="height" secondItem="NA0-U7-kBe" secondAttribute="height" id="oki-G9-fNP"/>
                                                     <constraint firstItem="tV2-tv-8TE" firstAttribute="height" secondItem="jW9-mB-OxV" secondAttribute="height" id="pCn-TR-a9C"/>
-                                                    <constraint firstItem="jse-8M-d5l" firstAttribute="top" secondItem="XQr-jo-fY1" secondAttribute="bottom" constant="4" id="pUR-A9-Wam"/>
+                                                    <constraint firstItem="jse-8M-d5l" firstAttribute="top" secondItem="XQr-jo-fY1" secondAttribute="bottom" constant="8" id="pUR-A9-Wam"/>
                                                     <constraint firstItem="tV2-tv-8TE" firstAttribute="top" secondItem="8CT-fW-C8E" secondAttribute="bottom" constant="2" id="pja-G1-hTU"/>
                                                     <constraint firstItem="VHa-eV-ald" firstAttribute="centerY" secondItem="NA0-U7-kBe" secondAttribute="centerY" id="pka-Gw-Sgt"/>
                                                     <constraint firstItem="E4w-zg-DRt" firstAttribute="top" secondItem="f3T-Gi-LOH" secondAttribute="bottom" constant="2" id="q6V-LY-JDK"/>
@@ -460,9 +481,9 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="ZeK-KO-6l0" firstAttribute="leading" secondItem="gK8-VD-oST" secondAttribute="leading" id="1CG-Sa-qSe"/>
-                                            <constraint firstAttribute="bottom" secondItem="ZeK-KO-6l0" secondAttribute="bottom" id="36X-xO-QXo"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZeK-KO-6l0" secondAttribute="bottom" constant="20" id="36X-xO-QXo"/>
                                             <constraint firstAttribute="trailing" secondItem="ZeK-KO-6l0" secondAttribute="trailing" id="b2u-jY-i7B"/>
-                                            <constraint firstItem="ZeK-KO-6l0" firstAttribute="height" secondItem="gK8-VD-oST" secondAttribute="height" id="b7q-mR-HBF"/>
+                                            <constraint firstItem="ZeK-KO-6l0" firstAttribute="height" secondItem="gK8-VD-oST" secondAttribute="height" priority="250" id="b7q-mR-HBF"/>
                                             <constraint firstItem="ZeK-KO-6l0" firstAttribute="width" secondItem="gK8-VD-oST" secondAttribute="width" id="fHv-Xc-oET"/>
                                             <constraint firstItem="ZeK-KO-6l0" firstAttribute="top" secondItem="gK8-VD-oST" secondAttribute="top" id="wUm-iZ-p1W"/>
                                         </constraints>
@@ -498,8 +519,6 @@
                         <outlet property="Button_commerceAddToWishList" destination="9pv-Lx-bsE" id="G8U-ds-qvd"/>
                         <outlet property="Button_commerceCategoryView" destination="jW9-mB-OxV" id="8xi-zH-wBU"/>
                         <outlet property="Button_commerceProductView" destination="gta-EV-g3l" id="hd6-2a-GbV"/>
-                        <outlet property="Button_commercePurchase" destination="E4w-zg-DRt" id="wMZ-Ad-jVD"/>
-                        <outlet property="Button_commercePurchaseBulk" destination="cZV-2i-Fka" id="v7q-gF-Ur8"/>
                         <outlet property="Button_commerceRefund" destination="XQr-jo-fY1" id="3JN-O1-3F7"/>
                         <outlet property="Button_commerceRefundBulk" destination="Qks-Cf-EJV" id="Qza-vT-k3j"/>
                         <outlet property="Button_commerceReviewOrder" destination="MWk-xz-Ne5" id="SLq-HD-8pA"/>
@@ -507,6 +526,8 @@
                         <outlet property="Button_commerceSearch" destination="bxN-1h-sKU" id="aJn-xC-aWC"/>
                         <outlet property="Button_commerceShare" destination="daV-1n-eNC" id="Ie4-IO-P3J"/>
                         <outlet property="Button_commerceViewHome" destination="tV2-tv-8TE" id="MMd-Nc-tPw"/>
+                        <outlet property="Button_commonPurchase" destination="E4w-zg-DRt" id="3EQ-0k-djF"/>
+                        <outlet property="Button_commonPurchaseBulk" destination="cZV-2i-Fka" id="rAY-rJ-cdt"/>
                         <outlet property="Button_event" destination="YSV-86-JLI" id="bwm-Wn-Fvu"/>
                         <outlet property="Button_eventSub" destination="5eb-Jm-AiG" id="8OP-az-mZr"/>
                         <outlet property="Button_listView" destination="jse-8M-d5l" id="f7E-KH-rlH"/>
