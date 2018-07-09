@@ -1050,4 +1050,5 @@
                                                                 @"none", @"stage_redeem"
                                                                 , nil]];
 }
+
 @end
