@@ -36,7 +36,7 @@
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
-    [adBrix initAdBrixWithAppKey:@"" secretKey:@""];
+    [adBrix initAdBrixWithAppKey:@"inputYourKeyFromServer" secretKey:@"inputYourKeyFromServer"];
     
     return YES;
 }
