@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "552551766.7612849"
+            timestampString = "553424447.880585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1391"
-            endingLineNumber = "1391"
+            startingLineNumber = "1380"
+            endingLineNumber = "1380"
             landmarkName = "makeCommerceProductParams(productInfo:attributes:)"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "552551766.761359"
+            timestampString = "553424447.880692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1389"
-            endingLineNumber = "1389"
+            startingLineNumber = "1378"
+            endingLineNumber = "1378"
             landmarkName = "makeCommerceProductParams(productInfo:attributes:)"
             landmarkType = "7">
             <Locations>
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Job/AdBrixEventQueue.swift"
-            timestampString = "551931728.84796"
+            timestampString = "552983943.841652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "715"
