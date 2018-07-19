@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *Button_gdprForgetMe;
 
+- (IBAction)click_gdprForgetMe:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *Button_event;
 - (IBAction)click_event:(id)sender;

@@ -193,6 +193,13 @@ SWIFT_CLASS("_TtC8AdBrixRM15AdBrixBase64Key")
 @end
 
 
+SWIFT_CLASS("_TtC8AdBrixRM12AdBrixCommon")
+@interface AdBrixCommon : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC8AdBrixRM12AdBrixConfig")
 @interface AdBrixConfig : NSObject
 + (AdBrixConfig * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
@@ -224,8 +231,9 @@ enum AdBrixEventUploadTimeInterval : NSInteger;
 enum AdBrixEventUploadCountInterval : NSInteger;
 @class AdBrixRmCommerceProductCategoryModel;
 @class AdBrixRmCommerceProductModel;
-enum AdbrixPaymentMethod : NSInteger;
 enum AdBrixSharingChannel : NSInteger;
+enum AdbrixPaymentMethod : NSInteger;
+enum AdBrixSignUpChannel : NSInteger;
 enum AdBrixCurrencyType : NSInteger;
 @class AdBrixRmCommerceProductAttrModel;
 enum AdBrixGenderType : NSInteger;
@@ -239,6 +247,8 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// @discussion Objective-C 기반 프로젝트에서 본 함수를 호툴하여 싱글톤 인스턴스 객체를 획득한다
 /// @author igaworks
 + (AdBrixRM * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)gdprForgetMe;
+- (BOOL)isGdprForgetMe SWIFT_WARN_UNUSED_RESULT;
 /// @discussion 앱 실행시 AppDelegate에서 최초 앱키, 해시키 등의 정보를 입력한다 - 디바이스id는 임의로 생성된다
 /// @author igaworks
 - (void)initAdBrixWithAppKey:(NSString * _Nonnull)appKey secretKey:(NSString * _Nonnull)secretKey SWIFT_METHOD_FAMILY(none);
@@ -365,15 +375,6 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)commerceReviewOrderWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDateMs:(double)eventDateMs;
 /// purchase 주문 내역 검토
 - (void)commerceReviewOrderWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
-/// purchase 상품 결제
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDate:(NSDate * _Nonnull)eventDate;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDateMs:(double)eventDateMs;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDateStr:(NSString * _Nonnull)eventDateStr;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDate:(NSDate * _Nonnull)eventDate;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDateMs:(double)eventDateMs;
-- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 주문 취소(환불)
 - (void)commerceRefundWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo penaltyCharge:(double)penaltyCharge;
 - (void)commerceRefundWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo penaltyCharge:(double)penaltyCharge orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr;
@@ -527,6 +528,31 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)gameStageClearedWithStageName:(NSString * _Nonnull)stageName gameInfoAttr:(NSDictionary<NSString *, id> * _Nullable)gameInfoAttr eventDateMs:(double)eventDateMs;
 /// game 스테이즈 클리어
 - (void)gameStageClearedWithStageName:(NSString * _Nonnull)stageName gameInfoAttr:(NSDictionary<NSString *, id> * _Nullable)gameInfoAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// purchase 상품 결제
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDate:(NSDate * _Nonnull)eventDate;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDateMs:(double)eventDateMs;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod eventDateStr:(NSString * _Nonnull)eventDateStr;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDate:(NSDate * _Nonnull)eventDate;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDateMs:(double)eventDateMs;
+- (void)commonPurchaseWithOrderId:(NSString * _Nonnull)orderId productInfo:(NSArray<AdBrixRmCommerceProductModel *> * _Nonnull)productInfo discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(enum AdbrixPaymentMethod)paymentMethod orderAttr:(NSDictionary<NSString *, id> * _Nullable)orderAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel commonAttr:(NSDictionary<NSString *, id> * _Nullable)commonAttr;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel eventDate:(NSDate * _Nonnull)eventDate;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel eventDateMs:(double)eventDateMs;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel commonAttr:(NSDictionary<NSString *, id> * _Nullable)commonAttr eventDate:(NSDate * _Nonnull)eventDate;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel commonAttr:(NSDictionary<NSString *, id> * _Nullable)commonAttr eventDateMs:(double)eventDateMs;
+/// common 회원가입
+- (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel commonAttr:(NSDictionary<NSString *, id> * _Nullable)commonAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 통화 타입을 반환한다
 - (NSString * _Nonnull)getCurrencyStringByAdBrixCurrencyType:(enum AdBrixCurrencyType)currency SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getCurrencyString:(NSInteger)currency SWIFT_WARN_UNUSED_RESULT;
@@ -535,7 +561,12 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (NSString * _Nonnull)getSharingChannel:(NSInteger)channel SWIFT_WARN_UNUSED_RESULT;
 /// purchase 결제 방법 타입을 반환한다
 - (NSString * _Nonnull)getPaymentMethodByAdbrixPaymentMethod:(enum AdbrixPaymentMethod)method SWIFT_WARN_UNUSED_RESULT;
+/// purchase 결제 방법 타입을 반환한다
 - (NSString * _Nonnull)getPaymentMethod:(NSInteger)method SWIFT_WARN_UNUSED_RESULT;
+/// common의 회원가입 채널 타입을 반환한다
+- (NSString * _Nonnull)getSignUpChannelByAdBrixSignUpChannel:(enum AdBrixSignUpChannel)channel SWIFT_WARN_UNUSED_RESULT;
+/// common의 회원가입 채널 타입을 반환한다
+- (NSString * _Nonnull)getSignUpChannel:(NSInteger)channel SWIFT_WARN_UNUSED_RESULT;
 /// purchase Category 모델을 생성한다
 - (AdBrixRmCommerceProductCategoryModel * _Nonnull)createCommerceProductCategoryDataWithCategory:(NSString * _Nonnull)category SWIFT_WARN_UNUSED_RESULT;
 /// purchase Category 모델을 생성한다
@@ -689,6 +720,21 @@ typedef SWIFT_ENUM(NSInteger, AdBrixSharingChannel) {
   AdBrixSharingChannelAdBrixSharingEmail = 9,
   AdBrixSharingChannelAdBrixSharingCopyUrl = 10,
   AdBrixSharingChannelAdBrixSharingETC = 11,
+};
+
+/// 회원가입 유형
+typedef SWIFT_ENUM(NSInteger, AdBrixSignUpChannel) {
+  AdBrixSignUpChannelAdBrixSignUpKakaoChannel = 1,
+  AdBrixSignUpChannelAdBrixSignUpNaverChannel = 2,
+  AdBrixSignUpChannelAdBrixSignUpLineChannel = 3,
+  AdBrixSignUpChannelAdBrixSignUpGoogleChannel = 4,
+  AdBrixSignUpChannelAdBrixSignUpFacebookChannel = 5,
+  AdBrixSignUpChannelAdBrixSignUpTwitterChannel = 6,
+  AdBrixSignUpChannelAdBrixSignUpWhatsAppChannel = 8,
+  AdBrixSignUpChannelAdBrixSignUpQQChannel = 9,
+  AdBrixSignUpChannelAdBrixSignUpWeChatChannel = 10,
+  AdBrixSignUpChannelAdBrixSignUpUserIdChannel = 11,
+  AdBrixSignUpChannelAdBrixSignUpETCChannel = 12,
 };
 
 /// 유저 프로퍼티 성별

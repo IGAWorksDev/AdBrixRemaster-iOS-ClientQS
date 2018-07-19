@@ -23,6 +23,7 @@
     [self setSetup];
     _adBrix = [AdBrixRM sharedInstance];
 //    adBrix = [AdBrixRM sharedInstance];
+    
 }
 
 
@@ -1051,4 +1052,7 @@
                                                                 , nil]];
 }
 
+- (IBAction)click_gdprForgetMe:(id)sender {
+    [_adBrix gdprForgetMe];
+}
 @end
