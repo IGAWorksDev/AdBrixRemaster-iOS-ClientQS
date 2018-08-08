@@ -218,7 +218,6 @@
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
                                                         <state key="normal" title="주문내역 복품"/>
                                                         <connections>
-                                                            <action selector="click_commercePurchase:" destination="zZU-Tj-cFV" eventType="touchUpInside" id="eFU-uM-IHd"/>
                                                             <action selector="click_commerceReviewOrderBulk:" destination="zZU-Tj-cFV" eventType="touchUpInside" id="h2Y-LM-JEZ"/>
                                                         </connections>
                                                     </button>

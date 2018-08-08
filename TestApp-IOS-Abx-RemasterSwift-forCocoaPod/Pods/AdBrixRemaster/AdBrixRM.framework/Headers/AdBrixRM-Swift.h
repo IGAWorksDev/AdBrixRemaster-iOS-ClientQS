@@ -234,6 +234,7 @@ enum AdBrixEventUploadCountInterval : NSInteger;
 enum AdBrixSharingChannel : NSInteger;
 enum AdbrixPaymentMethod : NSInteger;
 enum AdBrixSignUpChannel : NSInteger;
+enum AdBrixInviteChannel : NSInteger;
 enum AdBrixCurrencyType : NSInteger;
 @class AdBrixRmCommerceProductAttrModel;
 enum AdBrixGenderType : NSInteger;
@@ -263,7 +264,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// 회당 전송할 이벤트 데이터 수를 설정한다
 - (void)setEventUploadCountInterval:(enum AdBrixEventUploadCountInterval)cnt;
 /// 광고 Identifier 값을 설정한다
-- (void)setAppleAdvertisingIdentifier:(NSString * _Nonnull)appleAdvertisingIdentifier :(BOOL)isAppleAdvertisingTrackingEnabled;
+- (void)setAppleAdvertisingIdentifier:(NSString * _Nonnull)appleAdvertisingIdentifier;
 /// 로그인 - 본 함수로 라이브옵스, 커머스 공동 사용가능
 - (void)loginWithUserId:(NSString * _Nonnull)userId;
 /// 로그인 - 본 함수로 라이브옵스, 커머스 공동 사용가능
@@ -553,6 +554,54 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel commonAttr:(NSDictionary<NSString *, id> * _Nullable)commonAttr eventDateMs:(double)eventDateMs;
 /// common 회원가입
 - (void)commonSignUpWithChannel:(enum AdBrixSignUpChannel)channel commonAttr:(NSDictionary<NSString *, id> * _Nullable)commonAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 크레딧 사용
+- (void)commonUseCredit;
+/// common 크레딧 사용
+- (void)commonUseCreditWithCommonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr;
+/// common 크레딧 사용
+- (void)commonUseCreditWithEventDate:(NSDate * _Nonnull)eventDate;
+/// common 크레딧 사용
+- (void)commonUseCreditWithEventDateMs:(double)eventDateMs;
+/// common 크레딧 사용
+- (void)commonUseCreditWithEventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 크레딧 사용
+- (void)commonUseCreditWithCommonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDate:(NSDate * _Nonnull)eventDate;
+/// common 크레딧 사용
+- (void)commonUseCreditWithCommonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDateMs:(double)eventDateMs;
+/// common 크레딧 사용
+- (void)commonUseCreditWithCommonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver eventDate:(NSDate * _Nonnull)eventDate;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver eventDateMs:(double)eventDateMs;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDate:(NSDate * _Nonnull)eventDate;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDateMs:(double)eventDateMs;
+/// common 앱 업데이트
+- (void)commonAppUpdateWithPrev_ver:(NSString * _Nonnull)prev_ver curr_ver:(NSString * _Nonnull)curr_ver commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel eventDate:(NSDate * _Nonnull)eventDate;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel eventDateMs:(double)eventDateMs;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDate:(NSDate * _Nonnull)eventDate;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDateMs:(double)eventDateMs;
+/// common 친구초대
+- (void)commonInviteWithChannel:(enum AdBrixInviteChannel)channel commonAttr:(NSDictionary<NSString *, NSString *> * _Nullable)commonAttr eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// purchase 통화 타입을 반환한다
 - (NSString * _Nonnull)getCurrencyStringByAdBrixCurrencyType:(enum AdBrixCurrencyType)currency SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getCurrencyString:(NSInteger)currency SWIFT_WARN_UNUSED_RESULT;
@@ -735,6 +784,21 @@ typedef SWIFT_ENUM(NSInteger, AdBrixSignUpChannel) {
   AdBrixSignUpChannelAdBrixSignUpWeChatChannel = 10,
   AdBrixSignUpChannelAdBrixSignUpUserIdChannel = 11,
   AdBrixSignUpChannelAdBrixSignUpETCChannel = 12,
+};
+
+/// 초대 유형
+typedef SWIFT_ENUM(NSInteger, AdBrixInviteChannel) {
+  AdBrixInviteChannelAdBrixInviteKakaoChannel = 1,
+  AdBrixInviteChannelAdBrixInviteNaverChannel = 2,
+  AdBrixInviteChannelAdBrixInviteLineChannel = 3,
+  AdBrixInviteChannelAdBrixInviteGoogleChannel = 4,
+  AdBrixInviteChannelAdBrixInviteFacebookChannel = 5,
+  AdBrixInviteChannelAdBrixInviteTwitterChannel = 6,
+  AdBrixInviteChannelAdBrixInviteWhatsAppChannel = 8,
+  AdBrixInviteChannelAdBrixInviteQQChannel = 9,
+  AdBrixInviteChannelAdBrixInviteWeChatChannel = 10,
+  AdBrixInviteChannelAdBrixInviteUserIdChannel = 11,
+  AdBrixInviteChannelAdBrixInviteETCChannel = 12,
 };
 
 /// 유저 프로퍼티 성별

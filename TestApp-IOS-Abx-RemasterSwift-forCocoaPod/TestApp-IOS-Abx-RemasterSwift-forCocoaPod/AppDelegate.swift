@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         //광고id
         if ((NSClassFromString("ASIdentifierManager")) != nil) {
             let ifa :UUID = ASIdentifierManager.shared().advertisingIdentifier;
-            let isAppleAdvertisingTrackingEnalbed :Bool = ASIdentifierManager.shared().isAdvertisingTrackingEnabled;
-            adBrix.setAppleAdvertisingIdentifier(ifa.uuidString, isAppleAdvertisingTrackingEnalbed)
+            adBrix.setAppleAdvertisingIdentifier(ifa.uuidString)
             
             //print("ifa UUIDString :: \(ifa.uuidString)")
         }
