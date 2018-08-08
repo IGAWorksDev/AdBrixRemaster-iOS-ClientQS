@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <AdBrixRm/AdBrixRM-Swift.h>
 #import <AdSupport/AdSupport.h>
+#import <iAd/iAd.h>
 
 @interface AppDelegate ()
 
@@ -24,9 +25,7 @@
     //광고id
     if (NSClassFromString(@"ASIdentifierManager")) {
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
-        BOOL isAppleAdvertisingTrackingEnalbed = [[ASIdentifierManager sharedManager]isAdvertisingTrackingEnabled];
-        [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString] :isAppleAdvertisingTrackingEnalbed];
-        //NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
+        [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString]];
     }
     
     [adBrix setLogLevel:AdBrixLogLevelERROR];
@@ -36,7 +35,7 @@
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
-    [adBrix initAdBrixWithAppKey:@"03M110kRQ0K7UAF16jxmYg" secretKey:@"Br9TLszIZUGsmSbnToNBXg"];
+    [adBrix initAdBrixWithAppKey:@"key" secretKey:@"key"];
     
     return YES;
 }

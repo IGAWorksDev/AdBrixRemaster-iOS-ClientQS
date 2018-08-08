@@ -24,8 +24,7 @@
     //광고id
     if (NSClassFromString(@"ASIdentifierManager")){
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
-        BOOL isAppleAdvertisingTrackingEnalbed = [[ASIdentifierManager sharedManager]isAdvertisingTrackingEnabled];
-        [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString] :isAppleAdvertisingTrackingEnalbed];
+        [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString]];
        // NSLog(@"[ifa UUIDString] %@", [ifa UUIDString]);
     }
     

@@ -279,7 +279,6 @@ class MainContoller : UIViewController {
             "size" : "XXL"
         ]
         
-        
         let productModel = adBrix.createCommerceProductData(
             productId: "productId01"
             ,productName: "productName01"
@@ -761,7 +760,7 @@ class MainContoller : UIViewController {
             ,quantity: 1
             ,discount: 5000.0
             ,currencyString: adBrix.getCurrencyStringByAdBrixCurrencyType(AdBrixRM.AdBrixCurrencyType.KRW)
-            ,category: adBrix.createCommerceProductCategoryData(category: "기획전")
+            ,category: adBrix.createCommerceProductCategoryData(category: "기획전", category2: "썸머페스티벌")
             ,productAttrsMap: adBrix.createCommerceProductAttrData(dictionary: [
                 "no" : "9",
                 "color" : "black",
