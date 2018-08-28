@@ -823,6 +823,11 @@ class MainContoller : UIViewController {
         adBrix.gameStageCleared(stageName: "1-1", gameInfoAttr: [
             "stage_redeem" : "none",
             ])
+//        
+//        adBrix.commonSignUp(channel: AdBrixRM.AdBrixSignUpChannel.AdBrixSignUpKakaoChannel)
+//        adBrix.commonUseCredit(commonAttr: ["gold":"100"])
+//        adBrix.commonAppUpdate(prev_ver: "1.0", curr_ver: "1.1")
+//        adBrix.commonInvite(channel: AdBrixRM.AdBrixInviteChannel.AdBrixInviteLineChannel)
     }
     
     func getDateStr() -> String {

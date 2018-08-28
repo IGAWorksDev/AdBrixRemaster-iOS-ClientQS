@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
-        adBrix.initAdBrix(appKey: "key", secretKey:"key")
+        adBrix.initAdBrix(appKey: "kakakak", secretKey:"Br9TLszIZUGsmSbnToNBXg")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
                 

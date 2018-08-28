@@ -1050,6 +1050,13 @@
     [_adBrix gameStageClearedWithStageName:@"1-1" gameInfoAttr:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                 @"none", @"stage_redeem"
                                                                 , nil]];
+    
+    [_adBrix commonSignUpWithChannel:AdBrixSignUpChannelAdBrixSignUpLineChannel];
+    [_adBrix commonUseCreditWithCommonAttr:[NSDictionary dictionaryWithObjectsAndKeys:
+                                            @"100", @"gold"
+                                            , nil]];
+    [_adBrix commonAppUpdateWithPrev_ver:@"1.0" curr_ver:@"1.1"];
+    [_adBrix commonInviteWithChannel:AdBrixInviteChannelAdBrixInviteKakaoChannel];
 }
 
 - (IBAction)click_gdprForgetMe:(id)sender {

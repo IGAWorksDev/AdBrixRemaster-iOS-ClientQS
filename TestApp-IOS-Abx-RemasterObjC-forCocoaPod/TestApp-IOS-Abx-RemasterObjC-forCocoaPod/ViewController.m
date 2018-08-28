@@ -533,7 +533,7 @@
     //NSArray *productArray = [[NSArray alloc] initWithObjects:productModel1, nil];
     
     //상품 결제 - 신용카드
-    [_adBrix commercePurchaseWithOrderId:@"290192012"
+    [_adBrix commonPurchaseWithOrderId:@"290192012"
                              productInfo:productArray
                                 discount:0.00
                           deliveryCharge:3500.00
@@ -620,7 +620,7 @@
     //NSArray *productArray = [[NSArray alloc] initWithObjects:productModel1,productModel2, nil];
     
     //상품 결제 - 모바일 결제
-    [_adBrix commercePurchaseWithOrderId:@"290192012"
+    [_adBrix commonPurchaseWithOrderId:@"290192012"
                              productInfo:productArray
                                 discount:10000.00
                           deliveryCharge:3500.00
@@ -900,6 +900,49 @@
      ];
      */
 }
+
+- (IBAction)click_commonSignUp:(id)sender {
+    [_adBrix commonSignUpWithChannel:AdBrixSignUpChannelAdBrixSignUpLineChannel];
+}
+
+- (IBAction)click_commonUseCredit:(id)sender {
+    [_adBrix commonUseCreditWithCommonAttr:[NSDictionary dictionaryWithObjectsAndKeys:
+                                            @"100", @"gold"
+                                            , nil]];
+}
+
+- (IBAction)click_appUpdate:(id)sender {
+    [_adBrix commonAppUpdateWithPrev_ver:@"1.0" curr_ver:@"1.1"];
+}
+
+- (IBAction)click_commonInvite:(id)sender {
+    [_adBrix commonInviteWithChannel:AdBrixInviteChannelAdBrixInviteKakaoChannel];
+}
+
+
+- (IBAction)click_levelAchieved:(id)sender {
+    [_adBrix gameLevelAchievedWithLevel:15];
+}
+- (IBAction)click_tutorialCompleted:(id)sender {
+    [_adBrix gameTutorialCompletedWithIsSkip:false];
+}
+- (IBAction)click_characterCreated:(id)sender {
+    [_adBrix gameCharacterCreated];
+    [_adBrix gameCharacterCreatedWithGameInfoAttr:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                   @"adbrixer", @"character_name"
+                                                   , nil]];
+    
+}
+- (IBAction)click_stageCleared:(id)sender {
+    [_adBrix gameStageClearedWithStageName:@"1-1"];
+    [_adBrix gameStageClearedWithStageName:@"1-1" gameInfoAttr:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                @"none", @"stage_redeem"
+                                                                , nil]];
+    
+}
+
+
+
 
 
 // MARK -- just util logic not relate AdBrix

@@ -37,8 +37,10 @@ class MainContoller : UIViewController {
     @IBOutlet weak var Button_commerceSearch :UIButton!
     @IBOutlet weak var Button_commerceShare :UIButton!
     
-    
-    
+    @IBOutlet weak var Button_commonSignUp :UIButton!
+    @IBOutlet weak var Button_commonUseCredit :UIButton!
+    @IBOutlet weak var Button_commonAppUpdate :UIButton!
+    @IBOutlet weak var Button_commonInvite :UIButton!
     
     
     let adBrix = AdBrixRM.getInstance
@@ -495,7 +497,7 @@ class MainContoller : UIViewController {
         arr.append(productModel)
         
         //상품 결제 - 신용카드
-        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
+        adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard)
         
         //Extra Attr 사용시
         //adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod: AdBrixRM.AdbrixPaymentMethod.CreditCard, orderAttr: self.getExtraAttrDic())
@@ -548,7 +550,7 @@ class MainContoller : UIViewController {
         arr.append(productModel2)
         
         //상품 결제 - 모바일 결제
-        adBrix.commercePurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:
+        adBrix.commonPurchase(orderId: "290192012", productInfo: arr, discount: 0.00, deliveryCharge: 3500.00, paymentMethod:
             AdBrixRM.AdbrixPaymentMethod.CreditCard
         )
         
@@ -701,6 +703,40 @@ class MainContoller : UIViewController {
         //Extra Attr 사용시
         //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic())
         //adBrix.commerceShare(channel: AdBrixRM.AdBrixSharingChannel.AdBrixSharingKakaoTalk, productInfo: productModel, orderAttr: self.getExtraAttrDic(), eventDateStr: self.getDateStr())
+    }
+    
+    @IBAction func click_commonSignUp(_ sender: Any) {
+        adBrix.commonSignUp(channel: AdBrixRM.AdBrixSignUpChannel.AdBrixSignUpKakaoChannel)
+    }
+    @IBAction func click_commonUseCredit(_ sender: Any) {
+        adBrix.commonUseCredit(commonAttr: ["gold":"100"])
+    }
+    @IBAction func click_commonAppUpdate(_ sender: Any) {
+        adBrix.commonAppUpdate(prev_ver: "1.0", curr_ver: "1.1")
+    }
+    @IBAction func click_commonInvite(_ sender: Any) {
+        adBrix.commonInvite(channel: AdBrixRM.AdBrixInviteChannel.AdBrixInviteLineChannel)
+    }
+    
+    
+    @IBAction func click_levelAchieved(_ sender: Any) {
+        adBrix.gameLevelAchieved(level: 15)
+    }
+    @IBAction func click_tutorialCompleted(_ sender: Any) {
+        adBrix.gameTutorialCompleted(isSkip: false)
+    }
+    @IBAction func click_characterCreated(_ sender: Any) {
+        adBrix.gameCharacterCreated()
+        adBrix.gameCharacterCreated(gameInfoAttr: [
+            "nickname" : "adbrixer",
+            ])
+    }
+    
+    @IBAction func click_stageCleared(_ sender: Any) {
+        adBrix.gameStageCleared(stageName: "1-1")
+        adBrix.gameStageCleared(stageName: "1-1", gameInfoAttr: [
+            "stage_redeem" : "none",
+            ])
     }
     
     func getDateStr() -> String {
