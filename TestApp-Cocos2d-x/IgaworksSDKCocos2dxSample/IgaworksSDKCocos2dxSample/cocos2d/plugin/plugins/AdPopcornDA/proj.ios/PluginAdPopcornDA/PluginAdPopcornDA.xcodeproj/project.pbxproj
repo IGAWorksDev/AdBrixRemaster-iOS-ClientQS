@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE1C49591B563EE2009C1304 /* PluginAdPopcornDA.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE1C49581B563EE2009C1304 /* PluginAdPopcornDA.h */; };
+		EE1C495B1B563EE2009C1304 /* PluginAdPopcornDA.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1C495A1B563EE2009C1304 /* PluginAdPopcornDA.m */; };
+		EE1C49611B563EE3009C1304 /* libPluginAdPopcornDA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1C49551B563EE2009C1304 /* libPluginAdPopcornDA.a */; };
+		FE11229F1D824D0700DBE36D /* AdPopcornDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE11229E1D824D0700DBE36D /* AdPopcornDA.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE1C49621B563EE3009C1304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1C494D1B563EE2009C1304 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1C49541B563EE2009C1304;
+			remoteInfo = PluginAdPopcornDA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE1C49531B563EE2009C1304 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EE1C49591B563EE2009C1304 /* PluginAdPopcornDA.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE1C49551B563EE2009C1304 /* libPluginAdPopcornDA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginAdPopcornDA.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1C49581B563EE2009C1304 /* PluginAdPopcornDA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginAdPopcornDA.h; sourceTree = "<group>"; };
+		EE1C495A1B563EE2009C1304 /* PluginAdPopcornDA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginAdPopcornDA.m; sourceTree = "<group>"; };
+		EE1C49601B563EE3009C1304 /* PluginAdPopcornDATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginAdPopcornDATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1C49661B563EE3009C1304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE11229E1D824D0700DBE36D /* AdPopcornDA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdPopcornDA.framework; path = ../../AdPopcornDA.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE1C49521B563EE2009C1304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE11229F1D824D0700DBE36D /* AdPopcornDA.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1C495D1B563EE3009C1304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1C49611B563EE3009C1304 /* libPluginAdPopcornDA.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE1C494C1B563EE2009C1304 = {
+			isa = PBXGroup;
+			children = (
+				EE1C49571B563EE2009C1304 /* PluginAdPopcornDA */,
+				EE1C49641B563EE3009C1304 /* PluginAdPopcornDATests */,
+				EE1C49561B563EE2009C1304 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE1C49561B563EE2009C1304 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE1C49551B563EE2009C1304 /* libPluginAdPopcornDA.a */,
+				EE1C49601B563EE3009C1304 /* PluginAdPopcornDATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE1C49571B563EE2009C1304 /* PluginAdPopcornDA */ = {
+			isa = PBXGroup;
+			children = (
+				FE11229E1D824D0700DBE36D /* AdPopcornDA.framework */,
+				EE1C49581B563EE2009C1304 /* PluginAdPopcornDA.h */,
+				EE1C495A1B563EE2009C1304 /* PluginAdPopcornDA.m */,
+			);
+			path = PluginAdPopcornDA;
+			sourceTree = "<group>";
+		};
+		EE1C49641B563EE3009C1304 /* PluginAdPopcornDATests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1C49651B563EE3009C1304 /* Supporting Files */,
+			);
+			path = PluginAdPopcornDATests;
+			sourceTree = "<group>";
+		};
+		EE1C49651B563EE3009C1304 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE1C49661B563EE3009C1304 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE1C49541B563EE2009C1304 /* PluginAdPopcornDA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1C49691B563EE3009C1304 /* Build configuration list for PBXNativeTarget "PluginAdPopcornDA" */;
+			buildPhases = (
+				EE1C49511B563EE2009C1304 /* Sources */,
+				EE1C49521B563EE2009C1304 /* Frameworks */,
+				EE1C49531B563EE2009C1304 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginAdPopcornDA;
+			productName = PluginAdPopcornDA;
+			productReference = EE1C49551B563EE2009C1304 /* libPluginAdPopcornDA.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EE1C495F1B563EE3009C1304 /* PluginAdPopcornDATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1C496C1B563EE3009C1304 /* Build configuration list for PBXNativeTarget "PluginAdPopcornDATests" */;
+			buildPhases = (
+				EE1C495C1B563EE3009C1304 /* Sources */,
+				EE1C495D1B563EE3009C1304 /* Frameworks */,
+				EE1C495E1B563EE3009C1304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1C49631B563EE3009C1304 /* PBXTargetDependency */,
+			);
+			name = PluginAdPopcornDATests;
+			productName = PluginAdPopcornDATests;
+			productReference = EE1C49601B563EE3009C1304 /* PluginAdPopcornDATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE1C494D1B563EE2009C1304 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "wonje,song";
+				TargetAttributes = {
+					EE1C49541B563EE2009C1304 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EE1C495F1B563EE3009C1304 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = EE1C49501B563EE2009C1304 /* Build configuration list for PBXProject "PluginAdPopcornDA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE1C494C1B563EE2009C1304;
+			productRefGroup = EE1C49561B563EE2009C1304 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE1C49541B563EE2009C1304 /* PluginAdPopcornDA */,
+				EE1C495F1B563EE3009C1304 /* PluginAdPopcornDATests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE1C495E1B563EE3009C1304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE1C49511B563EE2009C1304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1C495B1B563EE2009C1304 /* PluginAdPopcornDA.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1C495C1B563EE3009C1304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE1C49631B563EE3009C1304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1C49541B563EE2009C1304 /* PluginAdPopcornDA */;
+			targetProxy = EE1C49621B563EE3009C1304 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE1C49671B563EE3009C1304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE1C49681B563EE3009C1304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE1C496A1B563EE3009C1304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../../../../cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EE1C496B1B563EE3009C1304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../../../../cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EE1C496D1B563EE3009C1304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginAdPopcornDATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE1C496E1B563EE3009C1304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginAdPopcornDATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE1C49501B563EE2009C1304 /* Build configuration list for PBXProject "PluginAdPopcornDA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1C49671B563EE3009C1304 /* Debug */,
+				EE1C49681B563EE3009C1304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1C49691B563EE3009C1304 /* Build configuration list for PBXNativeTarget "PluginAdPopcornDA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1C496A1B563EE3009C1304 /* Debug */,
+				EE1C496B1B563EE3009C1304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1C496C1B563EE3009C1304 /* Build configuration list for PBXNativeTarget "PluginAdPopcornDATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1C496D1B563EE3009C1304 /* Debug */,
+				EE1C496E1B563EE3009C1304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE1C494D1B563EE2009C1304 /* Project object */;
+}

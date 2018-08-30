@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		958B4BF81BA128C100DBFE5A /* PluginIgaworksCommerce.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 958B4BF71BA128C100DBFE5A /* PluginIgaworksCommerce.h */; };
+		958B4BFA1BA128C100DBFE5A /* PluginIgaworksCommerce.m in Sources */ = {isa = PBXBuildFile; fileRef = 958B4BF91BA128C100DBFE5A /* PluginIgaworksCommerce.m */; };
+		958B4C001BA128C100DBFE5A /* libPluginIgaworksCommerce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 958B4BF41BA128C100DBFE5A /* libPluginIgaworksCommerce.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		958B4C011BA128C100DBFE5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 958B4BEC1BA128C000DBFE5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 958B4BF31BA128C100DBFE5A;
+			remoteInfo = PluginIgaworksCommerce;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		958B4BF21BA128C100DBFE5A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				958B4BF81BA128C100DBFE5A /* PluginIgaworksCommerce.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		958B4BF41BA128C100DBFE5A /* libPluginIgaworksCommerce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginIgaworksCommerce.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		958B4BF71BA128C100DBFE5A /* PluginIgaworksCommerce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginIgaworksCommerce.h; sourceTree = "<group>"; };
+		958B4BF91BA128C100DBFE5A /* PluginIgaworksCommerce.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginIgaworksCommerce.m; sourceTree = "<group>"; };
+		958B4BFF1BA128C100DBFE5A /* PluginIgaworksCommerceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginIgaworksCommerceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		958B4C051BA128C100DBFE5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		958B4BF11BA128C100DBFE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		958B4BFC1BA128C100DBFE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958B4C001BA128C100DBFE5A /* libPluginIgaworksCommerce.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		958B4BEB1BA128C000DBFE5A = {
+			isa = PBXGroup;
+			children = (
+				958B4BF61BA128C100DBFE5A /* PluginIgaworksCommerce */,
+				958B4C031BA128C100DBFE5A /* PluginIgaworksCommerceTests */,
+				958B4BF51BA128C100DBFE5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		958B4BF51BA128C100DBFE5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				958B4BF41BA128C100DBFE5A /* libPluginIgaworksCommerce.a */,
+				958B4BFF1BA128C100DBFE5A /* PluginIgaworksCommerceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		958B4BF61BA128C100DBFE5A /* PluginIgaworksCommerce */ = {
+			isa = PBXGroup;
+			children = (
+				958B4BF71BA128C100DBFE5A /* PluginIgaworksCommerce.h */,
+				958B4BF91BA128C100DBFE5A /* PluginIgaworksCommerce.m */,
+			);
+			path = PluginIgaworksCommerce;
+			sourceTree = "<group>";
+		};
+		958B4C031BA128C100DBFE5A /* PluginIgaworksCommerceTests */ = {
+			isa = PBXGroup;
+			children = (
+				958B4C041BA128C100DBFE5A /* Supporting Files */,
+			);
+			path = PluginIgaworksCommerceTests;
+			sourceTree = "<group>";
+		};
+		958B4C041BA128C100DBFE5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				958B4C051BA128C100DBFE5A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		958B4BF31BA128C100DBFE5A /* PluginIgaworksCommerce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 958B4C081BA128C100DBFE5A /* Build configuration list for PBXNativeTarget "PluginIgaworksCommerce" */;
+			buildPhases = (
+				958B4BF01BA128C100DBFE5A /* Sources */,
+				958B4BF11BA128C100DBFE5A /* Frameworks */,
+				958B4BF21BA128C100DBFE5A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginIgaworksCommerce;
+			productName = PluginIgaworksCommerce;
+			productReference = 958B4BF41BA128C100DBFE5A /* libPluginIgaworksCommerce.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		958B4BFE1BA128C100DBFE5A /* PluginIgaworksCommerceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 958B4C0B1BA128C100DBFE5A /* Build configuration list for PBXNativeTarget "PluginIgaworksCommerceTests" */;
+			buildPhases = (
+				958B4BFB1BA128C100DBFE5A /* Sources */,
+				958B4BFC1BA128C100DBFE5A /* Frameworks */,
+				958B4BFD1BA128C100DBFE5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				958B4C021BA128C100DBFE5A /* PBXTargetDependency */,
+			);
+			name = PluginIgaworksCommerceTests;
+			productName = PluginIgaworksCommerceTests;
+			productReference = 958B4BFF1BA128C100DBFE5A /* PluginIgaworksCommerceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		958B4BEC1BA128C000DBFE5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = igaworks;
+				TargetAttributes = {
+					958B4BF31BA128C100DBFE5A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					958B4BFE1BA128C100DBFE5A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 958B4BEF1BA128C000DBFE5A /* Build configuration list for PBXProject "PluginIgaworksCommerce" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 958B4BEB1BA128C000DBFE5A;
+			productRefGroup = 958B4BF51BA128C100DBFE5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				958B4BF31BA128C100DBFE5A /* PluginIgaworksCommerce */,
+				958B4BFE1BA128C100DBFE5A /* PluginIgaworksCommerceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		958B4BFD1BA128C100DBFE5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		958B4BF01BA128C100DBFE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958B4BFA1BA128C100DBFE5A /* PluginIgaworksCommerce.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		958B4BFB1BA128C100DBFE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		958B4C021BA128C100DBFE5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 958B4BF31BA128C100DBFE5A /* PluginIgaworksCommerce */;
+			targetProxy = 958B4C011BA128C100DBFE5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		958B4C061BA128C100DBFE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		958B4C071BA128C100DBFE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		958B4C091BA128C100DBFE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+					"/Users/imkkt/Documents/cocos2d-x-3.7/plugin/plugins/IgaworksCommerce/proj.ios",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../../protocols/platform/ios",
+					"$(SRCROOT)/../../../../protocols/include",
+					"\"$(SRCROOT)/../../../../../../cocos2dx/cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		958B4C0A1BA128C100DBFE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+					"/Users/imkkt/Documents/cocos2d-x-3.7/plugin/plugins/IgaworksCommerce/proj.ios",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../../protocols/platform/ios",
+					"$(SRCROOT)/../../../../protocols/include",
+					"\"$(SRCROOT)/../../../../../../cocos2dx/cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		958B4C0C1BA128C100DBFE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginIgaworksCommerceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		958B4C0D1BA128C100DBFE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginIgaworksCommerceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		958B4BEF1BA128C000DBFE5A /* Build configuration list for PBXProject "PluginIgaworksCommerce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958B4C061BA128C100DBFE5A /* Debug */,
+				958B4C071BA128C100DBFE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		958B4C081BA128C100DBFE5A /* Build configuration list for PBXNativeTarget "PluginIgaworksCommerce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958B4C091BA128C100DBFE5A /* Debug */,
+				958B4C0A1BA128C100DBFE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		958B4C0B1BA128C100DBFE5A /* Build configuration list for PBXNativeTarget "PluginIgaworksCommerceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				958B4C0C1BA128C100DBFE5A /* Debug */,
+				958B4C0D1BA128C100DBFE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 958B4BEC1BA128C000DBFE5A /* Project object */;
+}

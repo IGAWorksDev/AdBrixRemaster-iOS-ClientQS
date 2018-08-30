@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE6042DD1B5359CA00B3810E /* PluginAdPopcornOfferwall.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EE6042DC1B5359CA00B3810E /* PluginAdPopcornOfferwall.h */; };
+		EE6042DF1B5359CA00B3810E /* PluginAdPopcornOfferwall.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6042DE1B5359CA00B3810E /* PluginAdPopcornOfferwall.m */; };
+		EE6042E51B5359CA00B3810E /* libPluginAdPopcornOfferwall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6042D91B5359CA00B3810E /* libPluginAdPopcornOfferwall.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE6042E61B5359CA00B3810E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE6042D11B5359CA00B3810E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE6042D81B5359CA00B3810E;
+			remoteInfo = PluginAdPopcornOfferwall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE6042D71B5359CA00B3810E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EE6042DD1B5359CA00B3810E /* PluginAdPopcornOfferwall.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE6042D91B5359CA00B3810E /* libPluginAdPopcornOfferwall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginAdPopcornOfferwall.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6042DC1B5359CA00B3810E /* PluginAdPopcornOfferwall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginAdPopcornOfferwall.h; sourceTree = "<group>"; };
+		EE6042DE1B5359CA00B3810E /* PluginAdPopcornOfferwall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginAdPopcornOfferwall.m; sourceTree = "<group>"; };
+		EE6042E41B5359CA00B3810E /* PluginAdPopcornOfferwallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginAdPopcornOfferwallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6042EA1B5359CA00B3810E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE6042F51B535A9F00B3810E /* AdPopcornOfferwall.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AdPopcornOfferwall.bundle; path = ../../AdPopcornOfferwall.framework/Versions/A/Resources/AdPopcornOfferwall.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE6042D61B5359CA00B3810E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6042E11B5359CA00B3810E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6042E51B5359CA00B3810E /* libPluginAdPopcornOfferwall.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE6042D01B5359CA00B3810E = {
+			isa = PBXGroup;
+			children = (
+				EE6042DB1B5359CA00B3810E /* PluginAdPopcornOfferwall */,
+				EE6042E81B5359CA00B3810E /* PluginAdPopcornOfferwallTests */,
+				EE6042DA1B5359CA00B3810E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE6042DA1B5359CA00B3810E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE6042D91B5359CA00B3810E /* libPluginAdPopcornOfferwall.a */,
+				EE6042E41B5359CA00B3810E /* PluginAdPopcornOfferwallTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE6042DB1B5359CA00B3810E /* PluginAdPopcornOfferwall */ = {
+			isa = PBXGroup;
+			children = (
+				EE6042F51B535A9F00B3810E /* AdPopcornOfferwall.bundle */,
+				EE6042DC1B5359CA00B3810E /* PluginAdPopcornOfferwall.h */,
+				EE6042DE1B5359CA00B3810E /* PluginAdPopcornOfferwall.m */,
+			);
+			path = PluginAdPopcornOfferwall;
+			sourceTree = "<group>";
+		};
+		EE6042E81B5359CA00B3810E /* PluginAdPopcornOfferwallTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE6042E91B5359CA00B3810E /* Supporting Files */,
+			);
+			path = PluginAdPopcornOfferwallTests;
+			sourceTree = "<group>";
+		};
+		EE6042E91B5359CA00B3810E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE6042EA1B5359CA00B3810E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE6042D81B5359CA00B3810E /* PluginAdPopcornOfferwall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6042ED1B5359CA00B3810E /* Build configuration list for PBXNativeTarget "PluginAdPopcornOfferwall" */;
+			buildPhases = (
+				EE6042D51B5359CA00B3810E /* Sources */,
+				EE6042D61B5359CA00B3810E /* Frameworks */,
+				EE6042D71B5359CA00B3810E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginAdPopcornOfferwall;
+			productName = PluginAdPopcornOfferwall;
+			productReference = EE6042D91B5359CA00B3810E /* libPluginAdPopcornOfferwall.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EE6042E31B5359CA00B3810E /* PluginAdPopcornOfferwallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6042F01B5359CA00B3810E /* Build configuration list for PBXNativeTarget "PluginAdPopcornOfferwallTests" */;
+			buildPhases = (
+				EE6042E01B5359CA00B3810E /* Sources */,
+				EE6042E11B5359CA00B3810E /* Frameworks */,
+				EE6042E21B5359CA00B3810E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE6042E71B5359CA00B3810E /* PBXTargetDependency */,
+			);
+			name = PluginAdPopcornOfferwallTests;
+			productName = PluginAdPopcornOfferwallTests;
+			productReference = EE6042E41B5359CA00B3810E /* PluginAdPopcornOfferwallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE6042D11B5359CA00B3810E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "wonje,song";
+				TargetAttributes = {
+					EE6042D81B5359CA00B3810E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EE6042E31B5359CA00B3810E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = EE6042D41B5359CA00B3810E /* Build configuration list for PBXProject "PluginAdPopcornOfferwall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EE6042D01B5359CA00B3810E;
+			productRefGroup = EE6042DA1B5359CA00B3810E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE6042D81B5359CA00B3810E /* PluginAdPopcornOfferwall */,
+				EE6042E31B5359CA00B3810E /* PluginAdPopcornOfferwallTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE6042E21B5359CA00B3810E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE6042D51B5359CA00B3810E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6042DF1B5359CA00B3810E /* PluginAdPopcornOfferwall.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6042E01B5359CA00B3810E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE6042E71B5359CA00B3810E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE6042D81B5359CA00B3810E /* PluginAdPopcornOfferwall */;
+			targetProxy = EE6042E61B5359CA00B3810E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE6042EB1B5359CA00B3810E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE6042EC1B5359CA00B3810E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE6042EE1B5359CA00B3810E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../../../IgaworksSDKCocos2dxSample/IgaworksSDKCocos2dxSample/cocos2d/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EE6042EF1B5359CA00B3810E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../../../IgaworksSDKCocos2dxSample/IgaworksSDKCocos2dxSample/cocos2d/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EE6042F11B5359CA00B3810E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginAdPopcornOfferwallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE6042F21B5359CA00B3810E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginAdPopcornOfferwallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE6042D41B5359CA00B3810E /* Build configuration list for PBXProject "PluginAdPopcornOfferwall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6042EB1B5359CA00B3810E /* Debug */,
+				EE6042EC1B5359CA00B3810E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6042ED1B5359CA00B3810E /* Build configuration list for PBXNativeTarget "PluginAdPopcornOfferwall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6042EE1B5359CA00B3810E /* Debug */,
+				EE6042EF1B5359CA00B3810E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6042F01B5359CA00B3810E /* Build configuration list for PBXNativeTarget "PluginAdPopcornOfferwallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6042F11B5359CA00B3810E /* Debug */,
+				EE6042F21B5359CA00B3810E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE6042D11B5359CA00B3810E /* Project object */;
+}

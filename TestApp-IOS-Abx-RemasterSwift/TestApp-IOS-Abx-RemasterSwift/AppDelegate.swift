@@ -90,6 +90,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         return true
     }
     
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let incomingURL = userActivity.webpageURL,
+            let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true),
+            let path = components.path,
+            let params = components.queryItems else {
+                return false
+        }
+        
+        print("path = \(path) :: incomingURL \(incomingURL) \(params)")
+        let adBrix = AdBrixRM.getInstance
+        adBrix.deepLinkOpen(url: incomingURL)
+        
+        return true
+    }
     
 //    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
 //

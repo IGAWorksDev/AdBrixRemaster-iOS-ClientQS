@@ -111,6 +111,21 @@
 }
 #endif
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
+-(BOOL)application:(nonnull UIApplication *)application continueUserActivity:(nonnull NSUserActivity *)userActivity restorationHandler:(nonnull void (^)(NSArray * __nullable))restorationHandler {
+    
+    if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        AdBrixRM *adBrix = [AdBrixRM sharedInstance];
+        [adBrix deepLinkOpenWithUrl:userActivity.webpageURL];
+        return YES;
+    }
+    else {
+        return NO;
+    }
+   
+}
+#endif
+
 - (NSString *)getDateStr
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
