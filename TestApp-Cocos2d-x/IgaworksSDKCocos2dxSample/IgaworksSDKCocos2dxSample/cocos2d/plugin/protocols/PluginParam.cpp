@@ -23,6 +23,7 @@ THE SOFTWARE.
 ****************************************************************************/
 
 #include "PluginParam.h"
+#include "json.h"
 
 namespace cocos2d { namespace plugin {
 
@@ -176,8 +177,7 @@ AdBrixRmCommerceProductModel::AdBrixRmCommerceProductModel(std::string productId
     _category = category->categoryFullString;
 }
     
-//std::string AdBrixRmCommerceProductModel::create(const char* productId, const char* productName, double price, double discount, int quantity, const char* currencyString, AdBrixRmCommerceProductCategoryModel category, AdBrixRmCommerceProductAttrModel *extraAttrs)
-    std::string AdBrixRmCommerceProductModel::create(std::string productId, std::string productName, double price, double discount, int quantity, std::string currencyString, AdBrixRmCommerceProductCategoryModel* category, AdBrixRmCommerceProductAttrModel *extraAttrs)
+std::string AdBrixRmCommerceProductModel::create(std::string productId, std::string productName, double price, double discount, int quantity, std::string currencyString, AdBrixRmCommerceProductCategoryModel* category, AdBrixRmCommerceProductAttrModel* extraAttrs)
     
     {
         //return *new AdBrixCommerceProductModel(productId, productName, price, discount, quantity, currencyString, category, extraAttrs);
@@ -186,49 +186,68 @@ AdBrixRmCommerceProductModel::AdBrixRmCommerceProductModel(std::string productId
         auto sDiscount = std::to_string(discount);
         auto sQuantity = std::to_string(quantity);
         
+        Json::Value root;
         
-        std::string jsonString = "{\"productId\": ";
+        root["product_id"] = productId;
+        root["product_name"] = productName;
+        root["price"] = sPrice;
+        root["currency"] = currencyString;
+        root["discount"] = sDiscount;
+        root["quantity"] = sQuantity;
+        root["category"] = category->categoryFullString;
         
-        jsonString = jsonString +
-        "\"" + productId  + "\"" + ", " +
-        "\"productName\": " + "\"" + productName + "\"" + ", " +
-        "\"price\": " + sPrice + ", " +
-        "\"currency\": " + "\"" + currencyString + "\"" + ", " +
-        "\"discount\": " + sDiscount + ", " +
-        "\"quantity\": " + "\"" + sQuantity + "\"" + ", " +
-        "\"category\": " + "\"" + category->categoryFullString + "\"" + ", ";
+        Json::Value extra_attrs;
         
-       
         if(extraAttrs != NULL)
-       {
-           jsonString = jsonString + "\"extra_attrs\":{";
-           for (int i = 0; i < 5; i ++)
-           {
-               if((i == 4) && (extraAttrs->getKey(i) != NULL) && (extraAttrs->getValue(i) != NULL))
-               {
-                   jsonString = jsonString + "\"" + extraAttrs->getKey(i) + "\":" + "\"" + extraAttrs->getValue(i) + "\"" + "}";
-               }
-               
-               else if((i == 0) && (extraAttrs->getKey(i) != NULL) && (extraAttrs->getValue(i) != NULL) )
-               {
-                   jsonString = jsonString + "\"" + extraAttrs->getKey(i) + "\":" + "\"" + extraAttrs->getValue(i) + "\"";
-               }
-               
-               else if((extraAttrs->getKey(i) != NULL) && (extraAttrs->getValue(i) != NULL) )
-               {
-                   jsonString = jsonString + ", " + "\"" + extraAttrs->getKey(i) + "\":" + "\"" + extraAttrs->getValue(i) + "\"";
-               }
-               
-               else if((extraAttrs->getKey(i) == NULL) && (extraAttrs->getValue(i) == NULL) )
-               {
-                   jsonString = jsonString + "}";
-                   break;
-               }
-               
-           }
-       }
-        jsonString = jsonString +"}";
-        return jsonString;
+        {
+            for (int i = 0; i < 5; i ++) {
+                if((extraAttrs->getKey(i) != NULL) && (extraAttrs->getValue(i) != NULL)) {
+                    extra_attrs[extraAttrs->getKey(i)] = extraAttrs->getValue(i);
+                }
+                
+            }
+        }
+        root["extra_attrs"] = extra_attrs;
+        
+//        std::string jsonString = "{\"product_id\": ";
+//
+//        jsonString = jsonString +
+//        "\"" + productId  + "\"" + ", " +
+//        "\"product_name\": " + "\"" + productName + "\"" + ", " +
+//        "\"price\": " + sPrice + ", " +
+//        "\"currency\": " + "\"" + currencyString + "\"" + ", " +
+//        "\"discount\": " + sDiscount + ", " +
+//        "\"quantity\": " + "\"" + sQuantity + "\"" + ", " +
+//        "\"category\": " + "\"" + category->categoryFullString + "\"" + ", ";
+//
+//        std::string jsonAttrString = "\"extra_attrs\":{";
+//        if(extraAttrs != NULL)
+//        {
+//            for (int i = 0; i < 5; i ++)
+//            {
+//
+//                if((extraAttrs->getKey(i) != NULL) && (extraAttrs->getValue(i) != NULL)) {
+//                    if (i == 4) {
+//                        jsonAttrString = jsonAttrString + "\"" + extraAttrs->getKey(i) + "\":" + "\"" + extraAttrs->getValue(i) + "\"" + "}";
+//                    } else {
+//                        jsonAttrString = jsonAttrString + "\"" + extraAttrs->getKey(i) + "\":" + "\"" + extraAttrs->getValue(i) + "\"" + ",";
+//                    }
+//                }
+//
+//            }
+//        }
+//        else {
+//            jsonAttrString = jsonAttrString + "}";
+//        }
+//        jsonString = jsonAttrString +"}";
+//        return jsonString;
+        
+        Json::StreamWriterBuilder builder;
+        const std::string output = Json::writeString(builder, root);
+        
+        return output;
     }
 
+   
+    
 }} //namespace cocos2d { namespace plugin {

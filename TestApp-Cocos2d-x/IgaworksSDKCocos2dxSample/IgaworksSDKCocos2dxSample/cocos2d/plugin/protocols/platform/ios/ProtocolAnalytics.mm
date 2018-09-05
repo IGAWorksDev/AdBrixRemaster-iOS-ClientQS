@@ -22,7 +22,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 #include "ProtocolAnalytics.h"
-#import  "InterfaceAnalytics.h"
+//#import  "InterfaceAnalytics.h"
 #include "PluginUtilsIOS.h"
 
 namespace cocos2d { namespace plugin {
@@ -37,40 +37,152 @@ ProtocolAnalytics::~ProtocolAnalytics()
 }
 
     
-void ProtocolAnalytics::setAppleAdvertisingIdentifier(const char* appleAdvertisingIdentifier){}
+void ProtocolAnalytics::setAppleAdvertisingIdentifier(const char* appleAdvertisingIdentifier){
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:setAppleAdvertisingIdentifier");
+}
 
-void ProtocolAnalytics::setEventUploadCountInterval(int countInterval) {}
-void ProtocolAnalytics::setEventUploadTimeInterval(int timeInterval){}
+void ProtocolAnalytics::setEventUploadCountInterval(int countInterval) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:setEventUploadCountInterval");
+}
+void ProtocolAnalytics::setEventUploadTimeInterval(int timeInterval){
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:setEventUploadTimeInterval");
+    
+}
 
-void ProtocolAnalytics::deepLinkOpenWithUrl(const char* urlStr){}
+void ProtocolAnalytics::deepLinkOpenWithUrl(const char* urlStr){
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:deepLinkOpenWithUrl");
+    
+}
 
-void ProtocolAnalytics::initAdBrix(const char* appKey, const char* secretKey){}
+void ProtocolAnalytics::initAdBrix(const char* appKey, const char* secretKey){
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:initAdBrix");
+    
+}
 
-void ProtocolAnalytics::setLogLevel(int logLevel) { }
-void ProtocolAnalytics::setAge(int age) { }
-void ProtocolAnalytics::setGender(int gender) { }
+void ProtocolAnalytics::setLogLevel(int logLevel) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM :setLogLevel");
+    
+}
+void ProtocolAnalytics::setAge(int age) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:setAge");
+    
+}
+void ProtocolAnalytics::setGender(int gender) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:setGender");
+    
+}
 
-void ProtocolAnalytics::setUserProperties(paramMap* params) { }
+void ProtocolAnalytics::setUserProperties(paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:setUserProperties");
+    
+}
 
-void ProtocolAnalytics::gdprForgetMe() { }
+void ProtocolAnalytics::gdprForgetMe() {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:gdprForgetMe");
+    
+}
 
-void ProtocolAnalytics::events(const char* eventName) { }
-void ProtocolAnalytics::events(const char* eventName, paramMap* params) { }
+void ProtocolAnalytics::events(const char* eventName) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:events");
+    
+}
+void ProtocolAnalytics::events(const char* eventName, paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:events");
+    
+}
 
-void ProtocolAnalytics::login(const char* userId) { }
+void ProtocolAnalytics::login(const char* userId) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:login");
+    
+}
 
 
-void ProtocolAnalytics::gameLevelAchieved(int level, paramMap* params) { }
+void ProtocolAnalytics::gameLevelAchieved(int level, paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:gameLevelAchieved");
+    
+}
 
-void ProtocolAnalytics::gameTutorialCompleted(bool isSkip, paramMap* params) { }
-void ProtocolAnalytics::gameCharacterCreated(paramMap* params) { }
-void ProtocolAnalytics::gameStageCleared(const char* stageName, paramMap* params) { }
+void ProtocolAnalytics::gameTutorialCompleted(bool isSkip, paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:gameTutorialCompleted");
+    
+}
+void ProtocolAnalytics::gameCharacterCreated(paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:gameCharacterCreated");
+}
+void ProtocolAnalytics::gameStageCleared(const char* stageName, paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:gameStageCleared");
+    
+}
 
-void ProtocolAnalytics::commonPurchase(paramMap* productParam, paramMap* params) { }
-void ProtocolAnalytics::commonSignUp(int channel, paramMap* params) { }
-void ProtocolAnalytics::commonUseCredit(paramMap* params) { }
-void ProtocolAnalytics::commonAppUpdate(const char* prev_ver, const char*  curr_ver, paramMap* params) { }
-void ProtocolAnalytics::commonInvite(int channel,  paramMap params) { }
+void ProtocolAnalytics::commonPurchaseSingle(paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:commonPurchase");
+    
+}
+    
+void ProtocolAnalytics::commonPurchaseBulk(paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:commonPurchase");
+    
+}
+    
+void ProtocolAnalytics::commonSignUp(int channel, paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:commonSignUp");
+    
+}
+void ProtocolAnalytics::commonUseCredit(paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:commonUseCredit");
+}
+void ProtocolAnalytics::commonAppUpdate(const char* prev_ver, const char*  curr_ver, paramMap* params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics:commonAppUpdate");
+}
+void ProtocolAnalytics::commonInvite(int channel,  paramMap params) {
+    PluginOCData* pData = PluginUtilsIOS::getPluginOCData(this);
+    assert(pData != NULL);
+    NSLog(@"AdBrixRM ProtocolAnalytics: commonInvite");
+}
 
 
 }} //namespace cocos2d { namespace plugin {

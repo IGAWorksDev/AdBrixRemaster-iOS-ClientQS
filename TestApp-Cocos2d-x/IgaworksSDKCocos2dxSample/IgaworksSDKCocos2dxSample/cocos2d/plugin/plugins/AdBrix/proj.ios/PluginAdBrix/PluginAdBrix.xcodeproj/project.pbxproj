@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131BDDF92138C3D100B2CFE7 /* PluginAdBrixRM.m in Sources */ = {isa = PBXBuildFile; fileRef = 131BDDF82138C3D100B2CFE7 /* PluginAdBrixRM.m */; };
+		131BDDFA2138C3D100B2CFE7 /* PluginAdBrixRM.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 131BDDF72138C3D100B2CFE7 /* PluginAdBrixRM.h */; };
+		131BDDFF2138C41000B2CFE7 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131BDDFE2138C41000B2CFE7 /* AdBrixRM.framework */; };
+		131BDE0C2138C70C00B2CFE7 /* PluginAdBrixRemaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 131BDE0B2138C70C00B2CFE7 /* PluginAdBrixRemaster.m */; };
+		131BDE0D2138C70C00B2CFE7 /* PluginAdBrixRemaster.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 131BDE0A2138C70C00B2CFE7 /* PluginAdBrixRemaster.h */; };
+		131BDE142138C7F300B2CFE7 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131BDE132138C7F300B2CFE7 /* AdBrixRM.framework */; };
+		131BDE162138C92000B2CFE7 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131BDE152138C92000B2CFE7 /* AdBrixRM.framework */; };
 		EED3DC251B54F6D7004A5C63 /* PluginAdBrix.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EED3DC241B54F6D7004A5C63 /* PluginAdBrix.h */; };
 		EED3DC271B54F6D7004A5C63 /* PluginAdBrix.m in Sources */ = {isa = PBXBuildFile; fileRef = EED3DC261B54F6D7004A5C63 /* PluginAdBrix.m */; };
 		EED3DC2D1B54F6D7004A5C63 /* libPluginAdBrix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */; };
@@ -24,6 +31,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		131BDDF32138C3D100B2CFE7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				131BDDFA2138C3D100B2CFE7 /* PluginAdBrixRM.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		131BDE062138C70C00B2CFE7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				131BDE0D2138C70C00B2CFE7 /* PluginAdBrixRemaster.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED3DC1F1B54F6D7004A5C63 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +64,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		131BDDF52138C3D100B2CFE7 /* libPluginAdBrixRM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginAdBrixRM.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		131BDDF72138C3D100B2CFE7 /* PluginAdBrixRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginAdBrixRM.h; sourceTree = "<group>"; };
+		131BDDF82138C3D100B2CFE7 /* PluginAdBrixRM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginAdBrixRM.m; sourceTree = "<group>"; };
+		131BDDFE2138C41000B2CFE7 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrixRM.framework; path = ../../AdBrixRM.framework; sourceTree = "<group>"; };
+		131BDE082138C70C00B2CFE7 /* libPluginAdBrixRemaster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginAdBrixRemaster.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		131BDE0A2138C70C00B2CFE7 /* PluginAdBrixRemaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginAdBrixRemaster.h; sourceTree = "<group>"; };
+		131BDE0B2138C70C00B2CFE7 /* PluginAdBrixRemaster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginAdBrixRemaster.m; sourceTree = "<group>"; };
+		131BDE132138C7F300B2CFE7 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrixRM.framework; path = ../../AdBrixRM.framework; sourceTree = "<group>"; };
+		131BDE152138C92000B2CFE7 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrixRM.framework; path = ../../AdBrixRM.framework; sourceTree = "<group>"; };
 		EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginAdBrix.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED3DC241B54F6D7004A5C63 /* PluginAdBrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginAdBrix.h; sourceTree = "<group>"; };
 		EED3DC261B54F6D7004A5C63 /* PluginAdBrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginAdBrix.m; sourceTree = "<group>"; };
@@ -47,11 +83,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		131BDDF22138C3D100B2CFE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131BDDFF2138C41000B2CFE7 /* AdBrixRM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		131BDE052138C70C00B2CFE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131BDE142138C7F300B2CFE7 /* AdBrixRM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED3DC1E1B54F6D7004A5C63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EED3DC411B54FBD3004A5C63 /* AdBrix.framework in Frameworks */,
+				131BDE162138C92000B2CFE7 /* AdBrixRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,11 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131BDDF62138C3D100B2CFE7 /* PluginAdBrixRM */ = {
+			isa = PBXGroup;
+			children = (
+				131BDDFE2138C41000B2CFE7 /* AdBrixRM.framework */,
+				131BDDF72138C3D100B2CFE7 /* PluginAdBrixRM.h */,
+				131BDDF82138C3D100B2CFE7 /* PluginAdBrixRM.m */,
+			);
+			path = PluginAdBrixRM;
+			sourceTree = "<group>";
+		};
+		131BDE092138C70C00B2CFE7 /* PluginAdBrixRemaster */ = {
+			isa = PBXGroup;
+			children = (
+				131BDE132138C7F300B2CFE7 /* AdBrixRM.framework */,
+				131BDE0A2138C70C00B2CFE7 /* PluginAdBrixRemaster.h */,
+				131BDE0B2138C70C00B2CFE7 /* PluginAdBrixRemaster.m */,
+			);
+			path = PluginAdBrixRemaster;
+			sourceTree = "<group>";
+		};
 		EED3DC181B54F6D7004A5C63 = {
 			isa = PBXGroup;
 			children = (
 				EED3DC231B54F6D7004A5C63 /* PluginAdBrix */,
 				EED3DC301B54F6D7004A5C63 /* PluginAdBrixTests */,
+				131BDDF62138C3D100B2CFE7 /* PluginAdBrixRM */,
+				131BDE092138C70C00B2CFE7 /* PluginAdBrixRemaster */,
 				EED3DC221B54F6D7004A5C63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +155,8 @@
 			children = (
 				EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */,
 				EED3DC2C1B54F6D7004A5C63 /* PluginAdBrixTests.xctest */,
+				131BDDF52138C3D100B2CFE7 /* libPluginAdBrixRM.a */,
+				131BDE082138C70C00B2CFE7 /* libPluginAdBrixRemaster.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +164,7 @@
 		EED3DC231B54F6D7004A5C63 /* PluginAdBrix */ = {
 			isa = PBXGroup;
 			children = (
+				131BDE152138C92000B2CFE7 /* AdBrixRM.framework */,
 				EED3DC421B54FBDE004A5C63 /* AdBrix.bundle */,
 				EED3DC401B54FBD3004A5C63 /* AdBrix.framework */,
 				EED3DC241B54F6D7004A5C63 /* PluginAdBrix.h */,
@@ -114,6 +192,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		131BDDF42138C3D100B2CFE7 /* PluginAdBrixRM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131BDDFD2138C3D100B2CFE7 /* Build configuration list for PBXNativeTarget "PluginAdBrixRM" */;
+			buildPhases = (
+				131BDDF12138C3D100B2CFE7 /* Sources */,
+				131BDDF22138C3D100B2CFE7 /* Frameworks */,
+				131BDDF32138C3D100B2CFE7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginAdBrixRM;
+			productName = PluginAdBrixRM;
+			productReference = 131BDDF52138C3D100B2CFE7 /* libPluginAdBrixRM.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		131BDE072138C70C00B2CFE7 /* PluginAdBrixRemaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131BDE0E2138C70C00B2CFE7 /* Build configuration list for PBXNativeTarget "PluginAdBrixRemaster" */;
+			buildPhases = (
+				131BDE042138C70C00B2CFE7 /* Sources */,
+				131BDE052138C70C00B2CFE7 /* Frameworks */,
+				131BDE062138C70C00B2CFE7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginAdBrixRemaster;
+			productName = PluginAdBrixRemaster;
+			productReference = 131BDE082138C70C00B2CFE7 /* libPluginAdBrixRemaster.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		EED3DC201B54F6D7004A5C63 /* PluginAdBrix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EED3DC351B54F6D7004A5C63 /* Build configuration list for PBXNativeTarget "PluginAdBrix" */;
@@ -158,6 +270,16 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "wonje,song";
 				TargetAttributes = {
+					131BDDF42138C3D100B2CFE7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = 6UFX7ZBPC3;
+						ProvisioningStyle = Automatic;
+					};
+					131BDE072138C70C00B2CFE7 = {
+						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = 6UFX7ZBPC3;
+						ProvisioningStyle = Automatic;
+					};
 					EED3DC201B54F6D7004A5C63 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -180,6 +302,8 @@
 			targets = (
 				EED3DC201B54F6D7004A5C63 /* PluginAdBrix */,
 				EED3DC2B1B54F6D7004A5C63 /* PluginAdBrixTests */,
+				131BDDF42138C3D100B2CFE7 /* PluginAdBrixRM */,
+				131BDE072138C70C00B2CFE7 /* PluginAdBrixRemaster */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +319,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		131BDDF12138C3D100B2CFE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131BDDF92138C3D100B2CFE7 /* PluginAdBrixRM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		131BDE042138C70C00B2CFE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131BDE0C2138C70C00B2CFE7 /* PluginAdBrixRemaster.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED3DC1D1B54F6D7004A5C63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +361,158 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		131BDDFB2138C3D100B2CFE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../../protocols/platform/ios",
+					"\"$(SRCROOT)/../../../../../../cocos2dx/cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		131BDDFC2138C3D100B2CFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../../protocols/platform/ios",
+					"\"$(SRCROOT)/../../../../../../cocos2dx/cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		131BDE0F2138C70C00B2CFE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		131BDE102138C70C00B2CFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EED3DC331B54F6D7004A5C63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -372,6 +664,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		131BDDFD2138C3D100B2CFE7 /* Build configuration list for PBXNativeTarget "PluginAdBrixRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131BDDFB2138C3D100B2CFE7 /* Debug */,
+				131BDDFC2138C3D100B2CFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		131BDE0E2138C70C00B2CFE7 /* Build configuration list for PBXNativeTarget "PluginAdBrixRemaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131BDE0F2138C70C00B2CFE7 /* Debug */,
+				131BDE102138C70C00B2CFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EED3DC1C1B54F6D7004A5C63 /* Build configuration list for PBXProject "PluginAdBrix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

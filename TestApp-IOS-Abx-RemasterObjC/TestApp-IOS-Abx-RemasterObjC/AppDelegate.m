@@ -35,10 +35,11 @@
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
-    [adBrix initAdBrixWithAppKey:@"key" secretKey:@"Br9TLszIZUGsmSbnToNBXg"];
+    [adBrix initAdBrixWithAppKey:@"03M110kRQ0K7UAF16jxmYg" secretKey:@"Br9TLszIZUGsmSbnToNBXg"];
     
     return YES;
 }
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

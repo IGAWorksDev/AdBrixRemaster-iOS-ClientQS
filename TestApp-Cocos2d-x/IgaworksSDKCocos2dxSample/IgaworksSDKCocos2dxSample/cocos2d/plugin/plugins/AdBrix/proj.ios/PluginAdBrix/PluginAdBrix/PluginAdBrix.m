@@ -8,267 +8,394 @@
 
 #import "PluginAdBrix.h"
 
-#import <AdBrix/AdBrix.h>
-#import <AdBrix/CrossPromotion.h>
-
 #import "AdsWrapper.h"
 
 @implementation PluginAdBrix
 
 
-- (void)firstTimeExperience:(NSString *)activityName
+- (void)setAdBrixDeeplinkDelegate
 {
-    NSLog(@"- (void)firstTimeExperience:(NSString *)activityName : %@", activityName);
-    
-    [AdBrix firstTimeExperience:activityName];
+    [[AdBrixRM sharedInstance] setDeeplinkDelegateWithDelegate:self];
 }
 
-- (void)firstTimeExperienceWithParam:(NSMutableDictionary *)params
-{
-    [AdBrix firstTimeExperience:[self checkNilToBlankString:[params objectForKey:@"Param1"]] param:[self checkNilToBlankString:[params objectForKey:@"Param2"]]];
-    
+- (void)setAppleAdvertisingIdentifier:(NSString *)appleAdvertisingIdentifier {
+    NSLog(@"AdBrixRM :setAppleAdvertisingIdentifier");
+    [[AdBrixRM sharedInstance] setAppleAdvertisingIdentifier:appleAdvertisingIdentifier];
 }
 
-- (void)retention:(NSString *)activityName
-{
-    [AdBrix retention:activityName];
+- (void)setEventUploadCountInterval:(NSNumber *)countInterval {
+    NSLog(@"AdBrixRM :setEventUploadCountInterval");
+    [[AdBrixRM sharedInstance] setEventUploadCountInterval:[[AdBrixRM sharedInstance] convertCountInterval:[countInterval integerValue]]];
+}
+- (void)setEventUploadTimeInterval:(NSNumber *)timeInterval {
+    NSLog(@"AdBrixRM :setEventUploadTimeInterval");
+    [[AdBrixRM sharedInstance] setEventUploadTimeInterval:[[AdBrixRM sharedInstance] convertTimeInterval:[timeInterval integerValue]]];
 }
 
-- (void)retentionWithParam:(NSMutableDictionary *)params
-{
-    [AdBrix retention:[self checkNilToBlankString:[params objectForKey:@"Param1"]] param:[self checkNilToBlankString:[params objectForKey:@"Param2"]]];
+- (void)deepLinkOpenWithUrl:(NSString *)urlStr {
+    NSLog(@"AdBrixRM :deepLinkOpenWithUrl");
+    [[AdBrixRM sharedInstance] deepLinkOpenWithUrl:[NSURL URLWithString: urlStr]];
 }
 
-- (void)buy:(NSString *)activityName
-{
-    [AdBrix buy:activityName];
+- (void)initAdBrix:(NSString *)appKey secretKey:(NSString *)secretKey {
+    NSLog(@"AdBrixRM :initAdBrix1");
+    [[AdBrixRM sharedInstance] initAdBrixWithAppKey:appKey secretKey:secretKey];
 }
 
-- (void)buyWithParam:(NSMutableDictionary *)params
-{
-    [AdBrix buy:[self checkNilToBlankString:[params objectForKey:@"Param1"]] param:[self checkNilToBlankString:[params objectForKey:@"Param2"]]];
+- (void)initAdBrix:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :initAdBrix2");
+//     [IgaworksCore igaworksCoreWithAppKey:[self checkNilToBlankString:[params objectForKey:@"Param1"]] andHashKey:[self checkNilToBlankString:[params objectForKey:@"Param2"]]andIsUseIgaworksRewardServer:[self checkNilToNo:[params objectForKey:@"Param3"]]];
+
+    NSLog(@"AdBrixRM :initAdBrix2 %@, %@", [self checkNilToBlankString:[params objectForKey:@"Param1"]], [self checkNilToBlankString:[params objectForKey:@"Param2"]]);
+    [[AdBrixRM sharedInstance] initAdBrixWithAppKey:[self checkNilToBlankString:[params objectForKey:@"Param1"]] secretKey:[self checkNilToBlankString:[params objectForKey:@"Param2"]]];
 }
 
-- (void)showViralCPINotice
-{
-    [AdBrix showViralCPINotice:[AdsWrapper getCurrentRootViewController]];
+- (void)setLogLevel:(NSNumber *)logLevel {
+    NSLog(@"AdBrixRM :setLogLevel");
+    [[AdBrixRM sharedInstance] setLogLevel:[[AdBrixRM sharedInstance] convertLogLevel:[logLevel integerValue]]];
 }
 
-- (void)setCustomCohort:(NSMutableDictionary *)params
-{
-    [AdBrix setCustomCohort:[self checkNilToZero:[params objectForKey:@"Param1"]] filterName:[self checkNilToBlankString:[params objectForKey:@"Param2"]]];
+- (void)setAge:(NSNumber *)age {
+    NSLog(@"AdBrixRM :setAge %@", age);
+    [[AdBrixRM sharedInstance] setAgeWithInt:[age integerValue]];
 }
 
-- (void)crossPromotionShowAD:(NSString *)activityName
-{
-    [CrossPromotion showAD:[self checkNilToBlankString:activityName] parentViewController:[AdsWrapper getCurrentRootViewController]];
+- (void)setGender:(NSNumber *)gender {
+    NSLog(@"AdBrixRM :setGender");
+    [[AdBrixRM sharedInstance] setGenderWithAdBrixGenderType:  [[AdBrixRM sharedInstance] convertGender:[gender integerValue]] ];
 }
 
-#pragma mark - CommerceV2
-
-- (NSString *)currencyName:(NSNumber *)currency
-{
-    return [AdBrix currencyName:[currency integerValue]];
+- (void)setUserProperties:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :setUserProperties");
+    [[AdBrixRM sharedInstance] setUserPropertiesWithDictionary:params];
 }
 
-- (NSString *)paymentMethod:(NSNumber *)method
-{
-    return [AdBrix paymentMethod:[method integerValue]];
+- (void)gdprForgetMe {
+    NSLog(@"AdBrixRM :gdprForgetMe");
+    [[AdBrixRM sharedInstance] gdprForgetMe];
 }
 
-- (NSString *)sharingChannel:(NSNumber *)channel
-{
-    return [AdBrix sharingChannel:[channel integerValue]];
+- (void)events:(NSString *)eventName {
+    NSLog(@"AdBrixRM :events");
+    [[AdBrixRM sharedInstance] eventWithEventName:eventName];
+}
+- (void)eventsWithParam:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :events");
+   [[AdBrixRM sharedInstance] eventWithEventName:[self checkNilToBlankString:[params objectForKey:@"Param1"]] value:[params objectForKey:@"Param2"]];
 }
 
-- (void)commercePurchaseI:(NSMutableDictionary *)params;
-{
-    @try
-    {
-        [AdBrix commercePurchase: [self checkNilToBlankString : [params objectForKey:@"Param1"]]
-                           price: [self checkNilToDoubleZero : [params objectForKey:@"Param2"]]
-                        currency: [self checkNilToBlankString : [params objectForKey:@"Param3"]]
-                   paymentMethod: [self checkNilToBlankString : [params objectForKey:@"Param4"]]];
-    }
-    @catch (NSException *exception)
-    {
-        NSLog(@"- (void)commercePurchaseI:(NSMutableDictionary *)params : error, : %@", exception);
-    }
+- (void)login:(NSString *)userId {
+    NSLog(@"AdBrixRM :login");
+    [[AdBrixRM sharedInstance] loginWithUserId:[self checkNilToBlankString:userId]];
 }
 
-- (void)commercePurchaseII:(NSMutableDictionary *)params;
+
+- (void)gameLevelAchieved:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :gameLevelAchieved");
+    [[AdBrixRM sharedInstance] gameLevelAchievedWithLevel:[[params objectForKey:@"Param1"] integerValue] gameInfoAttr:[params objectForKey:@"Param2"]];
+}
+
+- (void)gameTutorialCompleted:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :gameTutorialCompleted");
+    [[AdBrixRM sharedInstance] gameTutorialCompletedWithIsSkip:[[params objectForKey:@"Param1"] boolValue] gameInfoAttr:[params objectForKey:@"Param2"]];
+}
+
+- (void)gameCharacterCreated:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :gameCharacterCreated");
+    [[AdBrixRM sharedInstance] gameCharacterCreatedWithGameInfoAttr:params];
+}
+
+- (void)gameStageCleared:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :gameStageCleared");
+    [[AdBrixRM sharedInstance] gameStageClearedWithStageName:[self checkNilToBlankString:[params objectForKey:@"Param1"]] gameInfoAttr:[params objectForKey:@"Param2"]];
+}
+//
+//
+//- (void)commonPurchaseSingle:(NSString *)orderId productParam:(NSMutableDictionary *)productParam discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(NSNumber *)paymentMethod orderAttr:(NSMutableDictionary *)orderAttr {
+//
+//
+//    if(productParam == nil) {
+//        NSLog(@"- (void)commonPurchaseSingle:(NSMutableDictionary *)params : missing params, params is : %@", productParam);
+//        return;
+//    }
+//
+//    NSMutableArray<AdBrixRmCommerceProductModel *> *pArr = [NSMutableArray array];
+//
+//    NSMutableDictionary *pMap = [productParam objectForKey:@"products"];
+//
+//    for (NSString *pKey in pMap)
+//    {
+//        NSData *data = [[pMap valueForKey:pKey] dataUsingEncoding:NSUTF8StringEncoding];
+//        id jsonOb = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        AdBrixRmCommerceProductCategoryModel *cat = nil;
+//
+//        if ([jsonOb objectForKey:@"category"])
+//        {
+//            NSArray* categoryList = [[jsonOb objectForKey:@"category"] componentsSeparatedByString:@"."];
+//            if(categoryList.count == 1)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0]];
+//            if(categoryList.count == 2)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1]];
+//            if(categoryList.count == 3)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2]];
+//            if(categoryList.count == 4)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3]];
+//            if(categoryList.count == 5)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3] category5:categoryList[4]];
+//        }
+//
+//        AdBrixRmCommerceProductAttrModel *attrs;
+//        if ([jsonOb objectForKey:@"extra_attrs"])
+//        {
+//            NSDictionary* attrsDic = [jsonOb objectForKey:@"extra_attrs"];
+//            attrs = [[AdBrixRM sharedInstance] createCommerceProductAttrDataWithDictionary:attrsDic];
+//        }
+//
+//        [pArr addObject:[[AdBrixRM sharedInstance] createCommerceProductDataWithProductId:[jsonOb objectForKey:@"productId"]
+//                                                                              productName:[jsonOb objectForKey:@"productName"]
+//                                                                                    price:[self checkNilToDoubleZero :[jsonOb objectForKey:@"price"]]
+//                                                                                 quantity:[self checkNilToZero:[jsonOb objectForKey:@"quantity"]]
+//                                                                                 discount:[self checkNilToDoubleZero:[jsonOb objectForKey:@"discount"]]
+//                                                                           currencyString:[self currencyName:[jsonOb objectForKey:@"currency"]]
+//                                                                                 category:cat
+//                                                                          productAttrsMap:attrs]];
+//    }
+//
+//    [[AdBrixRM sharedInstance]   commonPurchaseWithOrderId:orderId
+//                                               productInfo:pArr
+//                                                  discount:discount
+//                                            deliveryCharge:deliveryCharge
+//                                             paymentMethod:[[AdBrixRM sharedInstance] convertPayment:[paymentMethod integerValue]]
+//                                                 orderAttr:orderAttr];
+//}
+
+- (void)commonPurchaseSingle:(NSMutableDictionary *)params;
 {
     @try
     {
         if(params == nil)
         {
-            NSLog(@"- (void)commercePurchaseII:(NSMutableDictionary *)params : missing params, params is : %@", params);
+            NSLog(@"- (void)commonPurchaseSingle:(NSMutableDictionary *)params : missing params, params is : %@", params);
             return;
         }
+        else {
+            NSLog(@"commonPurchase params ORIGIN :: %@", params);
+        }
         
+        NSMutableArray<AdBrixRmCommerceProductModel *> *pArr = [NSMutableArray array];
         NSData *data = [[params objectForKey:@"Param2"] dataUsingEncoding:NSUTF8StringEncoding];
+        NSError* e = nil;
+        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&e];
         
-        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
-        AdBrixCommerceProductCategoryModel *cat = nil;
-        
-        if ([json objectForKey:@"category"])
-        {
-            NSArray* categoryList = [[json objectForKey:@"category"] componentsSeparatedByString:@"."];
-            if(categoryList.count == 1)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0]];
-            if(categoryList.count == 2)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1]];
-            if(categoryList.count == 3)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1] category3:categoryList[2]];
-            if(categoryList.count == 4)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3]];
-            if(categoryList.count == 5)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3] category5:categoryList[4]];
+        if (e || json==nil) {
+            NSLog(@"commonPurchase productJSON error :: json string parsing err! %@", e);
+        }
+        else {
+            NSLog(@"commonPurchase JSON :: %@", json);
+            
+            AdBrixRmCommerceProductCategoryModel *cat = nil;
+            
+            if ([json objectForKey:@"category"])
+            {
+                NSArray* categoryList = [[json objectForKey:@"category"] componentsSeparatedByString:@"."];
+                if(categoryList.count == 1)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0]];
+                if(categoryList.count == 2)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1]];
+                if(categoryList.count == 3)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2]];
+                if(categoryList.count == 4)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3]];
+                if(categoryList.count == 5)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3] category5:categoryList[4]];
+            }
+            
+            AdBrixRmCommerceProductAttrModel *attrs;
+            if ([json objectForKey:@"extra_attrs"])
+            {
+                NSDictionary* attrsDic = [json objectForKey:@"extra_attrs"];
+                attrs = [[AdBrixRM sharedInstance] createCommerceProductAttrDataWithDictionary:attrsDic];
+            }
+            
+            [pArr addObject:[[AdBrixRM sharedInstance] createCommerceProductDataWithProductId:[json objectForKey:@"product_id"]
+                                                                                  productName:[json objectForKey:@"product_name"]
+                                                                                        price:[self checkNilToDoubleZero :[json objectForKey:@"price"]]
+                                                                                     quantity:[self checkNilToZero:[json objectForKey:@"quantity"]]
+                                                                                     discount:[self checkNilToDoubleZero:[json objectForKey:@"discount"]]
+                                                                               currencyString:[self currencyName:[json objectForKey:@"currency"]]
+                                                                                     category:cat
+                                                                              productAttrsMap:attrs]];
+            
+            
+            [[AdBrixRM sharedInstance]   commonPurchaseWithOrderId:[params objectForKey:@"Param1"]
+                                                       productInfo:pArr
+                                                          discount:[[params objectForKey:@"Param3"] doubleValue]
+                                                    deliveryCharge:[[params objectForKey:@"Param4"] doubleValue]
+                                                     paymentMethod:[[AdBrixRM sharedInstance] convertPayment:[[params objectForKey:@"Param5"] integerValue]]
+                                                         orderAttr:[params objectForKey:@"Param6"]];
         }
         
-        ;
-        
-        AdBrixCommerceProductAttrModel *attrs;
-        if ([json objectForKey:@"extra_attrs"])
-        {
-            NSDictionary* attrsDic = [json objectForKey:@"extra_attrs"];
-            attrs = [AdBrixCommerceProductAttrModel create:attrsDic];
-        }
-        
-        [AdBrix commercePurchase:[params objectForKey:@"Param1"]
-                         product:[AdBrix createCommerceProductModel:[json objectForKey:@"productId"]
-                                                        productName:[json objectForKey:@"productName"]
-                                                              price:[self checkNilToDoubleZero :[json objectForKey:@"price"]]
-                                                           discount:[self checkNilToDoubleZero:[json objectForKey:@"discount"]]
-                                                           quantity:[self checkNilToZero:[json objectForKey:@"quantity"]]
-                                                     currencyString:[json objectForKey:@"productId"]
-                                                           category:cat extraAttrsMap:attrs]
-                        discount:[[params objectForKey:@"Param3"] doubleValue]
-                  deliveryCharge:[[params objectForKey:@"Param4"] doubleValue]
-                   paymentMethod:[AdBrix paymentMethod:[[params objectForKey:@"Param5"] integerValue]]];
     }
     @catch (NSException *exception)
     {
-        NSLog(@"- (void)commercePurchase:(NSMutableDictionary *)params : error, : %@", exception);
+        NSLog(@"- (void)commonPurchaseSingle:(NSMutableDictionary *)params : error, : %@", exception);
     }
-
+    
 }
 
-- (void)commercePurchaseIII:(NSMutableDictionary *)params;
+- (void)commonPurchaseBulk:(NSMutableDictionary *)params;
 {
     @try
     {
-        NSLog(@"- (void)commercePurchaseIII:(NSMutableDictionary *)params : missing params, params is : %@", params);
         if(params == nil)
         {
-            NSLog(@"- (void)commercePurchaseIII:(NSMutableDictionary *)params : missing params, params is : %@", params);
+            NSLog(@"- (void)commonPurchaseBulk:(NSMutableDictionary *)params : missing params, params is : %@", params);
             return;
         }
-        NSMutableArray *pArr = [NSMutableArray array];
+        else {
+            NSLog(@"commonPurchase params ORIGIN :: %@", params);
+        }
         
+        NSMutableArray *pArr = [NSMutableArray array];
         NSMutableDictionary *pMap = [params objectForKey:@"Param2"];;
         
+        //NSLog(@"commonPurchase :: %@", params);
         
         for (NSString *pKey in pMap)
         {
             NSData *data = [[pMap valueForKey:pKey] dataUsingEncoding:NSUTF8StringEncoding];
-            id jsonOb = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            AdBrixCommerceProductCategoryModel *cat = nil;
+            NSError* e = nil;
             
-            if ([jsonOb objectForKey:@"category"])
-            {
-                NSArray* categoryList = [[jsonOb objectForKey:@"category"] componentsSeparatedByString:@"."];
-                if(categoryList.count == 1)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0]];
-                if(categoryList.count == 2)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1]];
-                if(categoryList.count == 3)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1] category3:categoryList[2]];
-                if(categoryList.count == 4)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3]];
-                if(categoryList.count == 5)cat = [AdBrixCommerceProductCategoryModel create:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3] category5:categoryList[4]];
+            
+            id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&e];
+           
+            if (e || json==nil) {
+                NSLog(@"commonPurchase productJSON error :: json string parsing err! %@", e);
+            }
+            else {
+                AdBrixRmCommerceProductCategoryModel *cat = nil;
+                
+                NSLog(@"commonPurchase productJSON :: %@", json);
+                
+                if ([json objectForKey:@"category"])
+                {
+                    NSArray* categoryList = [[json objectForKey:@"category"] componentsSeparatedByString:@"."];
+                    if(categoryList.count == 1)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0]];
+                    if(categoryList.count == 2)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1]];
+                    if(categoryList.count == 3)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2]];
+                    if(categoryList.count == 4)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3]];
+                    if(categoryList.count == 5)cat = [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categoryList[0] category2:categoryList[1] category3:categoryList[2] category4:categoryList[3] category5:categoryList[4]];
+                }
+                
+                AdBrixRmCommerceProductAttrModel *attrs;
+                if ([json objectForKey:@"extra_attrs"])
+                {
+                    NSDictionary* attrsDic = [json objectForKey:@"extra_attrs"];
+                    attrs = [[AdBrixRM sharedInstance] createCommerceProductAttrDataWithDictionary:attrsDic];
+                }
+                
+                [pArr addObject:[[AdBrixRM sharedInstance] createCommerceProductDataWithProductId:[json objectForKey:@"product_id"]
+                                                                                      productName:[json objectForKey:@"product_name"]
+                                                                                            price:[self checkNilToDoubleZero :[json objectForKey:@"price"]]
+                                                                                         quantity:[self checkNilToZero:[json objectForKey:@"quantity"]]
+                                                                                         discount:[self checkNilToDoubleZero:[json objectForKey:@"discount"]]
+                                                                                   currencyString:[self currencyName:[json objectForKey:@"currency"]]
+                                                                                         category:cat
+                                                                                  productAttrsMap:attrs]];
             }
             
-            AdBrixCommerceProductAttrModel *attrs;
-            if ([jsonOb objectForKey:@"extra_attrs"])
-            {
-                NSDictionary* attrsDic = [jsonOb objectForKey:@"extra_attrs"];
-                attrs = [AdBrixCommerceProductAttrModel create:attrsDic];
-            }
             
             
-            [pArr addObject:[AdBrix createCommerceProductModel:[jsonOb objectForKey:@"productId"]
-                                                   productName:[jsonOb objectForKey:@"productName"]
-                                                         price:[self checkNilToDoubleZero :[jsonOb objectForKey:@"price"]]
-                                                      discount:[self checkNilToDoubleZero:[jsonOb objectForKey:@"discount"]]
-                                                      quantity:[self checkNilToZero:[jsonOb objectForKey:@"quantity"]]
-                                                currencyString:[jsonOb objectForKey:@"productId"]
-                                                      category:cat extraAttrsMap:attrs]];
-        
-        
+            
+            
         }
-
-        [AdBrix commercePurchase:[params objectForKey:@"Param1"] productsInfos:pArr discount:[[params objectForKey:@"Param3"] doubleValue] deliveryCharge:[[params objectForKey:@"Param4"] doubleValue] paymentMethod:[AdBrix paymentMethod:[[params objectForKey:@"Param5"] integerValue]]];
+        
+        [[AdBrixRM sharedInstance]   commonPurchaseWithOrderId:[params objectForKey:@"Param1"]
+                                                   productInfo:pArr
+                                                      discount:[[params objectForKey:@"Param3"] doubleValue]
+                                                deliveryCharge:[[params objectForKey:@"Param4"] doubleValue]
+                                                 paymentMethod:[[AdBrixRM sharedInstance] convertPayment:[[params objectForKey:@"Param5"] integerValue]]
+                                                     orderAttr:[params objectForKey:@"Param6"]];
     }
     @catch (NSException *exception)
     {
-        NSLog(@"- (void)commercePurchase:(NSMutableDictionary *)params : error, : %@", exception);
+        NSLog(@"- (void)commonPurchaseBulk:(NSMutableDictionary *)params : error, : %@", exception);
     }
 }
 
-- (void)commercePurchase:(NSString *)orderId productsJsonDict:(NSArray *)productsJsonDict discount:(double)discount deliveryCharge:(double)deliveryCharge paymentMethod:(NSString *)paymentMethod
-{
-    
+- (void)commonSignUp:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :commonSignUp");
+    [[AdBrixRM sharedInstance] commonSignUpWithChannel:[[AdBrixRM sharedInstance] convertSignUpChannel:[[params objectForKey:@"Param1"] integerValue]] commonAttr:[params objectForKey:@"Param2"]];
 }
 
-- (void)commerceDeeplinkOpen : (NSString *)deeplinkUrl
-{
-    
+- (void)commonUseCredit:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :commonUseCredit");
+    [[AdBrixRM sharedInstance] commonUseCreditWithCommonAttr:params];
 }
 
-- (void)commerceLogin : (NSString *)userId
-{
-    
+- (void)commonAppUpdate:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :commonAppUpdate");
+    [[AdBrixRM sharedInstance] commonAppUpdateWithPrev_ver:[params objectForKey:@"Param1"] curr_ver:[params objectForKey:@"Param1"] commonAttr:[params objectForKey:@"Param4"]];
 }
 
-- (void)commerceRefund:(NSString *)orderId productsJsonDict:(NSArray *)productsJsonDict penaltyCharge:(double)penaltyCharge
-{
-    
+- (void)commonInvite:(NSMutableDictionary *)params {
+    NSLog(@"AdBrixRM :commonInvite");
+    [[AdBrixRM sharedInstance] commonInviteWithChannel:[[AdBrixRM sharedInstance] convertInviteChannel:[[params objectForKey:@"Param1"]  integerValue]] commonAttr:[params objectForKey:@"Param2"] ];
 }
 
-- (void)commerceAddtoCart:(NSArray *)productsJsonDict
+
+
+- (NSString *)currencyName:(NSNumber *)currency
 {
-    
+    return [[AdBrixRM sharedInstance] getCurrencyString:[currency integerValue]];
 }
 
-- (void)commerceAddToWishList:(NSArray *)productsJsonDict
+- (NSString *)paymentMethod:(NSNumber *)method
 {
-    
+    return [[AdBrixRM sharedInstance] getPaymentMethod:[method integerValue]];
 }
 
-- (void)commerceProductView:(NSArray *)productsJsonDict
+- (NSString *)sharingChannel:(NSNumber *)channel
 {
-    
+    return [[AdBrixRM sharedInstance] getSharingChannel:[channel integerValue]];
 }
 
-- (void)commerceCategoryView:(AdBrixCommerceProductCategoryModel*)category
+- (NSString *)signUpChannel:(NSNumber *)channel
 {
-    
+    return [[AdBrixRM sharedInstance] getSignUpChannel:[channel integerValue]];
 }
 
-- (void)commerceReviewOrder:(NSString *)orderId productsJsonDict:(NSArray *)productsJsonDict discount:(double)discount deliveryCharge:(double)deliveryCharge
+- (NSString *)inviteChannel:(NSNumber *)channel
 {
-    
+    return [[AdBrixRM sharedInstance] getInviteChannel:[channel integerValue]];
 }
 
-- (void)commercePaymentView:(NSString *)orderId productsJsonDict:(NSArray *)productsJsonDict discount:(double)discount deliveryCharge:(double)deliveryCharge
-{
-    
-}
 
-- (void)commerceSearch:(NSArray *)productsJsonDict keyword:(NSString *) keyword
-{
-    
-}
 
-- (void)commerceShare:(NSString*)channel productsJsonDict:(NSArray *)productsJsonDict
-{
-    
-}
 
 #pragma mark - private method
+
++(AdBrixRmCommerceProductCategoryModel *)makeCategoryFromStringForCommerce: (NSString *)categoryString
+{
+    NSString *categories[5];
+    if (categoryString) {
+        NSArray* categoryList = [categoryString componentsSeparatedByString:@"."];
+        for (int i=0; i<categoryList.count; ++i)
+        {
+            categories[i] = categoryList[i];
+        }
+    }
+    
+    return [[AdBrixRM sharedInstance] createCommerceProductCategoryDataWithCategory:categories[0] category2:categories[1] category3:categories[2] category4:categories[3] category5:categories[4]];
+}
+
++ (NSMutableDictionary* )makeExtraAttrDictionaryFromJson:(NSString *)jsonString
+{
+    NSMutableDictionary *_extraAttrs = [NSMutableDictionary dictionary];
+    
+    id dict = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    
+    for(NSString* key in dict)
+    {
+        if(![key isKindOfClass:[NSNull class]])
+        {
+            [_extraAttrs setValue:[dict objectForKey:key] forKey:key];
+        }
+    }
+    
+    return _extraAttrs;
+}
+
 - (NSString *)checkNilToBlankString:(id)target
 {
     NSString *returnString = @"";
@@ -276,10 +403,10 @@
     {
         returnString = target;
     }
-        
+    
     return returnString;
 }
-     
+
 - (BOOL)checkNilToNo:(id)target
 {
     BOOL returnBool = NO;
@@ -287,10 +414,10 @@
     {
         returnBool = (BOOL)[target boolValue];
     }
-        
+    
     return returnBool;
 }
-     
+
 - (int)checkNilToZero:(id)target
 {
     int returnInt = 0;
@@ -298,10 +425,10 @@
     {
         returnInt = [target intValue];
     }
-        
+    
     return returnInt;
 }
-     
+
 - (id)checkNilToNil:(id)target
 {
     id returnObject = nil;
@@ -309,11 +436,11 @@
     {
         returnObject = target;
     }
-        
+    
     return returnObject;
-        
+    
 }
-     
+
 - (double)checkNilToDoubleZero:(id)target
 {
     double returnDouble = 0.0;
@@ -321,70 +448,8 @@
     {
         returnDouble = [target doubleValue];
     }
-        
+    
     return returnDouble;
-}
-
-
-#pragma mark - InterfaceAnalytics
-- (void)startSession:(NSString *)appKey
-{
-    // no-op
-}
-
-- (void)stopSession
-{
-    // no-op
-}
-
-- (void)setSessionContinueMillis:(long)millis
-{
-    // no-op
-}
-
-- (void)setCaptureUncaughtException:(BOOL)isEnabled
-{
-    // no-op
-}
-
-- (void)setDebugMode:(BOOL)debug
-{
-    // no-op
-}
-
-- (void)logError:(NSString *)errorId withMsg:(NSString *)message
-{
-    // no-op
-}
-
-- (void)logEvent:(NSString *)eventId
-{
-    // no-op
-}
-
-- (void)logEvent:(NSString *)eventId withParam:(NSMutableDictionary *)paramMap
-{
-    // no-op
-}
-
-- (void)logTimedEventBegin:(NSString *)eventId
-{
-    // no-op
-}
-
-- (void)logTimedEventEnd:(NSString *)eventId
-{
-    // no-op
-}
-
-- (NSString *)getSDKVersion
-{
-    return @"1.0.0in";
-}
-
-- (NSString *)getPluginVersion
-{
-    return @"1.0";
 }
 
 

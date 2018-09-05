@@ -226,6 +226,7 @@ SWIFT_CLASS("_TtC8AdBrixRM14AdBrixPurchase")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+@protocol AdBrixRMDeeplinkDelegate;
 enum AdBrixLogLevel : NSInteger;
 enum AdBrixEventUploadTimeInterval : NSInteger;
 enum AdBrixEventUploadCountInterval : NSInteger;
@@ -250,6 +251,7 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 + (AdBrixRM * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
 - (void)gdprForgetMe;
 - (BOOL)isGdprForgetMe SWIFT_WARN_UNUSED_RESULT;
+- (void)setDeeplinkDelegateWithDelegate:(id <AdBrixRMDeeplinkDelegate> _Nonnull)delegate;
 /// @discussion 앱 실행시 AppDelegate에서 최초 앱키, 해시키 등의 정보를 입력한다 - 디바이스id는 임의로 생성된다
 /// @author igaworks
 - (void)initAdBrixWithAppKey:(NSString * _Nonnull)appKey secretKey:(NSString * _Nonnull)secretKey SWIFT_METHOD_FAMILY(none);
@@ -635,6 +637,8 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 /// purchase Product의 어트리뷰트 모델을 생성한다
 - (AdBrixRmCommerceProductAttrModel * _Nonnull)createCommerceProductAttrDataWithDictionary:(NSDictionary<NSString *, NSString *> * _Nullable)dictionary SWIFT_WARN_UNUSED_RESULT;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
+- (void)deepLinkOpenWithUrlStr:(NSString * _Nonnull)urlStr;
+- (void)deepLinkOpenWithUrlStr:(NSString * _Nonnull)urlStr eventDateStr:(NSString * _Nonnull)eventDateStr;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// 사용자의 GPS 위치를 설정한다
 - (void)setLocationWithLatitude:(double)latitude longitude:(double)longitude;
@@ -857,6 +861,12 @@ typedef SWIFT_ENUM(NSInteger, AdbrixPaymentMethod) {
   AdbrixPaymentMethodMobilePayment = 3,
   AdbrixPaymentMethodETC = 4,
 };
+
+
+SWIFT_PROTOCOL("_TtP8AdBrixRM24AdBrixRMDeeplinkDelegate_")
+@protocol AdBrixRMDeeplinkDelegate
+- (void)didReceiveDeeplinkWithDeeplink:(NSString * _Nonnull)deeplink;
+@end
 
 
 /// 본 모델은 AdBrix가 설정한다

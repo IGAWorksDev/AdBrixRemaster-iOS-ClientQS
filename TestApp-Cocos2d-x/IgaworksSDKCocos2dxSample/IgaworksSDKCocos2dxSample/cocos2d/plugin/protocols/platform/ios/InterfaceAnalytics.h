@@ -39,33 +39,22 @@
 - (void)gdprForgetMe;
 
 - (void)events:(NSString *)eventName;
-- (void)events:(NSString *)eventName params:(NSMutableDictionary *)params;
+- (void)eventsWithParam:(NSMutableDictionary *)params;
 
 - (void)login:(NSString *)userId;
 
-- (void)commerceViewHome:(NSMutableDictionary *)attr;
-- (void)commerceCategoryView:(NSArray *)cateArr productParam:(NSMutableDictionary *)productParam;
-- (void)commerceProductView:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceAddToCart:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceAddToWishList:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceReviewOrder:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceRefund:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceSearch:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceShare:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceListView:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commerceCartView:(NSMutableDictionary *)productParam attr:(NSMutableDictionary *)attr;
-- (void)commercePaymentInfoAdded:(NSMutableDictionary *)attr;
+- (void)commonPurchaseSingle:(NSMutableDictionary *)params;
+- (void)commonPurchaseBulk:(NSMutableDictionary *)params;
 
-- (void)gameLevelAchieved:(NSNumber *)level attr:(NSMutableDictionary *)attr;
-- (void)gameTutorialCompleted:(BOOL)isSkip attr:(NSMutableDictionary *)attr;
-- (void)gameCharacterCreated:(NSMutableDictionary *)attr;
-- (void)gameStageCleared:(NSString *)stageName attr:(NSMutableDictionary *)attr;
+- (void)gameLevelAchieved:(NSMutableDictionary *)params;
+- (void)gameTutorialCompleted:(NSMutableDictionary *)params;
+- (void)gameCharacterCreated:(NSMutableDictionary *)params;
+- (void)gameStageCleared:(NSMutableDictionary *)params;
 
-- (void)commonPurchase:(NSMutableDictionary *)productParam  attr:(NSMutableDictionary *)attr;
-- (void)commonSignUp:(NSNumber *)channel attr:(NSMutableDictionary *)attr;
+
+- (void)commonSignUp:(NSMutableDictionary *)params;
 - (void)commonUseCredit:(NSMutableDictionary *)attr;
-- (void)commonAppUpdate:(NSString *)prev_ver curr_ver:(NSString *)curr_ver attr:(NSMutableDictionary *)attr;
-- (void)commonInvite:(NSNumber *)channel attr:(NSMutableDictionary *)attr;
-
+- (void)commonAppUpdate:(NSMutableDictionary *)params;
+- (void)commonInvite:(NSMutableDictionary *)params;
 
 @end

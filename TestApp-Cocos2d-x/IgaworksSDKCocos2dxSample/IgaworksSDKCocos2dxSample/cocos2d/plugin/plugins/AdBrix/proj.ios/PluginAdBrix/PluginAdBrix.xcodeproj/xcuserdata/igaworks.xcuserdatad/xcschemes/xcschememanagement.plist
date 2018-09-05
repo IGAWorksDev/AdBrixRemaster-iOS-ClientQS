@@ -9,9 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PluginAdBrixRM.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PluginAdBrixRemaster.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>131BDDF42138C3D100B2CFE7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>131BDE072138C70C00B2CFE7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EED3DC201B54F6D7004A5C63</key>
 		<dict>
 			<key>primary</key>

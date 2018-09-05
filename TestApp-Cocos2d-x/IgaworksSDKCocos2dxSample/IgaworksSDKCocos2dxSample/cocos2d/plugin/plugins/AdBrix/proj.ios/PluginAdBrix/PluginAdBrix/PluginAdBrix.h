@@ -12,91 +12,70 @@
 
 #import "InterfaceAnalytics.h"
 
+//#import <AdBrixRM/AdBrixRM.h>
+#import <AdBrixRM/AdBrixRM-Swift.h>
+
 @interface PluginAdBrix : NSObject <InterfaceAnalytics>
+//<InterfaceAnalytics>
 
 
-/*!
- @abstract
- first time experience의 Activity에 해당할때 호출한다.
- 
- @param activityName              activity name.
- */
-- (void)firstTimeExperience:(NSString *)activityName;
+- (void)setAppleAdvertisingIdentifier:(NSString *)appleAdvertisingIdentifier;
+
+- (void)setEventUploadCountInterval:(NSNumber *)countInterval;
+- (void)setEventUploadTimeInterval:(NSNumber *)timeInterval;
+
+- (void)deepLinkOpenWithUrl:(NSString *)urlStr;
+
+- (void)initAdBrix:(NSMutableDictionary *)params;
+- (void)initAdBrix:(NSString *)appKey secretKey:(NSString *)secretKey;
+
+- (void)setLogLevel:(NSNumber *)logLevel;
+
+- (void)setAge:(NSNumber *)age;
+
+- (void)setGender:(NSNumber *)gender;
+
+- (void)setUserProperties:(NSMutableDictionary *)params;
+
+- (void)gdprForgetMe;
+
+- (void)events:(NSString *)eventName;
+- (void)eventsWithParam:(NSMutableDictionary *)params;
+
+- (void)login:(NSString *)userId;
 
 
-/*!
- @abstract
- first time experience의 Activity에 해당할때 호출한다.
- 
- @param activityName              activity name.
- @param param                     parameter.
- */
-- (void)firstTimeExperienceWithParam:(NSMutableDictionary *)params;
+
+- (void)gameLevelAchieved:(NSMutableDictionary *)params;
+
+- (void)gameTutorialCompleted:(NSMutableDictionary *)params;
+
+- (void)gameCharacterCreated:(NSMutableDictionary *)params;
+
+- (void)gameStageCleared:(NSMutableDictionary *)params;
 
 
-/*!
- @abstract
- retension의 Activity에 해당할때 호출한다.
- 
- @param activityName              activity name.
- */
-- (void)retention:(NSString *)activityName;
+- (void)commonPurchaseSingle:(NSMutableDictionary *)params;
+- (void)commonPurchaseBulk:(NSMutableDictionary *)params;
+
+- (void)commonSignUp:(NSMutableDictionary *)params;
+
+- (void)commonUseCredit:(NSMutableDictionary *)attr;
+
+- (void)commonAppUpdate:(NSMutableDictionary *)params;
+
+- (void)commonInvite:(NSMutableDictionary *)params;
 
 
-/*!
- @abstract
- retension의 Activity에 해당할때 호출한다.
- 
- @param activityName              activity name.
- @param param                     parameter.
- */
-- (void)retentionWithParam:(NSMutableDictionary *)params;
+- (NSString *)currencyName:(NSNumber *)currency;
 
-/*!
- @abstract
- buy의 Activity에 해당할때 호출한다.
- 
- @param activityName              activity name.
- */
-- (void)buy:(NSString *)activityName;
+- (NSString *)paymentMethod:(NSNumber *)method;
 
+- (NSString *)sharingChannel:(NSNumber *)channel;
 
-/*!
- @abstract
- buy의 Activity에 해당할때 호출한다.
- 
- @param activityName              activity name.
- @param param                     parameter.
- */
-- (void)buyWithParam:(NSMutableDictionary *)params;
+- (NSString *)signUpChannel:(NSNumber *)channel;
 
+- (NSString *)inviteChannel:(NSNumber *)channel;
 
-/*!
- @abstract
- 친구 초대 이벤트를 노출한다.
- */
-- (void)showViralCPINotice;
-
-/*!
- @abstract
- cohort 분석시 호출한다.
- 
- @param customCohortType          cohort type : AdBrixCustomCohortType
- @param filterName                filter Name
- */
-- (void)setCustomCohort:(NSMutableDictionary *)params;
-
-/*!
- @abstract
- cross promotion 이벤트를 노출한다.
- 
- @param activityName              activity name.
- */
-- (void)crossPromotionShowAD:(NSString *)activityName;
-
-- (NSString *)currencyName:(NSString *)currency;
-- (void)commercePurchaseI:(NSMutableDictionary *)params;
-- (void)commercePurchaseII:(NSMutableDictionary *)params;
-- (void)commercePurchaseIII:(NSMutableDictionary *)params;
 
 @end

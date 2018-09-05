@@ -12,7 +12,7 @@ import AdSupport
 import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, AdBrixRMDeeplinkDelegate {
 
     var window: UIWindow?
     var locationManager:CLLocationManager!
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
-        adBrix.initAdBrix(appKey: "kakakak", secretKey:"Br9TLszIZUGsmSbnToNBXg")
+        adBrix.initAdBrix(appKey: "03M110kRQ0K7UAF16jxmYg", secretKey:"Br9TLszIZUGsmSbnToNBXg")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
                 
@@ -78,15 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-//        let alertController = UIAlertController(title: "deep link test", message: "deep link push open", preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "Confirm", style: .default) { (result : UIAlertAction) -> Void in }
-//        alertController.addAction(okAction)
-//        self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
-//
-        // pass open url for commerce conversion
         let adBrix = AdBrixRM.getInstance
         adBrix.deepLinkOpen(url: url)
-        
         return true
     }
     
@@ -106,6 +99,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.deepLinkOpen(url: incomingURL)
         
         return true
+    }
+    
+    func didReceiveDeeplink(deeplink: String) {
+        print("deeplink received :: \(deeplink)")
     }
     
 //    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

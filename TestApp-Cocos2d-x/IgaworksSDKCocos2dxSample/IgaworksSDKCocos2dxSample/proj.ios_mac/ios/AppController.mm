@@ -31,7 +31,12 @@
 #import <AdSupport/AdSupport.h>
 
 #import <IgaworksCore/IgaworksCore.h>
+#import "AdBrixRM/AdBrixRM-Swift.h"
 #import <LiveOps/LiveOps.h>
+
+
+@interface AppController () <AdBrixRMDeeplinkDelegate> {}
+@end
 
 @implementation AppController
 
@@ -51,10 +56,23 @@ static AppDelegate s_sharedApplication;
         
         
         [IgaworksCore setAppleAdvertisingIdentifier:[ifa UUIDString]  isAppleAdvertisingTrackingEnabled:isAppleAdvertisingTrackingEnabled];
-        
         NSLog(@"[ifa UUIDString] : %@", [ifa UUIDString]);
     }
     
+    //AdBrix Remaster Init -- start
+    AdBrixRM *adBrix = [AdBrixRM sharedInstance]; //또는 AdBrixRM *adBrixs = AdBrixRM.sharedInstance;
+    
+    if (NSClassFromString(@"ASIdentifierManager")) {
+        NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
+        [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString]];
+    }
+    
+    [adBrix setLogLevel:AdBrixLogLevelERROR];
+    [adBrix setEventUploadCountInterval:AdBrixEventUploadCountIntervalMIN];
+    [adBrix setEventUploadTimeInterval:AdBrixEventUploadTimeIntervalMIN];
+    [adBrix setDeeplinkDelegateWithDelegate:self];
+    [adBrix initAdBrixWithAppKey:@"fnbFMvaGgkGVcajnoIeUTw" secretKey:@"mj2kvH7FL0Gdv15yaX2Cuw"];
+     //AdBrix Remaster Init -- end
     
     cocos2d::Application *app = cocos2d::Application::getInstance();
     app->initGLContextAttrs();
@@ -100,7 +118,8 @@ static AppDelegate s_sharedApplication;
     [window makeKeyAndVisible];
 
     [[UIApplication sharedApplication] setStatusBarHidden:true];
-
+  
+    
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView(eaglView);
     cocos2d::Director::getInstance()->setOpenGLView(glview);
@@ -150,18 +169,54 @@ static AppDelegate s_sharedApplication;
      */
 }
 
+/**
+ start deeplink
+ */
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-//    8. commerce conversion 분석을 위한, url scheme 정보 전달.
-    [IgaworksCore passOpenURL:url];
+    NSLog(@"DEEPLINK :: DeepLink Called !! - %@", url);
+    [[AdBrixRM sharedInstance] deepLinkOpenWithUrl:url];
     
     return YES;
 }
+#else
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options
+{
+    NSLog(@"DEEPLINK :: DeepLink Called !!! - %@", url);
+    [[AdBrixRM sharedInstance] deepLinkOpenWithUrl:url];
+    
+    return YES;
+    
+}
+#endif
+
+-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
+    if ([userActivity.activityType isEqualToString: NSUserActivityTypeBrowsingWeb]) {
+        NSURL *url = userActivity.webpageURL;
+        NSLog(@"DEEPLINK :: UniversialLink Called !! - %@", url);
+        [[AdBrixRM sharedInstance] deepLinkOpenWithUrl:url];
+    }
+    return YES;
+}
+
+//deferred deeplink url
+- (void)didReceiveDeeplinkWithDeeplink:(NSString * _Nonnull)deeplink {
+    NSLog(@"didReceiveDeeplinkWithDeeplink: %@", deeplink);
+}
+
+/**
+ end deeplink
+ */
+
 
 - (void)application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     [LiveOpsPush handleLocalNotification:notification];
 }
+
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_7_0
 #warning "Remote push open tracking is counted only when user touches notification center under iOS SDK 7.0"
@@ -202,6 +257,7 @@ static AppDelegate s_sharedApplication;
     [window release];
     [super dealloc];
 }
+
 
 
 @end

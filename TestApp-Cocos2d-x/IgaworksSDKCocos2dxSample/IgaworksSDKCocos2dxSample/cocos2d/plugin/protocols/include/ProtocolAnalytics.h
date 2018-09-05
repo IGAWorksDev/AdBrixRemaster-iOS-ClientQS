@@ -68,7 +68,10 @@ public:
     void gameCharacterCreated(paramMap* params);
     void gameStageCleared(const char* stageName, paramMap* params);
     
-    void commonPurchase(paramMap* productParam, paramMap* params);
+    
+    void commonPurchaseSingle(paramMap* params);
+    void commonPurchaseBulk(paramMap* params);
+    
     void commonSignUp(int channel, paramMap* params);
     void commonUseCredit(paramMap* params);
     void commonAppUpdate(const char* prev_ver, const char*  curr_ver, paramMap* params);
