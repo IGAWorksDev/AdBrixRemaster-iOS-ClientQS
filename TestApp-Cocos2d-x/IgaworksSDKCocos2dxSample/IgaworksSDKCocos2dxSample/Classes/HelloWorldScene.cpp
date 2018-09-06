@@ -261,6 +261,16 @@ void  HelloWorld::menuGdprForgetMeCallback(cocos2d::Ref* pSender) {
 void  HelloWorld::menuLoginCallback(cocos2d::Ref* pSender) {
     PluginParam pEventName1("adbrixremasteruser");
     _pluginAdBrixRm->callFuncWithParam("login", &pEventName1, NULL);
+    
+    bool isLoginSucc = false;
+    if(isLoginSucc) {
+        PluginParam pEventName1("adbrixremasteruser");
+        _pluginAdBrixRm->callFuncWithParam("login", &pEventName1, NULL);
+    }
+    else {
+        PluginParam pEventName1("");
+        _pluginAdBrixRm->callFuncWithParam("login", &pEventName1, NULL);
+    }
 }
 
 void  HelloWorld::menuPropsCallback(cocos2d::Ref* pSender) {
@@ -322,8 +332,6 @@ void  HelloWorld::menuGameStageClearedCallback(cocos2d::Ref* pSender) {
 
 void  HelloWorld::menuCommonSignUpCallback(cocos2d::Ref* pSender) {
     PluginParam pSignChannel(AdBrixSignUpNaverChannel);
-//    std::string signUpChannel = _pluginAdBrixRm->callStringFuncWithParam("signUpChannel", &pSignChannel, NULL);
-//    PluginParam pSignUpChannelString(signUpChannel.c_str());
     
     std::map<std::string,std::string> pAttrParam;
     pAttrParam["test_key"] = "test_value";
@@ -353,8 +361,6 @@ void  HelloWorld::menuCommonAppUpdateCallback(cocos2d::Ref* pSender) {
 
 void  HelloWorld::menuCommonInviteCallback(cocos2d::Ref* pSender) {
     PluginParam pinviteChannel(AdBrixInviteKakaoChannel);
-//    std::string inviteChannel = _pluginAdBrixRm->callStringFuncWithParam("inviteChannel", &pinviteChannel, NULL);
-//    PluginParam pInviteChannelString(inviteChannel.c_str());
     
     std::map<std::string,std::string> pAttrParam;
     pAttrParam["test_key"] = "test_value";

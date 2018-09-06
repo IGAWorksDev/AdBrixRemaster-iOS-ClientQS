@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:fnbfmvaggkgvcajnoieutw.adtouch.adbrix.io</string>
+		<string>applinks:appKey.adtouch.adbrix.io</string>
 	</array>
 </dict>
 </plist>
