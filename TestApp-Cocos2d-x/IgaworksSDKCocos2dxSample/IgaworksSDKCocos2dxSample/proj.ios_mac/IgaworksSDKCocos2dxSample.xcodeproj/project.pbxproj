@@ -19,6 +19,7 @@
 		134548DE213E5F7B00B9EFB3 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */; };
 		134548DF213E5FCA00B9EFB3 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */; };
 		134548E0213E5FCA00B9EFB3 /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1345490F2141FFDD00B9EFB3 /* libPluginProtocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1345490E2141FFDC00B9EFB3 /* libPluginProtocol.a */; };
 		1377833E2101CD67007AF6E2 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1377833B2101CD67007AF6E2 /* UserNotifications.framework */; };
 		137783402101CD6D007AF6E2 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1377833F2101CD6D007AF6E2 /* NotificationCenter.framework */; };
 		13FECE171E9DC7D4002D12B2 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FECE161E9DC7D4002D12B2 /* AVKit.framework */; };
@@ -74,9 +75,6 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
-		957A4EE41B789B71005A89AC /* libPluginLiveOps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 957A4EE21B789B71005A89AC /* libPluginLiveOps.a */; };
-		957A4EE51B789B71005A89AC /* LiveOps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957A4EE31B789B71005A89AC /* LiveOps.framework */; };
-		957A4EE91B789BBD005A89AC /* LiveOps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 957A4EE81B789BBD005A89AC /* LiveOps.bundle */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -86,13 +84,8 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		EE7F41181B4FB35D0087D5FB /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F41171B4FB35D0087D5FB /* GameController.framework */; };
 		EE7F411A1B4FB38B0087D5FB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F41191B4FB38B0087D5FB /* MediaPlayer.framework */; };
-		EE7F411C1B4FB4490087D5FB /* libPluginIgaworksCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F411B1B4FB4490087D5FB /* libPluginIgaworksCore.a */; };
-		EE7F411E1B4FB4670087D5FB /* IgaworksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7F411D1B4FB4670087D5FB /* IgaworksCore.framework */; };
 		EED3DBE01B54E13B004A5C63 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED3DBDF1B54E13B004A5C63 /* ImageIO.framework */; };
 		EED3DBE21B54E9C2004A5C63 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EED3DBE11B54E9C2004A5C63 /* libxml2.dylib */; };
-		EED3DC441B550176004A5C63 /* AdBrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED3DC431B550176004A5C63 /* AdBrix.framework */; };
-		EED3DC481B5501C9004A5C63 /* AdBrix.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EED3DC471B5501C9004A5C63 /* AdBrix.bundle */; };
-		EEEC98471B4FAC1A00B690DF /* libPluginProtocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEC98461B4FAC1A00B690DF /* libPluginProtocol.a */; };
 		EEEC98511B4FAC6D00B690DF /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEC98501B4FAC5700B690DF /* libcocos2d iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +132,7 @@
 		1335733D1D9D0966003A51E2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrixRM.framework; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/AdBrixRM.framework; sourceTree = "<group>"; };
 		134548F5213FB1E600B9EFB3 /* IgaworksSDKCocos2dxSample iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "IgaworksSDKCocos2dxSample iOS.entitlements"; sourceTree = "<group>"; };
+		1345490E2141FFDC00B9EFB3 /* libPluginProtocol.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginProtocol.a; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/libPluginProtocol.a; sourceTree = "<group>"; };
 		1348A2C41CF5527B00777C42 /* IgaworksCommerce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IgaworksCommerce.framework; path = ../../../IgaworksSDKCocos2dxPlugins/IgaworksCommerce/proj.ios/IgaworksCommerce.framework; sourceTree = "<group>"; };
 		1348A2C51CF5527B00777C42 /* libPluginIgaworksCommerce.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginIgaworksCommerce.a; path = ../../../IgaworksSDKCocos2dxPlugins/IgaworksCommerce/proj.ios/libPluginIgaworksCommerce.a; sourceTree = "<group>"; };
 		136754621CF5A8E10040B455 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/iAd.framework; sourceTree = DEVELOPER_DIR; };
@@ -203,9 +197,6 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		957A4EE21B789B71005A89AC /* libPluginLiveOps.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginLiveOps.a; path = ../cocos2d/plugin/plugins/LiveOps/proj.ios/libPluginLiveOps.a; sourceTree = "<group>"; };
-		957A4EE31B789B71005A89AC /* LiveOps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiveOps.framework; path = ../cocos2d/plugin/plugins/LiveOps/proj.ios/LiveOps.framework; sourceTree = "<group>"; };
-		957A4EE81B789BBD005A89AC /* LiveOps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LiveOps.bundle; path = ../cocos2d/plugin/plugins/LiveOps/proj.ios/LiveOps.framework/Versions/A/Resources/LiveOps.bundle; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -216,13 +207,8 @@
 		EE1C48F21B55FDAD009C1304 /* libPluginAdBrix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginAdBrix.a; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/libPluginAdBrix.a; sourceTree = "<group>"; };
 		EE7F41171B4FB35D0087D5FB /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		EE7F41191B4FB38B0087D5FB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
-		EE7F411B1B4FB4490087D5FB /* libPluginIgaworksCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginIgaworksCore.a; path = ../cocos2d/plugin/plugins/IgaworksCore/proj.ios/libPluginIgaworksCore.a; sourceTree = "<group>"; };
-		EE7F411D1B4FB4670087D5FB /* IgaworksCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IgaworksCore.framework; path = ../cocos2d/plugin/plugins/IgaworksCore/proj.ios/IgaworksCore.framework; sourceTree = "<group>"; };
 		EED3DBDF1B54E13B004A5C63 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		EED3DBE11B54E9C2004A5C63 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
-		EED3DC431B550176004A5C63 /* AdBrix.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrix.framework; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/AdBrix.framework; sourceTree = "<group>"; };
-		EED3DC471B5501C9004A5C63 /* AdBrix.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AdBrix.bundle; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/AdBrix.framework/Versions/A/Resources/AdBrix.bundle; sourceTree = "<group>"; };
-		EEEC98461B4FAC1A00B690DF /* libPluginProtocol.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginProtocol.a; path = ../cocos2d/plugin/plugins/IgaworksCore/proj.ios/libPluginProtocol.a; sourceTree = "<group>"; };
 		EEEC98481B4FAC5700B690DF /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,25 +232,20 @@
 				EED3DBE21B54E9C2004A5C63 /* libxml2.dylib in Frameworks */,
 				EED3DBE01B54E13B004A5C63 /* ImageIO.framework in Frameworks */,
 				EE7F411A1B4FB38B0087D5FB /* MediaPlayer.framework in Frameworks */,
-				EED3DC441B550176004A5C63 /* AdBrix.framework in Frameworks */,
 				131BDE192138CF9F00B2CFE7 /* libPluginAdBrix.a in Frameworks */,
 				134548DE213E5F7B00B9EFB3 /* AdBrixRM.framework in Frameworks */,
-				EEEC98471B4FAC1A00B690DF /* libPluginProtocol.a in Frameworks */,
 				EE7F41181B4FB35D0087D5FB /* GameController.framework in Frameworks */,
 				EEEC98511B4FAC6D00B690DF /* libcocos2d iOS.a in Frameworks */,
-				957A4EE41B789B71005A89AC /* libPluginLiveOps.a in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				134548DF213E5FCA00B9EFB3 /* AdBrixRM.framework in Frameworks */,
-				957A4EE51B789B71005A89AC /* LiveOps.framework in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
-				EE7F411E1B4FB4670087D5FB /* IgaworksCore.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
+				1345490F2141FFDD00B9EFB3 /* libPluginProtocol.a in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
-				EE7F411C1B4FB4490087D5FB /* libPluginIgaworksCore.a in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
@@ -343,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				EE1C48F21B55FDAD009C1304 /* libPluginAdBrix.a */,
-				EEEC98461B4FAC1A00B690DF /* libPluginProtocol.a */,
+				1345490E2141FFDC00B9EFB3 /* libPluginProtocol.a */,
 				134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */,
 				1377833F2101CD6D007AF6E2 /* NotificationCenter.framework */,
 				1377833B2101CD67007AF6E2 /* UserNotifications.framework */,
@@ -367,15 +348,8 @@
 				136754621CF5A8E10040B455 /* iAd.framework */,
 				1348A2C41CF5527B00777C42 /* IgaworksCommerce.framework */,
 				1348A2C51CF5527B00777C42 /* libPluginIgaworksCommerce.a */,
-				957A4EE81B789BBD005A89AC /* LiveOps.bundle */,
-				957A4EE21B789B71005A89AC /* libPluginLiveOps.a */,
-				957A4EE31B789B71005A89AC /* LiveOps.framework */,
-				EED3DC471B5501C9004A5C63 /* AdBrix.bundle */,
-				EED3DC431B550176004A5C63 /* AdBrix.framework */,
 				EED3DBE11B54E9C2004A5C63 /* libxml2.dylib */,
 				EED3DBDF1B54E13B004A5C63 /* ImageIO.framework */,
-				EE7F411D1B4FB4670087D5FB /* IgaworksCore.framework */,
-				EE7F411B1B4FB4490087D5FB /* libPluginIgaworksCore.a */,
 				EE7F41191B4FB38B0087D5FB /* MediaPlayer.framework */,
 				EE7F41171B4FB35D0087D5FB /* GameController.framework */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
@@ -606,7 +580,6 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
-				EED3DC481B5501C9004A5C63 /* AdBrix.bundle in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -618,7 +591,6 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
-				957A4EE91B789BBD005A89AC /* LiveOps.bundle in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
@@ -676,11 +648,7 @@
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../cocos2d/plugin/plugins/IgaworksCore/proj.ios",
-					"$(SRCROOT)/../cocos2d/plugin/plugins/LiveOps/proj.ios",
-					"$(SRCROOT)/../cocos2d/plugin/plugins/AdBrix/proj.ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../cocos2d/plugin/plugins/AdBrix/proj.ios";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -702,10 +670,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/../cocos2d/plugin/plugins/IgaworksCore/proj.ios",
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/../cocos2d/plugin/plugins/AdBrix/proj.ios",
-					"$(SRCROOT)/../cocos2d/plugin/plugins/LiveOps/proj.ios",
 				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
@@ -733,11 +699,7 @@
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../cocos2d/plugin/plugins/IgaworksCore/proj.ios",
-					"$(SRCROOT)/../cocos2d/plugin/plugins/LiveOps/proj.ios",
-					"$(SRCROOT)/../cocos2d/plugin/plugins/AdBrix/proj.ios",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../cocos2d/plugin/plugins/AdBrix/proj.ios";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -757,10 +719,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/../cocos2d/plugin/plugins/IgaworksCore/proj.ios",
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/../cocos2d/plugin/plugins/AdBrix/proj.ios",
-					"$(SRCROOT)/../cocos2d/plugin/plugins/LiveOps/proj.ios",
 				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",

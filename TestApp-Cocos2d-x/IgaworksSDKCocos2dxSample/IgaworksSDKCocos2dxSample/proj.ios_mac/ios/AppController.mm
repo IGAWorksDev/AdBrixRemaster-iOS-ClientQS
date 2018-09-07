@@ -30,9 +30,7 @@
 
 #import <AdSupport/AdSupport.h>
 
-#import <IgaworksCore/IgaworksCore.h>
 #import "AdBrixRM/AdBrixRM-Swift.h"
-#import <LiveOps/LiveOps.h>
 
 
 @interface AppController () <AdBrixRMDeeplinkDelegate> {}
@@ -48,17 +46,6 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    
-    if (NSClassFromString(@"ASIdentifierManager"))
-    {
-        NSUUID *ifa = [[ASIdentifierManager sharedManager] advertisingIdentifier];
-        BOOL isAppleAdvertisingTrackingEnabled = [[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled];
-        
-        
-        [IgaworksCore setAppleAdvertisingIdentifier:[ifa UUIDString]  isAppleAdvertisingTrackingEnabled:isAppleAdvertisingTrackingEnabled];
-        NSLog(@"[ifa UUIDString] : %@", [ifa UUIDString]);
-    }
-    
     //AdBrix Remaster Init -- start
     AdBrixRM *adBrix = [AdBrixRM sharedInstance]; //또는 AdBrixRM *adBrixs = AdBrixRM.sharedInstance;
     
@@ -95,9 +82,6 @@ static AppDelegate s_sharedApplication;
     // Enable or disable multiple touches
     [eaglView setMultipleTouchEnabled:NO];
 
-    [LiveOpsPush handleAllNotificationFromLaunch:launchOptions];
-    [LiveOpsPush setRemotePushEnable:YES];
-    
     // Use RootViewController manage CCEAGLView 
     _viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
     _viewController.wantsFullScreenLayout = YES;
@@ -214,7 +198,7 @@ static AppDelegate s_sharedApplication;
 
 - (void)application:(UIApplication*)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    [LiveOpsPush handleLocalNotification:notification];
+ 
 }
 
 
@@ -222,19 +206,19 @@ static AppDelegate s_sharedApplication;
 #warning "Remote push open tracking is counted only when user touches notification center under iOS SDK 7.0"
 - (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    [LiveOpsPush handleRemoteNotification:userInfo fetchHandler:nil];
+   
 }
 #else
 - (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [LiveOpsPush handleRemoteNotification:userInfo fetchHandler:completionHandler];
+   
 }
 #endif
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSLog(@"deviceToken: %@", deviceToken);
-    [LiveOpsPush setDeviceToken:deviceToken];
+  
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
