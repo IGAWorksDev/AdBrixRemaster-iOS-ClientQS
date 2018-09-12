@@ -2,6 +2,7 @@
 #define __IGAWORKS_PLUGIN_H__
 
 #include "cocos2d.h"
+#include "json.h"
 
 #define ADBRIX_SDK		0
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
@@ -93,7 +94,8 @@ public:
 	static void setGender(int gender);
 	static void setUserProperties(const char* key, const char* value);
     static void commonPurchase(const char * orderID, const char * purchaseDetail, double discount, double deliveryCharge, int paymentMethod, std::string jsonParam);
-    static void commonSignUp(int signChannelIdx,  std::string jsonParam);
+	static void commonPurchaseBulk(const char * orderID, const char * purchaseDetail, double discount, double deliveryCharge, int paymentMethod, std::string jsonParam);
+	static void commonSignUp(int signChannelIdx,  std::string jsonParam);
     static void commonUseCredit(std::string jsonParam);
     static void commonAppUpdate(const char * prev_ver, const char * curr_ver, std::string jsonParam);
     static void commonInvite(int inviteChannelIdx, std::string jsonParam);
@@ -151,7 +153,8 @@ class AdBrixCommerceProductModel : public AdBrixCommerceProductAttrModel, AdBrix
 public:
 	//AdBrixCommerceProductModel(std::string productId, std::string productName, double price, double discount, int quantity, int currencyString, AdBrixCommerceProductCategoryModel *category, AdBrixCommerceProductAttrModel *extraAttrs);
 	//std::string create(const char *productId, const char *productName, double price, double discount, int quantity, const char *currencyString, AdBrixCommerceProductCategoryModel category, AdBrixCommerceProductAttrModel *extraAttrs);
-	static std::string create(const char* productId, const char* productName, double price, double discount, int quantity, int currencyString, AdBrixCommerceProductCategoryModel* category, AdBrixCommerceProductAttrModel *extraAttrs);
+	static Json::Value create(const char* productId, const char* productName, double price, double discount, int quantity, int currencyString, AdBrixCommerceProductCategoryModel* category, AdBrixCommerceProductAttrModel *extraAttrs);
+
 private:
 	const char* _productID;
 	double _price;

@@ -525,8 +525,10 @@ void HelloWorld::menuCommonPurchaseSingleCallback() {
     //set the extra value to the AdBrixCommerceProductAttrModel
     AdBrixCommerceProductAttrModel *attr = AdBrixCommerceProductAttrModel::create(pMap);
     AdBrixCommerceProductCategoryModel *cat = AdBrixCommerceProductCategoryModel::create("cat1", "cat2");
-    std::string pProductModel = AdBrixCommerceProductModel::create("cocos2d_x_PRODUCT_ID", "cocos2d_x_PRODUCT_NAME", 1000.0, 500.0, 1, AdBrixCurrencyKRW, cat, attr);
+    Json::Value pProductModel = AdBrixCommerceProductModel::create("cocos2d_x_PRODUCT_ID", "cocos2d_x_PRODUCT_NAME", 1000.0, 500.0, 1, AdBrixCurrencyKRW, cat, attr);
 
+    Json::StreamWriterBuilder builder;
+    std::string pProductModelJson = Json::writeString(builder, pProductModel);
 
     Json::Value pOrderAttrMap;
 
@@ -535,7 +537,8 @@ void HelloWorld::menuCommonPurchaseSingleCallback() {
     Json::StreamWriterBuilder builder;
     std::string orderAttrStr = Json::writeString(builder, pOrderAttrMap);
 
-    PluginAdBrixAOS::commonPurchase("cocos2d_x_PRODUCT_ID", pProductModel.c_str(), 1000.00, 3500.00, AdBrixPaymentCreditCard, orderAttrStr);
+
+    PluginAdBrixAOS::commonPurchase("cocos2d_x_PRODUCT_ID", pProductModelJson.c_str(), 1000.00, 3500.00, AdBrixPaymentCreditCard, orderAttrStr);
 
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     std::map<std::string,std::string> pMap;
@@ -568,7 +571,36 @@ void HelloWorld::menuCommonPurchaseSingleCallback() {
 
 void  HelloWorld::menuCommonPurchaseBulkCallback() {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    //AdBrix Remaster AOS not support purchase bulk products ( use 'commonPurchaseSingle multiple call
+
+    std::map<std::string, std::string> pMap;
+    pMap["productattr_key01"] = "productattr_value01";
+    pMap["productattr_key02"] = "productattr_value02";
+
+    //set the extra value to the AdBrixCommerceProductAttrModel
+    AdBrixCommerceProductAttrModel *attr = AdBrixCommerceProductAttrModel::create(pMap);
+    AdBrixCommerceProductCategoryModel *cat = AdBrixCommerceProductCategoryModel::create("cat1", "cat2");
+
+    //make product
+    Json::Value pProductModel1 = AdBrixCommerceProductModel::create("cocos2d_x_PRODUCT_ID1", "cocos2d_x_PRODUCT_NAME1", 1000.0, 500.0, 1, AdBrixCurrencyKRW, cat, attr);
+    Json::Value pProductModel2 = AdBrixCommerceProductModel::create("cocos2d_x_PRODUCT_ID2", "cocos2d_x_PRODUCT_NAME2", 2000.0, 500.0, 1, AdBrixCurrencyKRW, cat, attr);
+    Json::Value pProductModel3 = AdBrixCommerceProductModel::create("cocos2d_x_PRODUCT_ID3", "cocos2d_x_PRODUCT_NAME3", 3000.0, 500.0, 1, AdBrixCurrencyKRW, cat, attr);
+
+    //generate product array
+    Json::Value pProductArray;
+    pProductArray.append(pProductModel1);
+    pProductArray.append(pProductModel2);
+    pProductArray.append(pProductModel3);
+    Json::StreamWriterBuilder builder;
+    std::string pProductArrayStr = Json::writeString(builder, pProductArray);
+
+    Json::Value pOrderAttrMap;
+
+    pOrderAttrMap["orderattr_key01"] = "orderattr_value01";
+
+    Json::StreamWriterBuilder attrBuilder;
+    std::string orderAttrStr = Json::writeString(attrBuilder, pOrderAttrMap);
+
+    PluginAdBrixAOS::commonPurchaseBulk("cocos2d_x_PRODUCT_ID", pProductArrayStr.c_str(), 1000.00, 3500.00, AdBrixPaymentCreditCard, orderAttrStr);
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     std::map<std::string,std::string> pMap;
     

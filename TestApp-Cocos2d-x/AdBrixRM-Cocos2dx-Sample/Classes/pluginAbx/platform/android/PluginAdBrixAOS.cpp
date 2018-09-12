@@ -417,8 +417,13 @@ void PluginAdBrixAOS::setUserProperties(const char* key, const char* value) {
 }
 
 void PluginAdBrixAOS::commonPurchase(const char * orderID, const char * productSingle, double discount, double deliveryCharge, int paymentMethod, std::string jsonParam)  {
-    LOGD("Called commonPurchase");
-    callStaticMethodForCommonPurchase("commonPurchaseSingle", orderID, productSingle, discount, deliveryCharge, paymentMethod, jsonParam.c_str(), ADBRIX_SDK);
+	LOGD("Called commonPurchase");
+	callStaticMethodForCommonPurchase("commonPurchaseSingle", orderID, productSingle, discount, deliveryCharge, paymentMethod, jsonParam.c_str(), ADBRIX_SDK);
+}
+
+void PluginAdBrixAOS::commonPurchaseBulk(const char * orderID, const char * productBulk, double discount, double deliveryCharge, int paymentMethod, std::string jsonParam)  {
+	LOGD("Called commonPurchase");
+	callStaticMethodForCommonPurchase("commonPurchaseBulk", orderID, productBulk, discount, deliveryCharge, paymentMethod, jsonParam.c_str(), ADBRIX_SDK);
 }
 
 void PluginAdBrixAOS::commonSignUp(int signChannelIdx, std::string jsonParam) {
@@ -569,7 +574,7 @@ AdBrixCommerceProductCategoryModel * AdBrixCommerceProductCategoryModel::create(
 }
 
 
-std::string AdBrixCommerceProductModel::create(const char* productId, const char* productName, double price, double discount, int quantity, int currencyString, AdBrixCommerceProductCategoryModel* category, AdBrixCommerceProductAttrModel *extraAttrs)
+Json::Value AdBrixCommerceProductModel::create(const char* productId, const char* productName, double price, double discount, int quantity, int currencyString, AdBrixCommerceProductCategoryModel* category, AdBrixCommerceProductAttrModel *extraAttrs)
 {
 
 
@@ -600,32 +605,6 @@ std::string AdBrixCommerceProductModel::create(const char* productId, const char
     }
     root["extra_attrs"] = extra_attrs;
 
-    Json::StreamWriterBuilder builder;
-    std::string output = Json::writeString(builder, root);
+    return root;
 
-    return output;
-
-
-//	std::string jsonString;
-//	std::string extra_attrs[5];
-//	std::string total_extra_attrs;
-//	for (int i = 0; i < 5; i++)
-//	{
-//		if (extraAttrs->getKey(i) != NULL && extraAttrs->getValue(i) != NULL)
-//		{
-//			if(i != 4)extra_attrs[i] = cocos2d::StringUtils::format("\"%s\": \"%s\", ", extraAttrs->getKey(i), extraAttrs->getValue(i));
-//			else extra_attrs[i] = cocos2d::StringUtils::format("\"%s\": \"%s\"", extraAttrs->getKey(i), extraAttrs->getValue(i));
-//		}
-//		else
-//		{
-//			extra_attrs[i] = "";
-//		}
-//	}
-//
-//	total_extra_attrs = cocos2d::StringUtils::format("{%s %s %s %s %s}", extra_attrs[0].c_str(), extra_attrs[1].c_str(), extra_attrs[2].c_str(), extra_attrs[3].c_str(), extra_attrs[4].c_str());
-//
-//	jsonString = cocos2d::StringUtils::format("{\"productId\": \"%s\", \"productName\": \"%s\", \"price\": %g, \"currency\": \"%d\", \"discount\": %g, \"quantity\": %d, \"category\": \"%s\", \"extra_attrs\": %s}",
-//		productId, productName, price, currencyString, discount, quantity, category->categoryFullString.c_str(), total_extra_attrs.c_str());
-//
-//	return jsonString;
 }
