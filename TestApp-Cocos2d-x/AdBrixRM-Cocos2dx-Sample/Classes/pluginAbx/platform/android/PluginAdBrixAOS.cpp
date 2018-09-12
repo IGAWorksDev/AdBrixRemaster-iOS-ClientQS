@@ -401,6 +401,16 @@ void PluginAdBrixAOS::login(const char* user_id) {
     callStaticMethodWithStringParam("login", user_id, ADBRIX_SDK);
 }
 
+void PluginAdBrixAOS::setAge(int age) {
+	LOGD("Called setAge");
+	callStaticMethodWithIntParam("setAge", age, ADBRIX_SDK);
+}
+
+void PluginAdBrixAOS::setGender(int gender) {
+	LOGD("Called setGender");
+	callStaticMethodWithIntParam("setGender", gender, ADBRIX_SDK);
+}
+
 void PluginAdBrixAOS::setUserProperties(const char* key, const char* value) {
     LOGD("Called setUserProperties");
     callStaticMethodWithStringStringParam("setUserProperties", key, value, ADBRIX_SDK);

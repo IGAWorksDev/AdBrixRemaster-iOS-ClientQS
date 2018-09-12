@@ -1,3 +1,0 @@
-
-include ':CppEmptyTest'
-project(':CppEmptyTest').projectDir = new File(settingsDir, 'app')

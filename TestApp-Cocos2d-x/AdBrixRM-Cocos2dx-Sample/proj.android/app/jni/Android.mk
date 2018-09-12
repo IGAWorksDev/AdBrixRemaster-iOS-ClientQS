@@ -17,7 +17,8 @@ LOCAL_SRC_FILES := $(LOCAL_PATH)/hellocpp/main.cpp \
                    $(LOCAL_PATH)/../../../Classes/pluginAbx/platform/android/PluginAdBrixAOS.cpp \
                    $(LOCAL_PATH)/../../../Classes/pluginAbx/platform/android/json.cpp
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../Classes \ $(LOCAL_PATH)/../../../Classes/pluginAbx/platform/android \ $(LOCAL_PATH)/../../../cocos2d/plugin/protocols/platform/android
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../Classes \ $(LOCAL_PATH)/../../../Classes/pluginAbx/platform/android \
+$(LOCAL_PATH)/../../../cocos2d/plugin/protocols/platform/android
 
 
 # _COCOS_HEADER_ANDROID_BEGIN

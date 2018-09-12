@@ -89,6 +89,8 @@ public:
 	static void gdprForgetMe();
     static void event(const char* name, std::string jsonParam);
 	static void login(const char* user_id);
+	static void setAge(int age);
+	static void setGender(int gender);
 	static void setUserProperties(const char* key, const char* value);
     static void commonPurchase(const char * orderID, const char * purchaseDetail, double discount, double deliveryCharge, int paymentMethod, std::string jsonParam);
     static void commonSignUp(int signChannelIdx,  std::string jsonParam);

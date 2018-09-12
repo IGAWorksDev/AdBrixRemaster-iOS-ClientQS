@@ -334,7 +334,8 @@ void  HelloWorld::menuLoginCallback() {
 void  HelloWorld::menuPropsCallback() {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     PluginAdBrixAOS::setUserProperties("nickname","cocos_adbrixer");
-
+    PluginAdBrixAOS::setAge(20);
+    PluginAdBrixAOS::setGender(1);
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     std::map<std::string,std::string> pEventParam;
     pEventParam["nickname"] = "adbrixrm";
@@ -377,7 +378,6 @@ void  HelloWorld::menuGameLevelAchievedCallback() {
 void  HelloWorld::menuGameTutorialCompletedCallback() {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     Json::Value param;
-
     param["rewards"] = "y";
     param["rewards_gold"] = "100";
 
@@ -440,9 +440,7 @@ void  HelloWorld::menuGameStageClearedCallback() {
 void  HelloWorld::menuCommonSignUpCallback() {
   #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     Json::Value param;
-
     param["with_userid"] = "n";
-
 
     Json::StreamWriterBuilder builder;
     std::string jsonStr = Json::writeString(builder, param);
@@ -462,9 +460,7 @@ void  HelloWorld::menuCommonSignUpCallback() {
 void  HelloWorld::menuCommonUseCreditCallback() {
   #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     Json::Value param;
-
     param["card"] = "samsung";
-
 
     Json::StreamWriterBuilder builder;
     std::string jsonStr = Json::writeString(builder, param);
@@ -481,9 +477,7 @@ void  HelloWorld::menuCommonUseCreditCallback() {
 void  HelloWorld::menuCommonAppUpdateCallback() {
  #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     Json::Value param;
-
     param["market"] = "google_play";
-
 
     Json::StreamWriterBuilder builder;
     std::string jsonStr = Json::writeString(builder, param);
@@ -504,9 +498,7 @@ void  HelloWorld::menuCommonAppUpdateCallback() {
 void  HelloWorld::menuCommonInviteCallback() {
   #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     Json::Value param;
-
     param["email_auth"] = "y";
-
 
     Json::StreamWriterBuilder builder;
     std::string jsonStr = Json::writeString(builder, param);
