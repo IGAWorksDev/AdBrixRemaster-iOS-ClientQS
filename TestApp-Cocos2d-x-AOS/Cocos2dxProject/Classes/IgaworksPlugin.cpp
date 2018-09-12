@@ -95,7 +95,7 @@ extern "C"
 		}
 	    else if(sdkType == COMMON_SDK){
 			classId = pEnv->FindClass(IGAW_COMMON_PLUGIN_CLASS_NAME);
-			if (!classId) {
+			if (!class
 				LOGD("Failed to find class of %s", IGAW_COMMON_PLUGIN_CLASS_NAME);
 				return false;
 			}

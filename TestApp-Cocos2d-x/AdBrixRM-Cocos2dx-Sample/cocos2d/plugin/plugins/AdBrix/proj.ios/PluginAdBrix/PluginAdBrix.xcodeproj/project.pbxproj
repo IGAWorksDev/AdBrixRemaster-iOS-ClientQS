@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1345497521426D8900B9EFB3 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1345497421426D8900B9EFB3 /* AdBrixRM.framework */; };
+		EED3DC251B54F6D7004A5C63 /* PluginAdBrix.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EED3DC241B54F6D7004A5C63 /* PluginAdBrix.h */; };
+		EED3DC271B54F6D7004A5C63 /* PluginAdBrix.m in Sources */ = {isa = PBXBuildFile; fileRef = EED3DC261B54F6D7004A5C63 /* PluginAdBrix.m */; };
+		EED3DC2D1B54F6D7004A5C63 /* libPluginAdBrix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EED3DC2E1B54F6D7004A5C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED3DC191B54F6D7004A5C63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED3DC201B54F6D7004A5C63;
+			remoteInfo = PluginAdBrix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EED3DC1F1B54F6D7004A5C63 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EED3DC251B54F6D7004A5C63 /* PluginAdBrix.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1345497421426D8900B9EFB3 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrixRM.framework; path = ../../AdBrixRM.framework; sourceTree = "<group>"; };
+		EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPluginAdBrix.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED3DC241B54F6D7004A5C63 /* PluginAdBrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginAdBrix.h; sourceTree = "<group>"; };
+		EED3DC261B54F6D7004A5C63 /* PluginAdBrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PluginAdBrix.m; sourceTree = "<group>"; };
+		EED3DC2C1B54F6D7004A5C63 /* PluginAdBrixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PluginAdBrixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED3DC321B54F6D7004A5C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EED3DC1E1B54F6D7004A5C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1345497521426D8900B9EFB3 /* AdBrixRM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED3DC291B54F6D7004A5C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED3DC2D1B54F6D7004A5C63 /* libPluginAdBrix.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EED3DC181B54F6D7004A5C63 = {
+			isa = PBXGroup;
+			children = (
+				EED3DC231B54F6D7004A5C63 /* PluginAdBrix */,
+				EED3DC301B54F6D7004A5C63 /* PluginAdBrixTests */,
+				EED3DC221B54F6D7004A5C63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EED3DC221B54F6D7004A5C63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */,
+				EED3DC2C1B54F6D7004A5C63 /* PluginAdBrixTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EED3DC231B54F6D7004A5C63 /* PluginAdBrix */ = {
+			isa = PBXGroup;
+			children = (
+				1345497421426D8900B9EFB3 /* AdBrixRM.framework */,
+				EED3DC241B54F6D7004A5C63 /* PluginAdBrix.h */,
+				EED3DC261B54F6D7004A5C63 /* PluginAdBrix.m */,
+			);
+			path = PluginAdBrix;
+			sourceTree = "<group>";
+		};
+		EED3DC301B54F6D7004A5C63 /* PluginAdBrixTests */ = {
+			isa = PBXGroup;
+			children = (
+				EED3DC311B54F6D7004A5C63 /* Supporting Files */,
+			);
+			path = PluginAdBrixTests;
+			sourceTree = "<group>";
+		};
+		EED3DC311B54F6D7004A5C63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EED3DC321B54F6D7004A5C63 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EED3DC201B54F6D7004A5C63 /* PluginAdBrix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED3DC351B54F6D7004A5C63 /* Build configuration list for PBXNativeTarget "PluginAdBrix" */;
+			buildPhases = (
+				EED3DC1D1B54F6D7004A5C63 /* Sources */,
+				EED3DC1E1B54F6D7004A5C63 /* Frameworks */,
+				EED3DC1F1B54F6D7004A5C63 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PluginAdBrix;
+			productName = PluginAdBrix;
+			productReference = EED3DC211B54F6D7004A5C63 /* libPluginAdBrix.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EED3DC2B1B54F6D7004A5C63 /* PluginAdBrixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED3DC381B54F6D7004A5C63 /* Build configuration list for PBXNativeTarget "PluginAdBrixTests" */;
+			buildPhases = (
+				EED3DC281B54F6D7004A5C63 /* Sources */,
+				EED3DC291B54F6D7004A5C63 /* Frameworks */,
+				EED3DC2A1B54F6D7004A5C63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED3DC2F1B54F6D7004A5C63 /* PBXTargetDependency */,
+			);
+			name = PluginAdBrixTests;
+			productName = PluginAdBrixTests;
+			productReference = EED3DC2C1B54F6D7004A5C63 /* PluginAdBrixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EED3DC191B54F6D7004A5C63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "wonje,song";
+				TargetAttributes = {
+					EED3DC201B54F6D7004A5C63 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EED3DC2B1B54F6D7004A5C63 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = EED3DC1C1B54F6D7004A5C63 /* Build configuration list for PBXProject "PluginAdBrix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EED3DC181B54F6D7004A5C63;
+			productRefGroup = EED3DC221B54F6D7004A5C63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EED3DC201B54F6D7004A5C63 /* PluginAdBrix */,
+				EED3DC2B1B54F6D7004A5C63 /* PluginAdBrixTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EED3DC2A1B54F6D7004A5C63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EED3DC1D1B54F6D7004A5C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED3DC271B54F6D7004A5C63 /* PluginAdBrix.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED3DC281B54F6D7004A5C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EED3DC2F1B54F6D7004A5C63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED3DC201B54F6D7004A5C63 /* PluginAdBrix */;
+			targetProxy = EED3DC2E1B54F6D7004A5C63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EED3DC331B54F6D7004A5C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EED3DC341B54F6D7004A5C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EED3DC361B54F6D7004A5C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../../protocols/platform/ios",
+					"\"$(SRCROOT)/../../../../../../cocos2dx/cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EED3DC371B54F6D7004A5C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../../protocols/platform/ios",
+					"\"$(SRCROOT)/../../../../../../cocos2dx/cocos2d-x-3.11/plugin/protocols/platform/ios\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EED3DC391B54F6D7004A5C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginAdBrixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EED3DC3A1B54F6D7004A5C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PluginAdBrixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EED3DC1C1B54F6D7004A5C63 /* Build configuration list for PBXProject "PluginAdBrix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED3DC331B54F6D7004A5C63 /* Debug */,
+				EED3DC341B54F6D7004A5C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED3DC351B54F6D7004A5C63 /* Build configuration list for PBXNativeTarget "PluginAdBrix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED3DC361B54F6D7004A5C63 /* Debug */,
+				EED3DC371B54F6D7004A5C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED3DC381B54F6D7004A5C63 /* Build configuration list for PBXNativeTarget "PluginAdBrixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED3DC391B54F6D7004A5C63 /* Debug */,
+				EED3DC3A1B54F6D7004A5C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EED3DC191B54F6D7004A5C63 /* Project object */;
+}

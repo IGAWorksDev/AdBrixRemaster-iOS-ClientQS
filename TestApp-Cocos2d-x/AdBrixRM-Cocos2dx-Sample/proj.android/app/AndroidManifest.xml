@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.cocos2dx.hellocpp"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    <application
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:name="org.cocos2dx.cpp.MainApplication"
+        android:icon="@mipmap/ic_launcher">
+        
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data android:name="android.app.lib_name"
+                   android:value="MyGame" />
+
+        <meta-data android:name="is_details_return" android:value="true" />
+        <meta-data android:name="AdbrixRmQaMode" android:value="true" />
+
+        <activity
+            android:name="org.cocos2dx.cpp.AppActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.igaworks.v2.core.application.AbxDefaultDeeplinkActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:noHistory="true">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--딥링크 스키마와 호스트를 입력합니다. -->
+                <data android:scheme="adbrix"/>
+            </intent-filter>
+            <!-- 딥링크 트래킹 이후에 메인액티비티로 리디렉션 처리를 하기 위해 메인 액티비티의 풀 패키지 네임을 입력합니다." -->
+            <meta-data android:name="AbxRedirectActivity" android:value="com.igaworks.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="org.cocos2dx.cpp.DeeplinkActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName="org.cocos2dx.cpp.AppActivity" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.cocos2dx.cpp.AppActivity" />
+
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--딥링크 스키마와 호스트를 입력합니다. -->
+                <data android:scheme="adbrix2"/>
+            </intent-filter>
+        </activity>
+
+
+
+    </application>
+
+</manifest>

@@ -133,8 +133,6 @@
 		134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrixRM.framework; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/AdBrixRM.framework; sourceTree = "<group>"; };
 		134548F5213FB1E600B9EFB3 /* IgaworksSDKCocos2dxSample iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "IgaworksSDKCocos2dxSample iOS.entitlements"; sourceTree = "<group>"; };
 		1345490E2141FFDC00B9EFB3 /* libPluginProtocol.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginProtocol.a; path = ../cocos2d/plugin/plugins/AdBrix/proj.ios/libPluginProtocol.a; sourceTree = "<group>"; };
-		1348A2C41CF5527B00777C42 /* IgaworksCommerce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IgaworksCommerce.framework; path = ../../../IgaworksSDKCocos2dxPlugins/IgaworksCommerce/proj.ios/IgaworksCommerce.framework; sourceTree = "<group>"; };
-		1348A2C51CF5527B00777C42 /* libPluginIgaworksCommerce.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPluginIgaworksCommerce.a; path = ../../../IgaworksSDKCocos2dxPlugins/IgaworksCommerce/proj.ios/libPluginIgaworksCommerce.a; sourceTree = "<group>"; };
 		136754621CF5A8E10040B455 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/iAd.framework; sourceTree = DEVELOPER_DIR; };
 		136754661CF5A9090040B455 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		136754681CF5A9350040B455 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
@@ -323,9 +321,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */,
 				EE1C48F21B55FDAD009C1304 /* libPluginAdBrix.a */,
 				1345490E2141FFDC00B9EFB3 /* libPluginProtocol.a */,
-				134548DD213E5F7A00B9EFB3 /* AdBrixRM.framework */,
 				1377833F2101CD6D007AF6E2 /* NotificationCenter.framework */,
 				1377833B2101CD67007AF6E2 /* UserNotifications.framework */,
 				13FECE1A1E9DC7FB002D12B2 /* CoreMedia.framework */,
@@ -346,8 +344,6 @@
 				136754681CF5A9350040B455 /* MessageUI.framework */,
 				136754661CF5A9090040B455 /* CFNetwork.framework */,
 				136754621CF5A8E10040B455 /* iAd.framework */,
-				1348A2C41CF5527B00777C42 /* IgaworksCommerce.framework */,
-				1348A2C51CF5527B00777C42 /* libPluginIgaworksCommerce.a */,
 				EED3DBE11B54E9C2004A5C63 /* libxml2.dylib */,
 				EED3DBDF1B54E13B004A5C63 /* ImageIO.framework */,
 				EE7F41191B4FB38B0087D5FB /* MediaPlayer.framework */,
