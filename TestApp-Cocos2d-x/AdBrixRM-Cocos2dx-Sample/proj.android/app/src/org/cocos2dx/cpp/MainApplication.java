@@ -13,7 +13,7 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        AbxActivityHelper.initializeSdk(getApplicationContext(), "fnbFMvaGgkGVcajnoIeUTw", "mj2kvH7FL0Gdv15yaX2Cuw");
+        AbxActivityHelper.initializeSdk(getApplicationContext(), "AppKey", "SecretKey");
         AdBrixRm.login("AdBrixRemasterAOSTest");
 
         AdBrixRm.setEnableLocationListening(true);

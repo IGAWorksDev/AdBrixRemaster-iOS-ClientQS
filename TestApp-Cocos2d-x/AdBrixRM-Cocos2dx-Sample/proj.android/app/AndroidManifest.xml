@@ -20,9 +20,6 @@
         <meta-data android:name="android.app.lib_name"
                    android:value="MyGame" />
 
-        <meta-data android:name="is_details_return" android:value="true" />
-        <meta-data android:name="AdbrixRmQaMode" android:value="true" />
-
         <activity
             android:name="org.cocos2dx.cpp.AppActivity"
             android:screenOrientation="landscape"
