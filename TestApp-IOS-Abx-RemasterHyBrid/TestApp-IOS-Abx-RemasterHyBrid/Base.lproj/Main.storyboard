@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestApp_IOS_Abx_RemasterHyBrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKr-5t-FZR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="buttonObjC" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRT-je-WvM">
+                                <rect key="frame" x="309" y="36" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="L2s-CW-iWM"/>
+                                    <constraint firstAttribute="height" constant="50" id="daQ-TX-6J0"/>
+                                </constraints>
+                                <state key="normal" title="ObjC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_toObjC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCG-yd-leC"/>
+                                    <segue destination="scc-RY-xdv" kind="show" id="NSo-qn-rVD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VRT-je-WvM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Afl-t9-wq5"/>
+                            <constraint firstItem="RKr-5t-FZR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qju-I3-mPj"/>
+                            <constraint firstItem="RKr-5t-FZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S3A-U4-bDM"/>
+                            <constraint firstItem="RKr-5t-FZR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xp7-Mg-BR8"/>
+                            <constraint firstItem="RKr-5t-FZR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="l58-W2-GJM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VRT-je-WvM" secondAttribute="trailing" constant="16" id="uAL-qi-q4k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="View_root" destination="RKr-5t-FZR" id="H90-ap-XvK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--AdBrixRMSampleObjC-->
+        <scene sceneID="Ikf-gP-yMc">
+            <objects>
+                <viewController id="scc-RY-xdv" userLabel="AdBrixRMSampleObjC" customClass="AdBrixRMSampleObjC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5UV-fg-xjc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wDj-hA-t6N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="buttonSwift" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsO-KO-kqz">
+                                <rect key="frame" x="309" y="36" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nSH-t1-JIj"/>
+                                    <constraint firstAttribute="width" constant="50" id="udg-cA-FRU"/>
+                                </constraints>
+                                <state key="normal" title="Swift">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_toObjC:" destination="scc-RY-xdv" eventType="touchUpInside" id="134-e3-Atb"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="0Nr-Im-6Nx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UsO-KO-kqz" firstAttribute="top" secondItem="fIa-re-Tv9" secondAttribute="top" constant="16" id="Pjb-t6-QKT"/>
+                            <constraint firstItem="fIa-re-Tv9" firstAttribute="trailing" secondItem="UsO-KO-kqz" secondAttribute="trailing" constant="16" id="tZD-BB-obq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fIa-re-Tv9"/>
+                    </view>
+                    <connections>
+                        <outlet property="Button_toSwift" destination="UsO-KO-kqz" id="yTb-Fw-svG"/>
+                        <outlet property="View_main" destination="wDj-hA-t6N" id="Ciy-Il-HBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIG-ar-Gok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="134"/>
+        </scene>
+    </scenes>
+</document>

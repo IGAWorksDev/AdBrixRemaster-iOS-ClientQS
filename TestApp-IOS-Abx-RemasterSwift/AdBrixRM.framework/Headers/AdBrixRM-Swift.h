@@ -622,6 +622,8 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (NSString * _Nonnull)getInviteChannelByAdBrixSignUpChannel:(enum AdBrixInviteChannel)channel SWIFT_WARN_UNUSED_RESULT;
 /// common의 초대 채널 타입을 반환한다
 - (NSString * _Nonnull)getInviteChannel:(NSInteger)channel SWIFT_WARN_UNUSED_RESULT;
+- (AdBrixRmCommerceProductCategoryModel * _Nonnull)createCommerceProductCategoryDataByStringsWithCategoryArray:(NSArray<NSString *> * _Nonnull)categoryArray SWIFT_WARN_UNUSED_RESULT;
+- (AdBrixRmCommerceProductCategoryModel * _Nonnull)createCommerceProductCategoryDataByArrayWithCategoryArray:(NSArray<NSString *> * _Nonnull)categoryArray SWIFT_WARN_UNUSED_RESULT;
 /// purchase Category 모델을 생성한다
 - (AdBrixRmCommerceProductCategoryModel * _Nonnull)createCommerceProductCategoryDataWithCategory:(NSString * _Nonnull)category SWIFT_WARN_UNUSED_RESULT;
 /// purchase Category 모델을 생성한다
