@@ -122,7 +122,6 @@
             else if ([funcName containsString:@"purchase"]) {
                 
                 if ([adbrixEventDict valueForKey:@"oid"] &&
-                    [adbrixEventDict valueForKey:@"discount"] &&
                     [adbrixEventDict valueForKey:@"deliveryCharge"] &&
                     [adbrixEventDict valueForKey:@"paymentMethod"]) {
                     
@@ -155,7 +154,7 @@
             }
             else if ([funcName containsString:@"search"]) {
                 if ([funcName containsString:@"keyword"]) {
-                    [[AdBrixRM sharedInstance] commerceSearchWithProductInfo:productArray keyword:[adbrixEventDict valueForKey:@"penaltyCharge"]];
+                    [[AdBrixRM sharedInstance] commerceSearchWithProductInfo:productArray keyword:[adbrixEventDict valueForKey:@"keyword"]];
                 }
             }
         }

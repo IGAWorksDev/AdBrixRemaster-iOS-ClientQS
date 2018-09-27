@@ -123,14 +123,13 @@ class ViewController: UIViewController, WKNavigationDelegate {
                             if funcName.contains("purchase") {
                                 
                                 if let orderId = dic["oid"],
-                                    let discount = dic["discount"],
                                     let deliveryCharge = dic["deliveryCharge"],
                                     let paymentMethod = dic["paymentMethod"] {
                                     
                                     AdBrixRM.getInstance.commonPurchase(
                                         orderId: orderId as! String,
                                         productInfo: arr,
-                                        discount: discount as! Double,
+                                        discount: 0.00,
                                         deliveryCharge: deliveryCharge as! Double,
                                         paymentMethod:
                                         AdBrixRM.getInstance.convertPayment(self.validPayment(paymentMethod as! String))
