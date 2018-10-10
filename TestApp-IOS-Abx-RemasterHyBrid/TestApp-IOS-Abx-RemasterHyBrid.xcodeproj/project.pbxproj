@@ -14,8 +14,6 @@
 		132D58D12150EB0D000FC074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132D58D02150EB0D000FC074 /* Assets.xcassets */; };
 		132D58D42150EB0E000FC074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132D58D22150EB0E000FC074 /* LaunchScreen.storyboard */; };
 		132D58DF2150EB7D000FC074 /* AdBrixRMSampleObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 132D58DE2150EB7D000FC074 /* AdBrixRMSampleObjC.m */; };
-		132D58F02150EC2F000FC074 /* IgaworksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132D58ED2150EC2F000FC074 /* IgaworksCore.framework */; };
-		132D58F22150EC2F000FC074 /* AdBrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132D58EF2150EC2F000FC074 /* AdBrix.framework */; };
 		132D58F42150EC39000FC074 /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 132D58EE2150EC2F000FC074 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		132D58F82150ED0E000FC074 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132D58F72150ED0E000FC074 /* MessageUI.framework */; };
 		132D58FA2150ED13000FC074 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132D58F92150ED13000FC074 /* CoreText.framework */; };
@@ -56,9 +54,7 @@
 		132D58DC2150EB5F000FC074 /* AdBrixRMSampleObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdBrixRMSampleObjC.h; sourceTree = "<group>"; };
 		132D58DD2150EB7C000FC074 /* TestApp-IOS-Abx-RemasterHyBrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-IOS-Abx-RemasterHyBrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		132D58DE2150EB7D000FC074 /* AdBrixRMSampleObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdBrixRMSampleObjC.m; sourceTree = "<group>"; };
-		132D58ED2150EC2F000FC074 /* IgaworksCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IgaworksCore.framework; sourceTree = "<group>"; };
 		132D58EE2150EC2F000FC074 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdBrixRM.framework; sourceTree = "<group>"; };
-		132D58EF2150EC2F000FC074 /* AdBrix.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdBrix.framework; sourceTree = "<group>"; };
 		132D58F72150ED0E000FC074 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		132D58F92150ED13000FC074 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		132D58FB2150ED1A000FC074 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -87,8 +83,6 @@
 				132D58FC2150ED1A000FC074 /* Security.framework in Frameworks */,
 				132D58FA2150ED13000FC074 /* CoreText.framework in Frameworks */,
 				132D58F82150ED0E000FC074 /* MessageUI.framework in Frameworks */,
-				132D58F02150EC2F000FC074 /* IgaworksCore.framework in Frameworks */,
-				132D58F22150EC2F000FC074 /* AdBrix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +92,7 @@
 		132D58BA2150EB0C000FC074 = {
 			isa = PBXGroup;
 			children = (
-				132D58EF2150EC2F000FC074 /* AdBrix.framework */,
 				132D58EE2150EC2F000FC074 /* AdBrixRM.framework */,
-				132D58ED2150EC2F000FC074 /* IgaworksCore.framework */,
 				132D58C52150EB0C000FC074 /* TestApp-IOS-Abx-RemasterHyBrid */,
 				132D58C42150EB0C000FC074 /* Products */,
 				132D58F62150ED0E000FC074 /* Frameworks */,

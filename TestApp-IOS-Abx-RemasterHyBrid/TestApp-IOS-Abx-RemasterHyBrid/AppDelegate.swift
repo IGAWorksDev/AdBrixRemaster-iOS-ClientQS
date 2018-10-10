@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import AdBrixRM
+import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let adBrix = AdBrixRM.getInstance
+        
+        //광고id
+        if ((NSClassFromString("ASIdentifierManager")) != nil) {
+            let ifa :UUID = ASIdentifierManager.shared().advertisingIdentifier
+            adBrix.setAppleAdvertisingIdentifier(ifa.uuidString)
+            
+            //    print("ifa UUIDString :: \(ifa.uuidString)")
+        }
+        
+        
+        adBrix.setLogLevel(AdBrixRM.AdBrixLogLevel.ERROR)
+        adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
+        adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
+        
+        adBrix.initAdBrix(appKey: "03M110kRQ0K7UAF16jxmYg", secretKey:"Br9TLszIZUGsmSbnToNBXg")
+        
         return true
     }
 

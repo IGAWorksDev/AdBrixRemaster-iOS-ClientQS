@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "557723152.756868"
+            timestampString = "560065378.018039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1478"
-            endingLineNumber = "1478"
+            startingLineNumber = "1483"
+            endingLineNumber = "1483"
             landmarkName = "makeCommerceProductParams(productInfo:attributes:)"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Core/AdBrixPrivate.swift"
-            timestampString = "557723152.756969"
+            timestampString = "560065378.018123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1476"
-            endingLineNumber = "1476"
+            startingLineNumber = "1481"
+            endingLineNumber = "1481"
             landmarkName = "makeCommerceProductParams(productInfo:attributes:)"
             landmarkType = "7">
             <Locations>
@@ -102,7 +102,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../RemasterSwift/AdBrixRM/AdBrixRM/Job/AdBrixEventQueue.swift"
@@ -111,8 +111,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "752"
             endingLineNumber = "752"
-            landmarkName = "addEvent(groupName:evtName:evtParam:)"
-            landmarkType = "7">
+            landmarkName = "AdBrixEventQueue"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -25,12 +25,13 @@
             NSArray *subcomponents = [component componentsSeparatedByString:@"="];
             if(subcomponents.count == 2)
             {
-                [parameters setObject:[[subcomponents objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
-                               forKey:[[subcomponents objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                
+                [parameters setObject:[[subcomponents objectAtIndex:1] stringByRemovingPercentEncoding]
+                               forKey:[[subcomponents objectAtIndex:0] stringByRemovingPercentEncoding]];
             }
             else
             {
-                [parameters setObject:@"" forKey:[component stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                [parameters setObject:@"" forKey:[component stringByRemovingPercentEncoding]];
             }
         }
     }

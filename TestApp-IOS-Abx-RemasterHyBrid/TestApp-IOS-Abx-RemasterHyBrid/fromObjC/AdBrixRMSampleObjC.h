@@ -17,7 +17,6 @@
 #import <WebKit/WebKit.h>
 #import "Utils.h"
 
-#define AbxPayment @[@"KRW",@"USD",@"JPY",@"EUR",@"GBP",@"CNY",@"TWD",@"HKD",@"IDR",@"INR",@"RUB",@"THB",@"VND",@"MYR"];
 
 
 
@@ -26,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIView *View_main;
 
 - (IBAction)click_toObjC:(id)sender;
+
 
 
 @end

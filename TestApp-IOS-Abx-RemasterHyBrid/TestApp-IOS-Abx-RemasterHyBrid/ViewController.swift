@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import AdBrixRM
+import JavaScriptCore
 
 class ViewController: UIViewController, WKNavigationDelegate {
     
@@ -52,7 +53,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         WKView_main.navigationDelegate = self
         
-        let address = "https://s3-ap-northeast-1.amazonaws.com/static.adbrix.igaworks.com/tech_support/adbrix/hybrid_web/adbrixHybrid.html"
+        let address = "http://tech.ad-brix.com/adbrix_hybrid_sample_web/index.html"
+//        let address = "https://s3-ap-northeast-1.amazonaws.com/static.adbrix.igaworks.com/tech_support/adbrix/hybrid_web/adbrixHybrid.html"
+        
         let url = URL(string: address)
         let request = URLRequest(url: url!)
         WKView_main.load(request)
@@ -66,25 +69,38 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @available(iOS 8.0, *)
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         var isAdbrixContains = false
-        
-        
-        
+             
         if let url = navigationAction.request.url, let schm = url.scheme, let funcName = url.host {
           
+            print("info :: url-\(url),\(webView.url!), scheme-\(schm)")
+            
+//            info :: purchase,{
+//                category = "A.B";
+//                currencyCode = KRW;
+//                orderid = O123;
+//                productId = P123;
+//                productName = ABS;
+//                quantity = 1;
+//                unitPrice = 123;
+//            }
+
             if let dic = Utils.getURLParmaters(url) {
                 
                 
-                print("info :: \(url),\(schm),\(funcName),\(dic)")
+                print("info :: \(funcName),\(dic)")
+//                print("info :: \(dic)")
                 
                 if ("AdBrixRM" == schm || "adbrix" == schm) {
                     
-                    if (funcName.contains("purchase") || funcName.contains("refund") || funcName.contains("list_view") || funcName.contains("add_to_cart") || funcName.contains("search")) {
+                    if (funcName.contains(Constants.FUNC_purchase) || funcName.contains(Constants.FUNC_viewList) || funcName.contains(Constants.FUNC_addToWishList) || funcName.contains(Constants.FUNC_share) || funcName.contains(Constants.FUNC_search) || funcName.contains(Constants.FUNC_productView) ||
+                        funcName.contains(Constants.FUNC_addToCart)
+                        ) {
                         
                         isAdbrixContains = true
                         
                         var cateArr :Array<String> = Array()
                         
-                        if let cate = (dic["category"] as? String) {
+                        if let cate = (dic[Constants.DIC_category] as? String) {
                             
                             let categories =  cate.components(separatedBy: ".")
                             for str in categories {
@@ -104,61 +120,73 @@ class ViewController: UIViewController, WKNavigationDelegate {
                             
                         }
                         
-                        if let productId = dic["pid"], let productName = dic["pname"], let price = dic["price"], let quantity = dic["quantity"], let currencyString = dic["currency_code"] {
-                            
-                            let productModel = AdBrixRM.getInstance.createCommerceProductData(
-                                productId: productId as! String
-                                ,productName: productName as! String
-                                ,price: price as! Double
-                                ,quantity: quantity as! Int
-                                ,discount: 0.00
-                                ,currencyString: self.validCurreny(currencyString as! String)
-                                ,category: AdBrixRM.getInstance.createCommerceProductCategoryDataByArray(categoryArray: cateArr)
-                                ,productAttrsMap: nil
-                            )
+                        if let productId = dic[Constants.DIC_productId], let productName = dic[Constants.DIC_productName], let price = dic[Constants.DIC_unitPrice], let quantity = dic[Constants.DIC_quantity], let currencyString = dic[Constants.DIC_currencyCode] {
                             
                             var arr : Array<AdBrixRmCommerceProductModel> = Array()
-                            arr.append(productModel)
                             
-                            if funcName.contains("purchase") {
+                            if let priceNum = (price as? NSString), let quantityNum = (quantity as? NSString) {
                                 
-                                if let orderId = dic["oid"],
-                                    let deliveryCharge = dic["deliveryCharge"],
-                                    let paymentMethod = dic["paymentMethod"] {
+                                
+                                
+                                let productModel = AdBrixRM.getInstance.createCommerceProductData(
+                                    productId: productId as! String
+                                    ,productName: productName as! String
+                                    ,price: Double(priceNum.integerValue)
+                                    ,quantity: quantityNum.integerValue
+                                    ,discount: 0.00
+                                    ,currencyString: self.validCurreny(currencyString as! String)
+                                    ,category: AdBrixRM.getInstance.createCommerceProductCategoryDataByArray(categoryArray: cateArr)
+                                    ,productAttrsMap: nil
+                                )
+                                
+                                arr.append(productModel)
+                                
+                                
+                                if funcName.contains(Constants.FUNC_purchase) {
                                     
-                                    AdBrixRM.getInstance.commonPurchase(
-                                        orderId: orderId as! String,
-                                        productInfo: arr,
-                                        discount: 0.00,
-                                        deliveryCharge: deliveryCharge as! Double,
-                                        paymentMethod:
-                                        AdBrixRM.getInstance.convertPayment(self.validPayment(paymentMethod as! String))
-                                    )
+                                    if let orderId = dic[Constants.DIC_orderId] {
+                                        
+                                        AdBrixRM.getInstance.commonPurchase(
+                                            orderId: orderId as! String,
+                                            productInfo: arr,
+                                            discount: 0.00,
+                                            deliveryCharge: 0.00,
+                                            paymentMethod:
+                                            AdBrixRM.getInstance.convertPayment(self.validPayment(Constants.ABXRM_PAYMENT[1] ?? "CreditCard"))
+                                        )
+                                    }
+                                    
+                                    
+                                }
+                               
+                                else if funcName.contains(Constants.FUNC_productView) {
+                                    AdBrixRM.getInstance.commerceProductView(productInfo: productModel)
+                                }
+                                else if funcName.contains(Constants.FUNC_viewList) {
+                                    AdBrixRM.getInstance.commerceListView(productInfo: arr)
+                                }
+                                else if funcName.contains(Constants.FUNC_addToCart) {
+                                    AdBrixRM.getInstance.commerceAddToCart(productInfo: arr)
+                                }
+                                else if funcName.contains(Constants.FUNC_addToWishList) {
+                                    AdBrixRM.getInstance.commerceAddToWishList(productInfo: arr[0])
+                                }
+                                else if funcName.contains(Constants.FUNC_share) {
+                                    if let shareName = dic[Constants.DIC_sharingChannel] {
+                                        AdBrixRM.getInstance.commerceShare(channel: AdBrixRM.getInstance.convertChannel(self.validSharingChannel(shareName as! String)), productInfo: arr[0])
+                                    }
+                                }
+                                else if funcName.contains(Constants.FUNC_search) {
+                                    if let keyword = dic[Constants.DIC_keyword] {
+                                        AdBrixRM.getInstance.commerceSearch(productInfo: arr, keyword: keyword as! String)
+                                    }
+                                    
                                 }
                                 
-                              
                             }
-                            else if funcName.contains("refund") {
-                                if let orderId = dic["oid"], let penaltyCharge = dic["penaltyCharge"] {
-                                    AdBrixRM.getInstance.commerceRefund(orderId: orderId as! String, productInfo: arr, penaltyCharge: penaltyCharge as! Double)
-                                }
-                                
-                            }
-                            else if funcName.contains("product_view") {
-                                AdBrixRM.getInstance.commerceProductView(productInfo: productModel)
-                            }
-                            else if funcName.contains("list_view") {
-                                AdBrixRM.getInstance.commerceListView(productInfo: arr)
-                            }
-                            else if funcName.contains("add_to_cart") {
-                                AdBrixRM.getInstance.commerceAddToCart(productInfo: arr)
-                            }
-                            else if funcName.contains("search") {
-                                if let keyword = dic["keyword"] {
-                                    AdBrixRM.getInstance.commerceSearch(productInfo: arr, keyword: keyword as! String)
-                                }
-                                
-                            }
+                            
+                            
+                            
                             
                         }
                         
@@ -201,7 +229,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     public func validPayment(_ code :String) -> Int{
         
         
-        var type = 4;
+        var type = 1;
         
         for v in Constants.ABXRM_PAYMENT {
             if v.value == code {
@@ -213,6 +241,20 @@ class ViewController: UIViewController, WKNavigationDelegate {
         return type
     }
     
+    public func validSharingChannel(_ code :String) -> Int{
+        
+        
+        var type = 1;
+        
+        for v in Constants.ABXRM_SHARINGCHANNEL {
+            if v.value == code {
+                type = v.key
+                break
+            }
+        }
+        
+        return type
+    }
     
     
 }

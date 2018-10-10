@@ -785,6 +785,10 @@ class MainContoller : UIViewController {
             )
         )
         
+        var model: AdBrixRmCommerceProductAttrModel = AdBrixRmCommerceProductAttrModel()
+        model.setAttr()
+        model.setAttr()
+        
         var arr : Array<AdBrixRmCommerceProductModel> = Array()
         arr.append(productModel)
         arr.append(productModel2)
