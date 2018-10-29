@@ -534,8 +534,8 @@ void HelloWorld::menuCommonPurchaseSingleCallback() {
 
     pOrderAttrMap["orderattr_key01"] = "orderattr_value01";
 
-    Json::StreamWriterBuilder builder;
-    std::string orderAttrStr = Json::writeString(builder, pOrderAttrMap);
+    Json::StreamWriterBuilder builder2;
+    std::string orderAttrStr = Json::writeString(builder2, pOrderAttrMap);
 
 
     PluginAdBrixAOS::commonPurchase("cocos2d_x_PRODUCT_ID", pProductModelJson.c_str(), 1000.00, 3500.00, AdBrixPaymentCreditCard, orderAttrStr);
