@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		137486DA206CE35C0004968F /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; };
+		13526F3F218197EE000762ED /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 13526F3E218197EE000762ED /* libxml2.tbd */; };
+		137486DA206CE35C0004968F /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		137486DB206CE35C0004968F /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E7620689414008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		139DBBA8202944470026B03D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139DBBA7202944470026B03D /* AppDelegate.m */; };
 		139DBBAB202944470026B03D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139DBBAA202944470026B03D /* ViewController.m */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		132FED33203FFEFF00793D1D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		132FED35203FFF0700793D1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		13526F3E218197EE000762ED /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		139DBBA3202944470026B03D /* TestApp-IOS-Abx-RemasterObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestApp-IOS-Abx-RemasterObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		139DBBA6202944470026B03D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		139DBBA7202944470026B03D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,7 +73,6 @@
 		139DBBC6202944470026B03D /* TestApp-IOS-Abx-RemasterObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestApp-IOS-Abx-RemasterObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		139DBBCA202944470026B03D /* TestApp_IOS_Abx_RemasterObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestApp_IOS_Abx_RemasterObjCUITests.m; sourceTree = "<group>"; };
 		139DBBCC202944470026B03D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13C2B7D2202AF86C0039CFD0 /* AdBrix.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdBrix.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TestApp-IOS-Abx.RemasterWorkspace-hcwfpnkhosstjshlacxfvblfqrcs/Build/Products/Release-iphoneos/AdBrix.framework"; sourceTree = "<group>"; };
 		13EE5E7620689414008A81E0 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdBrixRM.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13526F3F218197EE000762ED /* libxml2.tbd in Frameworks */,
 				13EE5E7520689404008A81E0 /* UIKit.framework in Frameworks */,
 				13EE5E74206893FE008A81E0 /* iAd.framework in Frameworks */,
 				137486DA206CE35C0004968F /* AdBrixRM.framework in Frameworks */,
@@ -106,9 +108,9 @@
 		137A0BCC202944BC00F3072C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13526F3E218197EE000762ED /* libxml2.tbd */,
 				132FED35203FFF0700793D1D /* UIKit.framework */,
 				132FED33203FFEFF00793D1D /* iAd.framework */,
-				13C2B7D2202AF86C0039CFD0 /* AdBrix.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,13 +480,16 @@
 		139DBBD0202944470026B03D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterObjC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -494,15 +499,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.igaworks.TestApp-IOS-Abx-RemasterObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../SDK-IOS-Abx-Remaster/AdBrix\"/**";
 			};
 			name = Debug;
 		};
 		139DBBD1202944470026B03D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -510,6 +517,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterObjC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -519,8 +527,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.igaworks.TestApp-IOS-Abx-RemasterObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../SDK-IOS-Abx-Remaster/AdBrix\"/**";
 			};
 			name = Release;
 		};

@@ -57,6 +57,8 @@ class MainContoller : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -785,9 +787,9 @@ class MainContoller : UIViewController {
             )
         )
         
-        var model: AdBrixRmCommerceProductAttrModel = AdBrixRmCommerceProductAttrModel()
-        model.setAttr()
-        model.setAttr()
+//        var model: AdBrixRmCommerceProductAttrModel = AdBrixRmCommerceProductAttrModel()
+//        model.setAttr()
+//        model.setAttr()
         
         var arr : Array<AdBrixRmCommerceProductModel> = Array()
         arr.append(productModel)

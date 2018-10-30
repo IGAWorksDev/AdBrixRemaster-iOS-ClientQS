@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
         
+        adBrix.setPushEnable(toPushEnable: true)
         adBrix.initAdBrix(appKey: "03M110kRQ0K7UAF16jxmYg", secretKey:"Br9TLszIZUGsmSbnToNBXg")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
@@ -45,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager.distanceFilter = 200
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        application.setMinimumBackgroundFetchInterval(10.0)
         
         return true
     }
@@ -57,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        print("Remain BgTime :: App is applicationDidEnterBackground.")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -69,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        print("Remain BgTime :: App is applicationWillTerminate.")
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any?) -> Bool {
@@ -123,5 +128,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 //    }
 
 
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        if let newData = fetchUpdates() {
+//            addDataToFeed(newData: newData)
+//            completionHandler(.newData)
+//        }
+        
+        self.checkData(completion: { (_ result) in
+            
+            print("Time Fetch :: checkData :: \(result)")
+            if result {
+                completionHandler(.newData)
+            }
+            else {
+                print("Time Fetch :: checkData")
+                completionHandler(.noData)
+            }
+        })
+    }
+    
+    func checkData(completion: @escaping (_ result: Bool)->()) {
+        completion(true)
+        
+    }
+    
 }
 

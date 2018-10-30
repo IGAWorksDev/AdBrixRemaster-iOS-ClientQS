@@ -86,11 +86,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
             if let dic = Utils.getURLParmaters(url) {
                 
-                
-                print("info :: \(funcName),\(dic)")
-//                print("info :: \(dic)")
-                
-                if ("AdBrixRM" == schm || "adbrix" == schm) {
+                if ("adbrix" == schm) {
                     
                     if (funcName.contains(Constants.FUNC_purchase) || funcName.contains(Constants.FUNC_viewList) || funcName.contains(Constants.FUNC_addToWishList) || funcName.contains(Constants.FUNC_share) || funcName.contains(Constants.FUNC_search) || funcName.contains(Constants.FUNC_productView) ||
                         funcName.contains(Constants.FUNC_addToCart)

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1302CAFA20BD168A0024824B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1302CAF920BD168A0024824B /* CoreLocation.framework */; };
 		132FED38203FFF1700793D1D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED37203FFF1600793D1D /* iAd.framework */; };
 		132FED3A203FFF1C00793D1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED39203FFF1B00793D1D /* UIKit.framework */; };
+		13526F2E21800A31000762ED /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E71206893D2008A81E0 /* AdBrixRM.framework */; };
+		13526F2F21800A31000762ED /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E71206893D2008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		137A0BE020294B0100F3072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A0BDF20294B0100F3072C /* AppDelegate.swift */; };
 		137A0BE720294B0100F3072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137A0BE620294B0100F3072C /* Assets.xcassets */; };
 		137A0BEA20294B0100F3072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137A0BE820294B0100F3072C /* LaunchScreen.storyboard */; };
@@ -17,8 +18,6 @@
 		137A0C0020294B0100F3072C /* TestApp_IOS_Abx_RemasterSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A0BFF20294B0100F3072C /* TestApp_IOS_Abx_RemasterSwiftUITests.swift */; };
 		137A0C62202AEE5500F3072C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A0C61202AEE5500F3072C /* MainController.swift */; };
 		137A0C64202AEEA000F3072C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137A0C63202AEEA000F3072C /* Main.storyboard */; };
-		13EE5E72206893D2008A81E0 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E71206893D2008A81E0 /* AdBrixRM.framework */; };
-		13EE5E73206893D2008A81E0 /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E71206893D2008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		13EE5DC42064C8DD008A81E0 /* Embed Frameworks */ = {
+		13526F3021800A31000762ED /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				13EE5E73206893D2008A81E0 /* AdBrixRM.framework in Embed Frameworks */,
+				13526F2F21800A31000762ED /* AdBrixRM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,10 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1302CAFA20BD168A0024824B /* CoreLocation.framework in Frameworks */,
 				132FED3A203FFF1C00793D1D /* UIKit.framework in Frameworks */,
 				132FED38203FFF1700793D1D /* iAd.framework in Frameworks */,
-				13EE5E72206893D2008A81E0 /* AdBrixRM.framework in Frameworks */,
+				13526F2E21800A31000762ED /* AdBrixRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +102,6 @@
 		137A0BD320294B0100F3072C = {
 			isa = PBXGroup;
 			children = (
-				13EE5E71206893D2008A81E0 /* AdBrixRM.framework */,
 				137A0BDE20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwift */,
 				137A0BF320294B0100F3072C /* TestApp-IOS-Abx-RemasterSwiftTests */,
 				137A0BFE20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwiftUITests */,
@@ -126,6 +123,7 @@
 		137A0BDE20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwift */ = {
 			isa = PBXGroup;
 			children = (
+				13EE5E71206893D2008A81E0 /* AdBrixRM.framework */,
 				137A0BDF20294B0100F3072C /* AppDelegate.swift */,
 				137A0BE620294B0100F3072C /* Assets.xcassets */,
 				137A0BE820294B0100F3072C /* LaunchScreen.storyboard */,
@@ -174,7 +172,7 @@
 				137A0BD820294B0100F3072C /* Sources */,
 				137A0BD920294B0100F3072C /* Frameworks */,
 				137A0BDA20294B0100F3072C /* Resources */,
-				13EE5DC42064C8DD008A81E0 /* Embed Frameworks */,
+				13526F3021800A31000762ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -462,13 +460,13 @@
 		137A0C0520294B0100F3072C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TestApp-IOS-Abx-RemasterSwift",
 				);
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterSwift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -488,13 +486,13 @@
 		137A0C0620294B0100F3072C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UFX7ZBPC3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TestApp-IOS-Abx-RemasterSwift",
 				);
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterSwift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
