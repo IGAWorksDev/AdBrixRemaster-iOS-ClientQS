@@ -26,28 +26,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         if ((NSClassFromString("ASIdentifierManager")) != nil) {
             let ifa :UUID = ASIdentifierManager.shared().advertisingIdentifier
             adBrix.setAppleAdvertisingIdentifier(ifa.uuidString)
-            
-        //    print("ifa UUIDString :: \(ifa.uuidString)")
         }
         
         
+        adBrix.initAdBrix(appKey: "03M110kRQ0K7UAF16jxmYg", secretKey:"Br9TLszIZUGsmSbnToNBXg")
+        
+        adBrix.setPushEnable(toPushEnable: true)
         adBrix.setLogLevel(AdBrixRM.AdBrixLogLevel.ERROR)
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
-        
-        adBrix.setPushEnable(toPushEnable: true)
-        adBrix.initAdBrix(appKey: "03M110kRQ0K7UAF16jxmYg", secretKey:"Br9TLszIZUGsmSbnToNBXg")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
-        
                 
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 200
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        application.setMinimumBackgroundFetchInterval(10.0)
         
         return true
     }

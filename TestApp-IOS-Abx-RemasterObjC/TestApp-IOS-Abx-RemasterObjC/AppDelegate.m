@@ -11,7 +11,7 @@
 #import <AdSupport/AdSupport.h>
 #import <iAd/iAd.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () 
 
 @end
 
@@ -27,11 +27,12 @@
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];
         [adBrix setAppleAdvertisingIdentifier:[ifa UUIDString]];
     }
-    
+    [adBrix setDeeplinkDelegateWithDelegate:self];
     [adBrix setLogLevel:AdBrixLogLevelERROR];
     [adBrix setEventUploadCountInterval:AdBrixEventUploadCountIntervalMIN];
     [adBrix setEventUploadTimeInterval:AdBrixEventUploadTimeIntervalMIN];
     
+    [adBrix setGenderWithAdBrixGenderType:AdBrixGenderTypeFemale];
     double lat = 37.541;
     double lon = 126.986;
     [adBrix setLocationWithLatitude:lat longitude:lon];
@@ -107,6 +108,7 @@
     
     AdBrixRM *adBrix = [AdBrixRM sharedInstance];
     [adBrix deepLinkOpenWithUrl:url];
+    
     return YES;
     
 }
@@ -140,5 +142,9 @@
     return dateString;
 }
 
+
+- (void)didReceiveDeeplinkWithDeeplink:(NSString * _Nonnull)deeplink {
+    NSLog(@"deeplink, %@", deeplink);
+}
 
 @end

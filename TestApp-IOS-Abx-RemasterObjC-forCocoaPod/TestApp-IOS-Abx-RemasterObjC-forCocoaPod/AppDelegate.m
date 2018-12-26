@@ -32,7 +32,7 @@
     [adBrix setEventUploadCountInterval:AdBrixEventUploadCountIntervalMIN];
     [adBrix setEventUploadTimeInterval:AdBrixEventUploadTimeIntervalMIN];
     
-    [adBrix initAdBrixWithAppKey:@"inputYourKeyFromServer" secretKey:@"inputYourKeyFromServer"];
+    [adBrix initAdBrixWithAppKey:@"" secretKey:@""];
     
     return YES;
 }

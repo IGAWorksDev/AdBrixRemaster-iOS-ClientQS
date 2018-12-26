@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131750732192C64F004BB247 /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131750712192C64A004BB247 /* AdBrixRM.framework */; };
+		131750742192C64F004BB247 /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 131750712192C64A004BB247 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		132FED38203FFF1700793D1D /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED37203FFF1600793D1D /* iAd.framework */; };
 		132FED3A203FFF1C00793D1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 132FED39203FFF1B00793D1D /* UIKit.framework */; };
-		13526F2E21800A31000762ED /* AdBrixRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E71206893D2008A81E0 /* AdBrixRM.framework */; };
-		13526F2F21800A31000762ED /* AdBrixRM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE5E71206893D2008A81E0 /* AdBrixRM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		137A0BE020294B0100F3072C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A0BDF20294B0100F3072C /* AppDelegate.swift */; };
 		137A0BE720294B0100F3072C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137A0BE620294B0100F3072C /* Assets.xcassets */; };
 		137A0BEA20294B0100F3072C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137A0BE820294B0100F3072C /* LaunchScreen.storyboard */; };
@@ -38,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		13526F3021800A31000762ED /* Embed Frameworks */ = {
+		131750702192BC2B004BB247 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				13526F2F21800A31000762ED /* AdBrixRM.framework in Embed Frameworks */,
+				131750742192C64F004BB247 /* AdBrixRM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		1302CAF920BD168A0024824B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		131750712192C64A004BB247 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdBrixRM.framework; sourceTree = "<group>"; };
 		132FED37203FFF1600793D1D /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		132FED39203FFF1B00793D1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		137A0BDC20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestApp-IOS-Abx-RemasterSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +69,6 @@
 		137A0C0120294B0100F3072C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137A0C61202AEE5500F3072C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		137A0C63202AEEA000F3072C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		13EE5E71206893D2008A81E0 /* AdBrixRM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdBrixRM.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			files = (
 				132FED3A203FFF1C00793D1D /* UIKit.framework in Frameworks */,
 				132FED38203FFF1700793D1D /* iAd.framework in Frameworks */,
-				13526F2E21800A31000762ED /* AdBrixRM.framework in Frameworks */,
+				131750732192C64F004BB247 /* AdBrixRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +102,7 @@
 		137A0BD320294B0100F3072C = {
 			isa = PBXGroup;
 			children = (
+				131750712192C64A004BB247 /* AdBrixRM.framework */,
 				137A0BDE20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwift */,
 				137A0BF320294B0100F3072C /* TestApp-IOS-Abx-RemasterSwiftTests */,
 				137A0BFE20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwiftUITests */,
@@ -123,7 +124,6 @@
 		137A0BDE20294B0100F3072C /* TestApp-IOS-Abx-RemasterSwift */ = {
 			isa = PBXGroup;
 			children = (
-				13EE5E71206893D2008A81E0 /* AdBrixRM.framework */,
 				137A0BDF20294B0100F3072C /* AppDelegate.swift */,
 				137A0BE620294B0100F3072C /* Assets.xcassets */,
 				137A0BE820294B0100F3072C /* LaunchScreen.storyboard */,
@@ -172,7 +172,7 @@
 				137A0BD820294B0100F3072C /* Sources */,
 				137A0BD920294B0100F3072C /* Frameworks */,
 				137A0BDA20294B0100F3072C /* Resources */,
-				13526F3021800A31000762ED /* Embed Frameworks */,
+				131750702192BC2B004BB247 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

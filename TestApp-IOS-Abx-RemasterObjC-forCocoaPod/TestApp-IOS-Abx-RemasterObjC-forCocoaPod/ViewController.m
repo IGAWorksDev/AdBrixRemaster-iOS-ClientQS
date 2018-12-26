@@ -146,7 +146,7 @@
                                                                                            price:10000.00
                                                                                         quantity:1
                                                                                         discount:5000.00
-                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                        @"9", @"no",
@@ -191,7 +191,7 @@
                                                   price:10000.00
                                                   quantity:1
                                                   discount:1000.00
-                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                  currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                   category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                   productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                   ];
@@ -222,7 +222,7 @@
                                                                                            price:10000.00
                                                                                         quantity:1
                                                                                         discount:1000.00
-                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                   ];
@@ -259,7 +259,7 @@
                                                                                            price:10000.00
                                                                                         quantity:1
                                                                                         discount:1000.00
-                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict]
                                                   ];
@@ -276,7 +276,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:1000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict2]
                                                    ];
@@ -315,7 +315,7 @@
                                                                                            price:10000.00
                                                                                         quantity:1
                                                                                         discount:5000.00
-                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                  currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                         category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                   ];
@@ -343,7 +343,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -428,7 +428,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -443,7 +443,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -515,7 +515,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -537,7 +537,7 @@
                              productInfo:productArray
                                 discount:0.00
                           deliveryCharge:3500.00
-                           paymentMethod:AdbrixPaymentMethodCreditCard
+                           paymentMethod:AdbrixRmPaymentMethodCreditCard
      ];
     
     
@@ -590,7 +590,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -624,7 +624,7 @@
                              productInfo:productArray
                                 discount:10000.00
                           deliveryCharge:3500.00
-                           paymentMethod:AdbrixPaymentMethodCreditCard
+                           paymentMethod:AdbrixRmPaymentMethodCreditCard
      ];
     
     /*
@@ -672,7 +672,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -730,7 +730,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -745,7 +745,7 @@
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -804,7 +804,7 @@
                                                                                             price:105000.00
                                                                                          quantity:0
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
                                                                                     productAttrsMap:nil
                                                    ];
@@ -814,7 +814,7 @@
                                                                                             price:105000.00
                                                                                          quantity:0
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"[나이키]운동화기획전"]
                                                                                     productAttrsMap:nil
                                                    ];
@@ -863,7 +863,7 @@
                                                                                             price:10000.00
                                                                                          quantity:0
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                     productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                                                                         @"9", @"no",
@@ -873,7 +873,7 @@
                                                                                                    ]
                                                    ];
     
-    [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
+    [_adBrix commerceShareWithChannel:AdBrixRmSharingChannelAdBrixRmSharingKakaoTalk
                           productInfo:productModel1];
     
     /*
@@ -902,7 +902,7 @@
 }
 
 - (IBAction)click_commonSignUp:(id)sender {
-    [_adBrix commonSignUpWithChannel:AdBrixSignUpChannelAdBrixSignUpLineChannel];
+    [_adBrix commonSignUpWithChannel:AdBrixRmSignUpChannelAdBrixRmSignUpLineChannel];
 }
 
 - (IBAction)click_commonUseCredit:(id)sender {
@@ -916,7 +916,7 @@
 }
 
 - (IBAction)click_commonInvite:(id)sender {
-    [_adBrix commonInviteWithChannel:AdBrixInviteChannelAdBrixInviteKakaoChannel];
+    [_adBrix commonInviteWithChannel:AdBrixRmInviteChannelAdBrixRmInviteKakaoChannel];
 }
 
 

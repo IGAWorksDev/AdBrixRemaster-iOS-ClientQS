@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import <AdBrixRM/AdBrixRM-Swift.h>
-//#import <AdBrixRM/AdBrixRM.h>
 
 @interface ViewController ()
 @property (nonatomic) AdBrixRM* adBrix;
@@ -135,19 +134,20 @@
 }
 - (IBAction)click_commerceCategoryView:(id)sender {
     
+    NSDictionary *extraDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                               @"9", @"no",
+                               @"black", @"color",
+                               @"XXL", @"size"
+                               , nil];
+    
     AdBrixRmCommerceProductModel *productModel = [_adBrix createCommerceProductDataWithProductId:@"5385487401"
                                                                                       productName:@"이월특가 나염 맨투맨"
                                                                                             price:10000.00
                                                                                          quantity:1
                                                                                          discount:5000.00
-                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                                                   currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                                                          category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
-                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                                                                                                        @"9", @"no",
-                                                                                                                                                        @"black", @"color",
-                                                                                                                                                        @"XXL", @"size"
-                                                                                                                                                        , nil]
-                                                                                                   ]
+                                                                                    productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                    ];
     
     
@@ -173,10 +173,10 @@
     
     //가을 맞이 슬렉스 10종 특가
     NSDictionary *extraDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   @"9", @"no",
-                                   @"black", @"color",
-                                   @"XXL", @"size"
-                                    , nil];
+                               @"9", @"no",
+                               @"black", @"color",
+                               @"XXL", @"size"
+                               , nil];
     
     AdBrixRmCommerceProductModel *productModel = [
                                                   _adBrix createCommerceProductDataWithProductId:@"5385487400"
@@ -184,11 +184,10 @@
                                                   price:10000.00
                                                   quantity:1
                                                   discount:1000.00
-                                                  currencyString:[_adBrix getCurrencyString:AdBrixCurrencyTypeKRW]
+                                                  currencyString:[_adBrix getCurrencyString:AdBrixRmCurrencyTypeKRW]
                                                   category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                   productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:extraDict]
                                                   ];
-    
     
     //상품 상세보기
     [_adBrix commerceProductViewWithProductInfo:productModel];
@@ -258,6 +257,7 @@
                                                                           productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict]
                                          ];
     
+    
     //이월특가 나염 맨투맨
     NSDictionary *productExtraDict2 = [NSDictionary dictionaryWithObjectsAndKeys:
                                @"13", @"no",
@@ -274,7 +274,7 @@
                                                                                        category:[_adBrix createCommerceProductCategoryDataWithCategory:@"기획전"]
                                                                                   productAttrsMap:[_adBrix createCommerceProductAttrDataWithDictionary:productExtraDict2]
                                          ];
-    
+   
     //NSMutableArray방식
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
     [productArray addObject:productModel];
@@ -290,6 +290,7 @@
     //Data + 클라이언트 앱 기준 이벤트 시각(formatted Date String) 전송 - AdBrixDateFormat format 준수
     //[_adBrix commerceAddToCartWithProductInfo:productArray eventDateStr:[self getDateStr]];
     
+    [_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic]];
     //Order Attr 사용시
     //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic]];
     //[_adBrix commerceAddToCartWithProductInfo:productArray orderAttr:[self getExtraDic] eventDateStr:[self getDateStr]];
@@ -350,6 +351,7 @@
                                                                                                  ]
                                                  ];
     
+
 //    AdBrixRmCommerceProductModel *productModel3 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
 //                                                                                      productName:@"가을 맞이 슬렉스 10종 특가"
 //                                                                                            price:10000.00
@@ -376,6 +378,7 @@
                                    discount:0.00
                              deliveryCharge:3500.00
     ];
+    
     
     /*
      
@@ -530,6 +533,7 @@
     [_adBrix commerceRefundWithOrderId:@"290192012"
                            productInfo:productArray
                          penaltyCharge:3500.00];
+    
     /*
      
    
@@ -596,6 +600,20 @@
     NSMutableArray<AdBrixRmCommerceProductModel *> *productArray = [NSMutableArray array];
     [productArray addObject:productModel1];
     [productArray addObject:productModel2];
+    
+    [_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          @"9", @"no",
+                                                          @"black", @"color",
+                                                          @"XXL", @"size"
+                                                          , nil]
+     ];
+    
+    [_adBrix createCommerceProductAttrDataWithDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          @"9", @"no",
+                                                          @"black", @"color",
+                                                          @"XXL", @"size"
+                                                          , nil]
+     ];
     
     //NSArray방식
     //NSArray *productArray = [[NSArray alloc] initWithObjects:productModel1, productModel2, nil];
@@ -696,6 +714,7 @@
 - (IBAction)click_commerceShare:(id)sender {
     
     /* 가을 맞이 슬렉스 10종 특가 상품을 카카오톡으로 공유*/
+    [_adBrix createCommerceProductCategoryDataWithCategory:@"기획전" category2:@"기획전" category3:@"기획전" category4:@"기획전" category5:@"기획전"];
     AdBrixRmCommerceProductModel *productModel1 = [_adBrix createCommerceProductDataWithProductId:@"5385487400"
                                                                                     productName:@"가을 맞이 슬렉스 10종 특가"
                                                                                           price:10000.00
@@ -713,7 +732,7 @@
  
     [_adBrix commerceShareWithChannel:AdBrixSharingChannelAdBrixSharingKakaoTalk
                           productInfo:productModel1];
-    
+   
     /*
      
    
@@ -828,6 +847,7 @@
     [productArray addObject:productModel2];
     
     [_adBrix commerceListViewWithProductInfo:productArray];
+  
 
 //    [_adBrix commerceListViewWithProductInfo:productArray orderAttr:[self getExtraDic]];
     
@@ -865,12 +885,15 @@
     [productArray addObject:productModel2];
     
     [_adBrix commerceCartViewWithProductInfo:productArray];
+
 }
 - (IBAction)click_commercePaymentInfoAdded:(id)sender {
     
     [_adBrix commercePaymentInfoAddedWithPaymentInfoAttr:[NSDictionary dictionaryWithObjectsAndKeys:
                                                           @"kbcard", @"creditcard"
                                                           , nil]];
+    
+    
 }
 
 
@@ -1031,12 +1054,14 @@
      eventDateStr:[self getDateStr]
      ];
      */
+    
 }
 - (IBAction)click_levelAchieved:(id)sender {
     [_adBrix gameLevelAchievedWithLevel:15];
+   
 }
 - (IBAction)click_tutorialCompleted:(id)sender {
-    [_adBrix gameTutorialCompletedWithIsSkip:false];
+    [_adBrix gameTutorialCompletedWithIsSkip:NO];
 }
 - (IBAction)click_characterCreated:(id)sender {
     [_adBrix gameCharacterCreated];
@@ -1051,10 +1076,13 @@
                                                                 @"none", @"stage_redeem"
                                                                 , nil]];
     
+    
     [_adBrix commonSignUpWithChannel:AdBrixSignUpChannelAdBrixSignUpLineChannel];
     [_adBrix commonUseCreditWithCommonAttr:[NSDictionary dictionaryWithObjectsAndKeys:
                                             @"100", @"gold"
                                             , nil]];
+    
+    
     [_adBrix commonAppUpdateWithPrev_ver:@"1.0" curr_ver:@"1.1"];
     [_adBrix commonInviteWithChannel:AdBrixInviteChannelAdBrixInviteKakaoChannel];
 }
