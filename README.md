@@ -28,3 +28,5 @@ AdBrixRemaster SDK를빠르게 적용해볼 수 있는 iOS 클라이언트용 �
 ## React Native
 - xcode로 포팅된 프로젝트에서 CocoaPods로 자동설치 후 연동
 
+## Hybrid 앱 사용자 (Swift)
+- TestApp-IOS-Abx-RemasterHyBrid 
