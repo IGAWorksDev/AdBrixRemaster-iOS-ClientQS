@@ -1,3 +1,6 @@
+### NOTICE
+AOS SDK 버전 1.0.2.3 이하는 2019/01/02일 부로 더이상 지원하지 않습니다.
+
 # AdBrixRemaster-iOS-Client QuickStart App
 
 AdBrixRemaster SDK를빠르게 적용해볼 수 있는 iOS 클라이언트용 어플리케이션 프로젝트
@@ -26,3 +29,4 @@ AdBrixRemaster SDK를빠르게 적용해볼 수 있는 iOS 클라이언트용 �
 
 ## Cocos2d-x 사용자
 - TestApp-Cocos2d-x
+

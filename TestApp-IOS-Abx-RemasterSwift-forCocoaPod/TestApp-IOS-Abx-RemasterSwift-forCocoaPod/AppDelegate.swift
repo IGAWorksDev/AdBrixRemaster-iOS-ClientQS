@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             //print("ifa UUIDString :: \(ifa.uuidString)")
         }
         
-        
         adBrix.setLogLevel(AdBrixRM.AdBrixLogLevel.TRACE)
         adBrix.setEventUploadCountInterval(AdBrixRM.AdBrixEventUploadCountInterval.MIN)
         adBrix.setEventUploadTimeInterval(AdBrixRM.AdBrixEventUploadTimeInterval.MIN)
@@ -38,15 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         adBrix.initAdBrix(appKey: "", secretKey:"")
         adBrix.setLocation(latitude: 32.514, longitude: 126.986)
         
-        
-        
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 200
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
+     
         return true
     }
     

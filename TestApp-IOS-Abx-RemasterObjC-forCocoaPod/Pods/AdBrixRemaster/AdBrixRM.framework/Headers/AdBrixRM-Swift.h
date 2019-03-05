@@ -185,11 +185,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC8AdBrixRM15AdBrixBase64Key")
 @interface AdBrixBase64Key : NSObject
-+ (AdBrixBase64Key * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (NSString * _Nonnull)getSuperkey SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getTrackingSuperkey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -216,7 +212,7 @@ SWIFT_CLASS("_TtC8AdBrixRM13AdBrixPrivate")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 - (NSString * _Nonnull)getAppleAdvertisingIdentifierStr SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getAppleAdvertisingTrackingEnable SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)getAppleAdvertisingTrackingEnable SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -640,9 +636,61 @@ SWIFT_CLASS("_TtC8AdBrixRM8AdBrixRM")
 - (AdBrixRmCommerceProductModel * _Nonnull)createCommerceProductDataWithProductId:(NSString * _Nonnull)productId productName:(NSString * _Nonnull)productName price:(double)price quantity:(NSInteger)quantity discount:(double)discount currencyString:(NSString * _Nullable)currencyString category:(AdBrixRmCommerceProductCategoryModel * _Nullable)category productAttrsMap:(AdBrixRmCommerceProductAttrModel * _Nullable)productAttrsMap SWIFT_WARN_UNUSED_RESULT;
 /// purchase Product의 어트리뷰트 모델을 생성한다
 - (AdBrixRmCommerceProductAttrModel * _Nonnull)createCommerceProductAttrDataWithDictionary:(NSDictionary<NSString *, NSString *> * _Nullable)dictionary SWIFT_WARN_UNUSED_RESULT;
-- (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
+/// deepLinkOpen 이벤트
+/// <h1>Example Swift</h1>
+/// \code
+/// func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+///     let adBrix = AdBrixRM.getInstance
+///     adBrix.deepLinkOpen(urlStr: "data://http://www.adbrix.com?datakey=datavalue")
+///
+///     return true
+/// }
+///
+/// \endcode<h1>Example ObjC</h1>
+/// \code
+/// - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options
+/// {
+///     AdBrixRM *adBrix = [AdBrixRM sharedInstance];
+///     [adBrix deepLinkOpenWithUrlStr:@"data://http://www.adbrix.com?datakey=datavalue"];
+///
+///     return YES;
+/// }
+///
+/// \endcode<h1>Be careful</h1>
+/// <ul>
+///   <li>
+///     url must able to convert URL Type (if you use invalid URL scheme, will be crushed from your app side)
+///   </li>
+/// </ul>
 - (void)deepLinkOpenWithUrlStr:(NSString * _Nonnull)urlStr;
 - (void)deepLinkOpenWithUrlStr:(NSString * _Nonnull)urlStr eventDateStr:(NSString * _Nonnull)eventDateStr;
+/// deepLinkOpen 이벤트
+/// <h1>Example Swift</h1>
+/// \code
+/// func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+///     let adBrix = AdBrixRM.getInstance
+///     adBrix.deepLinkOpen(url: url)
+///
+///     return true
+/// }
+///
+/// \endcode<h1>Example ObjC</h1>
+/// \code
+/// - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options
+/// {
+///     AdBrixRM *adBrix = [AdBrixRM sharedInstance];
+///     [adBrix deepLinkOpenWithUrl:url];
+///
+///     return YES;
+/// }
+///
+/// \endcode<h1>Be careful</h1>
+/// <ul>
+///   <li>
+///     url must use valid URL Type (if you use invalid URL scheme, will be crushed from your app side)
+///   </li>
+/// </ul>
+- (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url;
 - (void)deepLinkOpenWithUrl:(NSURL * _Nonnull)url eventDateStr:(NSString * _Nonnull)eventDateStr;
 /// 사용자의 GPS 위치를 설정한다
 - (void)setLocationWithLatitude:(double)latitude longitude:(double)longitude;

@@ -49,7 +49,7 @@
 
 + (NSString *)IDFA;
 + (NSString *)IDFV;
-+ (NSString *)isAppleAdvertisingTrackingEnabled;
++ (BOOL)isAppleAdvertisingTrackingEnabled;
 + (NSString *)platformString;
 + (BOOL)isPhone;
 + (NSString *)carrier;
