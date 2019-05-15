@@ -192,8 +192,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod-frameworks.sh",
-				"${PODS_ROOT}/AdBrixRemaster/AdBrixRM.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod-frameworks.sh",
+				"${PODS_ROOT}/AdBrixRemastered/AdBrixRM.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -201,7 +201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -355,7 +355,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/AdBrixRemaster",
+					"$(PROJECT_DIR)/Pods/AdBrixRemastered",
 				);
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -365,7 +365,7 @@
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/AdBrixRemaster\"",
+					"\"${PODS_ROOT}/Headers/Public/AdBrixRemastered\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -389,7 +389,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/AdBrixRemaster",
+					"$(PROJECT_DIR)/Pods/AdBrixRemastered",
 				);
 				INFOPLIST_FILE = "TestApp-IOS-Abx-RemasterSwift-forCocoaPod/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -399,7 +399,7 @@
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"-isystem",
-					"\"${PODS_ROOT}/Headers/Public/AdBrixRemaster\"",
+					"\"${PODS_ROOT}/Headers/Public/AdBrixRemastered\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

@@ -1,7 +1,7 @@
 platform :ios, '10.0'
 target "TestApp-IOS-Abx-RemasterObjC-forCocoaPod" do
 
-  pod 'AdBrixRemaster'  
+  pod 'AdBrixRemastered' 
 
 end
 

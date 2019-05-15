@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "235791802F18DD1203F4D9E615B312D7"
+               BlueprintIdentifier = "D20DB1868A7A244CF634818803C75937"
+               BuildableName = "libPods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod.a"
                BlueprintName = "Pods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-TestApp-IOS-Abx-RemasterSwift-forCocoaPod.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

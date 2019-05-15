@@ -1,9 +1,9 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## AdBrixRemaster
+## AdBrixRemastered
 
-All text and design is copyright 2018 igaworks, Inc.
+All text and design is copyright 2019 igaworks, Inc.
 
 All rights reserved.
 

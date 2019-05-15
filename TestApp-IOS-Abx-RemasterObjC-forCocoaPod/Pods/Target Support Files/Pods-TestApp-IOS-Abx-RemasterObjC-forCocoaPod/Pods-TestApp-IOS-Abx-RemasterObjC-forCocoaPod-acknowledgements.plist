@@ -14,7 +14,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>All text and design is copyright 2018 igaworks, Inc.
+			<string>All text and design is copyright 2019 igaworks, Inc.
 
 All rights reserved.
 
@@ -23,7 +23,7 @@ https://github.com/IGAWorksDev/SDK-IOS-Abx.Remaster-CocoaPod
 			<key>License</key>
 			<string>Commercial</string>
 			<key>Title</key>
-			<string>AdBrixRemaster</string>
+			<string>AdBrixRemastered</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

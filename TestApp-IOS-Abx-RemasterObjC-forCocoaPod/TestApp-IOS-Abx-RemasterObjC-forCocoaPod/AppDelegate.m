@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     AdBrixRM *adBrix = [AdBrixRM sharedInstance]; //또는 AdBrixRM *adBrixs = AdBrixRM.sharedInstance;
-
+    
     //광고id
     if (NSClassFromString(@"ASIdentifierManager")){
         NSUUID *ifa =[[ASIdentifierManager sharedManager]advertisingIdentifier];

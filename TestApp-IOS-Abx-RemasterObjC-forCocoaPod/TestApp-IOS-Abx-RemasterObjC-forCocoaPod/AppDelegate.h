@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AdBrixRM/AdBrixRM-Swift.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+    
 @property (strong, nonatomic) UIWindow *window;
-
 
 @end
 
